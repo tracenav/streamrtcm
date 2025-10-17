@@ -477,42 +477,60 @@ def main():
           disp_mmdd = None
           disp_hms = None
           virt_sec_id = None
+          gga_dt = None
+          zda_dt = None
           if virt_anchor_wall is not None and virt_anchor_base_ms is not None:
             elapsed_ms = int((time.time() - virt_anchor_wall) * 1000.0 * (speed if speed > 0 else 1.0))
             if virt_is_absolute:
               t_abs_ms = virt_anchor_base_ms + elapsed_ms
               virt_sec_id = t_abs_ms // 1000
-              dt = datetime.datetime.fromtimestamp(t_abs_ms / 1000.0, tz=datetime.UTC)
-              disp_mmdd = dt.strftime('%m%d')
-              disp_hms = dt.strftime('%H:%M:%S')
+              gga_dt = datetime.datetime.fromtimestamp(t_abs_ms / 1000.0, tz=datetime.UTC)
+              disp_mmdd = gga_dt.strftime('%m%d')
+              disp_hms = gga_dt.strftime('%H:%M:%S')
+              if use_spartn_file:
+                zda_dt = gga_dt
             else:
               combined = virt_anchor_base_ms + elapsed_ms
-              sec = (combined // 1000) % (24*3600)
-              virt_sec_id = sec  # day-relative seconds
-              hh = sec // 3600
-              mi = (sec // 60) % 60
-              ss = sec % 60
+              virt_sec_id = combined // 1000
+              ms_in_day = combined % (24 * 3600 * 1000)
+              hh = ms_in_day // 3600000
+              mi = (ms_in_day // 60000) % 60
+              ss = (ms_in_day // 1000) % 60
+              frac_ms = ms_in_day % 1000
               disp_hms = f"{hh:02d}:{mi:02d}:{ss:02d}"
               disp_mmdd = pmp_date_str or datetime.datetime.now(datetime.UTC).strftime('%m%d')
+              base_date = datetime.datetime.now(datetime.UTC)
+              if pmp_date_str and len(pmp_date_str) == 4:
+                try:
+                  base_date = base_date.replace(month=int(pmp_date_str[0:2]), day=int(pmp_date_str[2:4]))
+                except ValueError:
+                  pass
+              base_midnight = base_date.replace(hour=0, minute=0, second=0, microsecond=0)
+              gga_dt = base_midnight + datetime.timedelta(hours=hh, minutes=mi, seconds=ss, milliseconds=frac_ms)
           else:
             # Fallback: real time
-            now_dt = datetime.datetime.now(datetime.UTC)
-            virt_sec_id = int(now_dt.timestamp())
-            disp_mmdd = now_dt.strftime('%m%d')
-            disp_hms = now_dt.strftime('%H:%M:%S')
+            virt_sec_id = int(time.time())
+            disp_mmdd = datetime.datetime.now(datetime.UTC).strftime('%m%d')
+            disp_hms = time.strftime('%H:%M:%S', time.gmtime())
 
           # Gate NMEA if ephemeris initial batch not yet completed
           if not eph_initial_batch_done:
             pass
           elif virt_sec_id != last_nmea_virtual_sec:
             # Convert virt_sec_id to datetime for NMEA generation
-            virt_dt = datetime.datetime.fromtimestamp(virt_sec_id, tz=datetime.UTC)
-            gga_line = build_gga(args.gga_lat, args.gga_lon, args.gga_alt, dt=virt_dt)
+            if gga_dt is None and virt_sec_id is not None:
+              try:
+                gga_dt = datetime.datetime.fromtimestamp(virt_sec_id, tz=datetime.UTC)
+              except Exception:
+                gga_dt = None
+            gga_line = build_gga(args.gga_lat, args.gga_lon, args.gga_alt, dt=gga_dt)
             ser.write(gga_line.encode('ascii'))
-            if not args.no_zda:
-              zda_line = build_zda(dt=virt_dt)
+            sent_zda = False
+            if (not args.no_zda) and (zda_dt is not None):
+              zda_line = build_zda(dt=zda_dt)
               ser.write(zda_line.encode('ascii'))
-            msg_type = "GGA+ZDA" if not args.no_zda else "GGA"
+              sent_zda = True
+            msg_type = "GGA+ZDA" if sent_zda else "GGA"
             print(f"[ESP32] NMEA sent: {msg_type} ({disp_mmdd}, {disp_hms} UTC, {args.gga_lat:.5f}, {args.gga_lon:.5f})")
             sys.stdout.flush()
             last_nmea_virtual_sec = virt_sec_id
@@ -828,5 +846,3 @@ def main():
 
 if __name__ == '__main__':
   main()
-
-

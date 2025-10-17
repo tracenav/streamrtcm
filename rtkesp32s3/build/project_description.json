@@ -1,7 +1,7 @@
 {
     "version":            "1.2",
     "project_name":       "rtk_base_station",
-    "project_version":    "1916318-dirty",
+    "project_version":    "b18100a-dirty",
     "project_path":       "/Users/delta/streamrtcm/rtkesp32s3",
     "idf_path":           "/Users/delta/esp/v5.5/esp-idf",
     "build_dir":          "/Users/delta/streamrtcm/rtkesp32s3/build",

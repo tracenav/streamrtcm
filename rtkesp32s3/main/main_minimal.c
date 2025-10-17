@@ -177,10 +177,10 @@ static void feeder_task(void *arg) {
           dbg_rtcm_in_frames++;
           dbg_rtcm_in_bytes += (uint32_t)expected_len;
         } else if (header_type == 'S') {
-          // Use PPL_SendSpartn for IP channel (NTRIP), not PPL_SendAuxSpartn
-          ePPL_ReturnStatus r = PPL_SendSpartn((uint8_t *)binbuf, (uint32_t)expected_len);
+          // With AUX channel enabled, route SPARTN frames through PPL_SendAuxSpartn
+          ePPL_ReturnStatus r = PPL_SendAuxSpartn((uint8_t *)binbuf, (uint32_t)expected_len);
           if (r != ePPL_Success) {
-            printf("WARN: PPL_SendSpartn=%s len=%d\n", ppl_status_str(r), expected_len);
+            printf("WARN: PPL_SendAuxSpartn=%s len=%d\n", ppl_status_str(r), expected_len);
             fflush(stdout);
           }
           dbg_spartn_frames++;
@@ -217,12 +217,11 @@ void app_main(void) {
   fflush(stdout);
 
   // Init PPL
-  // Use IP channel for NTRIP SPARTN streams (not AUX channel which is for L-band)
-  ePPL_ReturnStatus st = PPL_Initialize(PPL_CFG_ENABLE_IP_CHANNEL);
+  // Enable auxiliary channel which accepts SPARTN from external feeders
+  ePPL_ReturnStatus st = PPL_Initialize(PPL_CFG_ENABLE_AUX_CHANNEL);
   printf("PPL_Initialize: %d (%s)\n", (int)st, ppl_status_str(st)); fflush(stdout);
   if (st == ePPL_Success) {
-    // NTRIP SPARTN streams are typically unencrypted
-    printf("PPL ready for IP channel (NTRIP) data\n");
+    printf("PPL ready for AUX channel SPARTN data\n");
     fflush(stdout);
   }
 
@@ -230,5 +229,3 @@ void app_main(void) {
   xTaskCreate(ppl_poll_task, "ppl_poll", 4096, NULL, 5, NULL);
   xTaskCreate(feeder_task,   "feeder",    6144, NULL, 6, NULL);
 }
-
-
