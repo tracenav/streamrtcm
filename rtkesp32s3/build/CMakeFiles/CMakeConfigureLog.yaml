@@ -56,10 +56,10 @@ events:
       - "/Library/Apple/usr/bin/"
       - "/Applications/VMware Fusion.app/Contents/Public/"
       - "/usr/local/go/bin/"
-      - "/Applications/Xcode.app/Contents/Developer/usr/libexec/git-core/"
       - "/opt/miniconda3/condabin/"
       - "/Users/delta/Library/Python/3.13/bin/"
       - "/Users/delta/.local/bin/"
+      - "/Users/delta/.cursor/extensions/ms-python.debugpy-2025.14.1-darwin-arm64/bundled/scripts/noConfigScripts/"
     searched_directories:
       - "/Users/delta/esp/v5.5/esp-idf/components/espcoredump/git"
       - "/Users/delta/esp/v5.5/esp-idf/components/partition_table/git"
@@ -120,7 +120,6 @@ events:
         - "/Library/Apple/usr/bin"
         - "/Applications/VMware Fusion.app/Contents/Public"
         - "/usr/local/go/bin"
-        - "/Applications/Xcode.app/Contents/Developer/usr/libexec/git-core"
         - "/opt/homebrew/opt/postgresql@15/bin"
         - "/Users/delta/.deno/bin"
         - "/opt/miniconda3/condabin"
@@ -129,6 +128,7 @@ events:
         - "/opt/local/sbin"
         - "/Users/delta/Library/Python/3.13/bin"
         - "/Users/delta/.local/bin"
+        - "/Users/delta/.cursor/extensions/ms-python.debugpy-2025.14.1-darwin-arm64/bundled/scripts/noConfigScripts"
         - "/Users/delta/Library/Python/3.13/bin"
         - "/Users/delta/.local/bin"
         - "/Users/delta/Library/Python/3.13/bin"
@@ -186,10 +186,10 @@ events:
       - "/Library/Apple/usr/bin/"
       - "/Applications/VMware Fusion.app/Contents/Public/"
       - "/usr/local/go/bin/"
-      - "/Applications/Xcode.app/Contents/Developer/usr/libexec/git-core/"
       - "/opt/miniconda3/condabin/"
       - "/Users/delta/Library/Python/3.13/bin/"
       - "/Users/delta/.local/bin/"
+      - "/Users/delta/.cursor/extensions/ms-python.debugpy-2025.14.1-darwin-arm64/bundled/scripts/noConfigScripts/"
     searched_directories:
       - "/Users/delta/esp/v5.5/esp-idf/components/espcoredump/uname"
       - "/Users/delta/esp/v5.5/esp-idf/components/partition_table/uname"
@@ -250,7 +250,6 @@ events:
         - "/Library/Apple/usr/bin"
         - "/Applications/VMware Fusion.app/Contents/Public"
         - "/usr/local/go/bin"
-        - "/Applications/Xcode.app/Contents/Developer/usr/libexec/git-core"
         - "/opt/homebrew/opt/postgresql@15/bin"
         - "/Users/delta/.deno/bin"
         - "/opt/miniconda3/condabin"
@@ -259,6 +258,7 @@ events:
         - "/opt/local/sbin"
         - "/Users/delta/Library/Python/3.13/bin"
         - "/Users/delta/.local/bin"
+        - "/Users/delta/.cursor/extensions/ms-python.debugpy-2025.14.1-darwin-arm64/bundled/scripts/noConfigScripts"
         - "/Users/delta/Library/Python/3.13/bin"
         - "/Users/delta/.local/bin"
         - "/Users/delta/Library/Python/3.13/bin"
@@ -327,10 +327,10 @@ events:
       - "/Library/Apple/usr/bin/"
       - "/Applications/VMware Fusion.app/Contents/Public/"
       - "/usr/local/go/bin/"
-      - "/Applications/Xcode.app/Contents/Developer/usr/libexec/git-core/"
       - "/opt/miniconda3/condabin/"
       - "/Users/delta/Library/Python/3.13/bin/"
       - "/Users/delta/.local/bin/"
+      - "/Users/delta/.cursor/extensions/ms-python.debugpy-2025.14.1-darwin-arm64/bundled/scripts/noConfigScripts/"
     searched_directories:
       - "/Users/delta/esp/v5.5/esp-idf/components/espcoredump/ninja-build"
       - "/Users/delta/esp/v5.5/esp-idf/components/espcoredump/ninja"
@@ -420,7 +420,6 @@ events:
         - "/Library/Apple/usr/bin"
         - "/Applications/VMware Fusion.app/Contents/Public"
         - "/usr/local/go/bin"
-        - "/Applications/Xcode.app/Contents/Developer/usr/libexec/git-core"
         - "/opt/homebrew/opt/postgresql@15/bin"
         - "/Users/delta/.deno/bin"
         - "/opt/miniconda3/condabin"
@@ -429,6 +428,7 @@ events:
         - "/opt/local/sbin"
         - "/Users/delta/Library/Python/3.13/bin"
         - "/Users/delta/.local/bin"
+        - "/Users/delta/.cursor/extensions/ms-python.debugpy-2025.14.1-darwin-arm64/bundled/scripts/noConfigScripts"
         - "/Users/delta/Library/Python/3.13/bin"
         - "/Users/delta/.local/bin"
         - "/Users/delta/Library/Python/3.13/bin"
@@ -487,10 +487,10 @@ events:
       - "/Library/Apple/usr/bin/"
       - "/Applications/VMware Fusion.app/Contents/Public/"
       - "/usr/local/go/bin/"
-      - "/Applications/Xcode.app/Contents/Developer/usr/libexec/git-core/"
       - "/opt/miniconda3/condabin/"
       - "/Users/delta/Library/Python/3.13/bin/"
       - "/Users/delta/.local/bin/"
+      - "/Users/delta/.cursor/extensions/ms-python.debugpy-2025.14.1-darwin-arm64/bundled/scripts/noConfigScripts/"
     searched_directories:
       - "/Users/delta/esp/v5.5/esp-idf/components/espcoredump/xtensa-esp32s3-elf-gcc"
       - "/Users/delta/esp/v5.5/esp-idf/components/partition_table/xtensa-esp32s3-elf-gcc"
@@ -533,7 +533,6 @@ events:
         - "/Library/Apple/usr/bin"
         - "/Applications/VMware Fusion.app/Contents/Public"
         - "/usr/local/go/bin"
-        - "/Applications/Xcode.app/Contents/Developer/usr/libexec/git-core"
         - "/opt/homebrew/opt/postgresql@15/bin"
         - "/Users/delta/.deno/bin"
         - "/opt/miniconda3/condabin"
@@ -542,6 +541,7 @@ events:
         - "/opt/local/sbin"
         - "/Users/delta/Library/Python/3.13/bin"
         - "/Users/delta/.local/bin"
+        - "/Users/delta/.cursor/extensions/ms-python.debugpy-2025.14.1-darwin-arm64/bundled/scripts/noConfigScripts"
         - "/Users/delta/Library/Python/3.13/bin"
         - "/Users/delta/.local/bin"
         - "/Users/delta/Library/Python/3.13/bin"
@@ -609,7 +609,6 @@ events:
         - "/Library/Apple/usr/bin"
         - "/Applications/VMware Fusion.app/Contents/Public"
         - "/usr/local/go/bin"
-        - "/Applications/Xcode.app/Contents/Developer/usr/libexec/git-core"
         - "/opt/homebrew/opt/postgresql@15/bin"
         - "/Users/delta/.deno/bin"
         - "/opt/miniconda3/condabin"
@@ -618,6 +617,7 @@ events:
         - "/opt/local/sbin"
         - "/Users/delta/Library/Python/3.13/bin"
         - "/Users/delta/.local/bin"
+        - "/Users/delta/.cursor/extensions/ms-python.debugpy-2025.14.1-darwin-arm64/bundled/scripts/noConfigScripts"
         - "/Users/delta/Library/Python/3.13/bin"
         - "/Users/delta/.local/bin"
         - "/Users/delta/Library/Python/3.13/bin"
@@ -700,10 +700,10 @@ events:
       - "/Library/Apple/usr/bin/"
       - "/Applications/VMware Fusion.app/Contents/Public/"
       - "/usr/local/go/bin/"
-      - "/Applications/Xcode.app/Contents/Developer/usr/libexec/git-core/"
       - "/opt/miniconda3/condabin/"
       - "/Users/delta/Library/Python/3.13/bin/"
       - "/Users/delta/.local/bin/"
+      - "/Users/delta/.cursor/extensions/ms-python.debugpy-2025.14.1-darwin-arm64/bundled/scripts/noConfigScripts/"
     found: "/Users/delta/.espressif/tools/xtensa-esp-elf/esp-14.2.0_20241119/xtensa-esp-elf/bin/xtensa-esp32s3-elf-ar"
     search_context:
       ENV{PATH}:
@@ -740,7 +740,6 @@ events:
         - "/Library/Apple/usr/bin"
         - "/Applications/VMware Fusion.app/Contents/Public"
         - "/usr/local/go/bin"
-        - "/Applications/Xcode.app/Contents/Developer/usr/libexec/git-core"
         - "/opt/homebrew/opt/postgresql@15/bin"
         - "/Users/delta/.deno/bin"
         - "/opt/miniconda3/condabin"
@@ -749,6 +748,7 @@ events:
         - "/opt/local/sbin"
         - "/Users/delta/Library/Python/3.13/bin"
         - "/Users/delta/.local/bin"
+        - "/Users/delta/.cursor/extensions/ms-python.debugpy-2025.14.1-darwin-arm64/bundled/scripts/noConfigScripts"
         - "/Users/delta/Library/Python/3.13/bin"
         - "/Users/delta/.local/bin"
         - "/Users/delta/Library/Python/3.13/bin"
@@ -808,10 +808,10 @@ events:
       - "/Library/Apple/usr/bin/"
       - "/Applications/VMware Fusion.app/Contents/Public/"
       - "/usr/local/go/bin/"
-      - "/Applications/Xcode.app/Contents/Developer/usr/libexec/git-core/"
       - "/opt/miniconda3/condabin/"
       - "/Users/delta/Library/Python/3.13/bin/"
       - "/Users/delta/.local/bin/"
+      - "/Users/delta/.cursor/extensions/ms-python.debugpy-2025.14.1-darwin-arm64/bundled/scripts/noConfigScripts/"
     found: "/Users/delta/.espressif/tools/xtensa-esp-elf/esp-14.2.0_20241119/xtensa-esp-elf/bin/xtensa-esp32s3-elf-ranlib"
     search_context:
       ENV{PATH}:
@@ -848,7 +848,6 @@ events:
         - "/Library/Apple/usr/bin"
         - "/Applications/VMware Fusion.app/Contents/Public"
         - "/usr/local/go/bin"
-        - "/Applications/Xcode.app/Contents/Developer/usr/libexec/git-core"
         - "/opt/homebrew/opt/postgresql@15/bin"
         - "/Users/delta/.deno/bin"
         - "/opt/miniconda3/condabin"
@@ -857,6 +856,7 @@ events:
         - "/opt/local/sbin"
         - "/Users/delta/Library/Python/3.13/bin"
         - "/Users/delta/.local/bin"
+        - "/Users/delta/.cursor/extensions/ms-python.debugpy-2025.14.1-darwin-arm64/bundled/scripts/noConfigScripts"
         - "/Users/delta/Library/Python/3.13/bin"
         - "/Users/delta/.local/bin"
         - "/Users/delta/Library/Python/3.13/bin"
@@ -916,10 +916,10 @@ events:
       - "/Library/Apple/usr/bin/"
       - "/Applications/VMware Fusion.app/Contents/Public/"
       - "/usr/local/go/bin/"
-      - "/Applications/Xcode.app/Contents/Developer/usr/libexec/git-core/"
       - "/opt/miniconda3/condabin/"
       - "/Users/delta/Library/Python/3.13/bin/"
       - "/Users/delta/.local/bin/"
+      - "/Users/delta/.cursor/extensions/ms-python.debugpy-2025.14.1-darwin-arm64/bundled/scripts/noConfigScripts/"
     found: "/Users/delta/.espressif/tools/xtensa-esp-elf/esp-14.2.0_20241119/xtensa-esp-elf/bin/xtensa-esp32s3-elf-strip"
     search_context:
       ENV{PATH}:
@@ -956,7 +956,6 @@ events:
         - "/Library/Apple/usr/bin"
         - "/Applications/VMware Fusion.app/Contents/Public"
         - "/usr/local/go/bin"
-        - "/Applications/Xcode.app/Contents/Developer/usr/libexec/git-core"
         - "/opt/homebrew/opt/postgresql@15/bin"
         - "/Users/delta/.deno/bin"
         - "/opt/miniconda3/condabin"
@@ -965,6 +964,7 @@ events:
         - "/opt/local/sbin"
         - "/Users/delta/Library/Python/3.13/bin"
         - "/Users/delta/.local/bin"
+        - "/Users/delta/.cursor/extensions/ms-python.debugpy-2025.14.1-darwin-arm64/bundled/scripts/noConfigScripts"
         - "/Users/delta/Library/Python/3.13/bin"
         - "/Users/delta/.local/bin"
         - "/Users/delta/Library/Python/3.13/bin"
@@ -1024,10 +1024,10 @@ events:
       - "/Library/Apple/usr/bin/"
       - "/Applications/VMware Fusion.app/Contents/Public/"
       - "/usr/local/go/bin/"
-      - "/Applications/Xcode.app/Contents/Developer/usr/libexec/git-core/"
       - "/opt/miniconda3/condabin/"
       - "/Users/delta/Library/Python/3.13/bin/"
       - "/Users/delta/.local/bin/"
+      - "/Users/delta/.cursor/extensions/ms-python.debugpy-2025.14.1-darwin-arm64/bundled/scripts/noConfigScripts/"
     found: "/Users/delta/.espressif/tools/xtensa-esp-elf/esp-14.2.0_20241119/xtensa-esp-elf/bin/xtensa-esp32s3-elf-ld"
     search_context:
       ENV{PATH}:
@@ -1064,7 +1064,6 @@ events:
         - "/Library/Apple/usr/bin"
         - "/Applications/VMware Fusion.app/Contents/Public"
         - "/usr/local/go/bin"
-        - "/Applications/Xcode.app/Contents/Developer/usr/libexec/git-core"
         - "/opt/homebrew/opt/postgresql@15/bin"
         - "/Users/delta/.deno/bin"
         - "/opt/miniconda3/condabin"
@@ -1073,6 +1072,7 @@ events:
         - "/opt/local/sbin"
         - "/Users/delta/Library/Python/3.13/bin"
         - "/Users/delta/.local/bin"
+        - "/Users/delta/.cursor/extensions/ms-python.debugpy-2025.14.1-darwin-arm64/bundled/scripts/noConfigScripts"
         - "/Users/delta/Library/Python/3.13/bin"
         - "/Users/delta/.local/bin"
         - "/Users/delta/Library/Python/3.13/bin"
@@ -1132,10 +1132,10 @@ events:
       - "/Library/Apple/usr/bin/"
       - "/Applications/VMware Fusion.app/Contents/Public/"
       - "/usr/local/go/bin/"
-      - "/Applications/Xcode.app/Contents/Developer/usr/libexec/git-core/"
       - "/opt/miniconda3/condabin/"
       - "/Users/delta/Library/Python/3.13/bin/"
       - "/Users/delta/.local/bin/"
+      - "/Users/delta/.cursor/extensions/ms-python.debugpy-2025.14.1-darwin-arm64/bundled/scripts/noConfigScripts/"
     found: "/Users/delta/.espressif/tools/xtensa-esp-elf/esp-14.2.0_20241119/xtensa-esp-elf/bin/xtensa-esp32s3-elf-nm"
     search_context:
       ENV{PATH}:
@@ -1172,7 +1172,6 @@ events:
         - "/Library/Apple/usr/bin"
         - "/Applications/VMware Fusion.app/Contents/Public"
         - "/usr/local/go/bin"
-        - "/Applications/Xcode.app/Contents/Developer/usr/libexec/git-core"
         - "/opt/homebrew/opt/postgresql@15/bin"
         - "/Users/delta/.deno/bin"
         - "/opt/miniconda3/condabin"
@@ -1181,6 +1180,7 @@ events:
         - "/opt/local/sbin"
         - "/Users/delta/Library/Python/3.13/bin"
         - "/Users/delta/.local/bin"
+        - "/Users/delta/.cursor/extensions/ms-python.debugpy-2025.14.1-darwin-arm64/bundled/scripts/noConfigScripts"
         - "/Users/delta/Library/Python/3.13/bin"
         - "/Users/delta/.local/bin"
         - "/Users/delta/Library/Python/3.13/bin"
@@ -1240,10 +1240,10 @@ events:
       - "/Library/Apple/usr/bin/"
       - "/Applications/VMware Fusion.app/Contents/Public/"
       - "/usr/local/go/bin/"
-      - "/Applications/Xcode.app/Contents/Developer/usr/libexec/git-core/"
       - "/opt/miniconda3/condabin/"
       - "/Users/delta/Library/Python/3.13/bin/"
       - "/Users/delta/.local/bin/"
+      - "/Users/delta/.cursor/extensions/ms-python.debugpy-2025.14.1-darwin-arm64/bundled/scripts/noConfigScripts/"
     found: "/Users/delta/.espressif/tools/xtensa-esp-elf/esp-14.2.0_20241119/xtensa-esp-elf/bin/xtensa-esp32s3-elf-objdump"
     search_context:
       ENV{PATH}:
@@ -1280,7 +1280,6 @@ events:
         - "/Library/Apple/usr/bin"
         - "/Applications/VMware Fusion.app/Contents/Public"
         - "/usr/local/go/bin"
-        - "/Applications/Xcode.app/Contents/Developer/usr/libexec/git-core"
         - "/opt/homebrew/opt/postgresql@15/bin"
         - "/Users/delta/.deno/bin"
         - "/opt/miniconda3/condabin"
@@ -1289,6 +1288,7 @@ events:
         - "/opt/local/sbin"
         - "/Users/delta/Library/Python/3.13/bin"
         - "/Users/delta/.local/bin"
+        - "/Users/delta/.cursor/extensions/ms-python.debugpy-2025.14.1-darwin-arm64/bundled/scripts/noConfigScripts"
         - "/Users/delta/Library/Python/3.13/bin"
         - "/Users/delta/.local/bin"
         - "/Users/delta/Library/Python/3.13/bin"
@@ -1348,10 +1348,10 @@ events:
       - "/Library/Apple/usr/bin/"
       - "/Applications/VMware Fusion.app/Contents/Public/"
       - "/usr/local/go/bin/"
-      - "/Applications/Xcode.app/Contents/Developer/usr/libexec/git-core/"
       - "/opt/miniconda3/condabin/"
       - "/Users/delta/Library/Python/3.13/bin/"
       - "/Users/delta/.local/bin/"
+      - "/Users/delta/.cursor/extensions/ms-python.debugpy-2025.14.1-darwin-arm64/bundled/scripts/noConfigScripts/"
     found: "/Users/delta/.espressif/tools/xtensa-esp-elf/esp-14.2.0_20241119/xtensa-esp-elf/bin/xtensa-esp32s3-elf-objcopy"
     search_context:
       ENV{PATH}:
@@ -1388,7 +1388,6 @@ events:
         - "/Library/Apple/usr/bin"
         - "/Applications/VMware Fusion.app/Contents/Public"
         - "/usr/local/go/bin"
-        - "/Applications/Xcode.app/Contents/Developer/usr/libexec/git-core"
         - "/opt/homebrew/opt/postgresql@15/bin"
         - "/Users/delta/.deno/bin"
         - "/opt/miniconda3/condabin"
@@ -1397,6 +1396,7 @@ events:
         - "/opt/local/sbin"
         - "/Users/delta/Library/Python/3.13/bin"
         - "/Users/delta/.local/bin"
+        - "/Users/delta/.cursor/extensions/ms-python.debugpy-2025.14.1-darwin-arm64/bundled/scripts/noConfigScripts"
         - "/Users/delta/Library/Python/3.13/bin"
         - "/Users/delta/.local/bin"
         - "/Users/delta/Library/Python/3.13/bin"
@@ -1456,10 +1456,10 @@ events:
       - "/Library/Apple/usr/bin/"
       - "/Applications/VMware Fusion.app/Contents/Public/"
       - "/usr/local/go/bin/"
-      - "/Applications/Xcode.app/Contents/Developer/usr/libexec/git-core/"
       - "/opt/miniconda3/condabin/"
       - "/Users/delta/Library/Python/3.13/bin/"
       - "/Users/delta/.local/bin/"
+      - "/Users/delta/.cursor/extensions/ms-python.debugpy-2025.14.1-darwin-arm64/bundled/scripts/noConfigScripts/"
     found: "/Users/delta/.espressif/tools/xtensa-esp-elf/esp-14.2.0_20241119/xtensa-esp-elf/bin/xtensa-esp32s3-elf-readelf"
     search_context:
       ENV{PATH}:
@@ -1496,7 +1496,6 @@ events:
         - "/Library/Apple/usr/bin"
         - "/Applications/VMware Fusion.app/Contents/Public"
         - "/usr/local/go/bin"
-        - "/Applications/Xcode.app/Contents/Developer/usr/libexec/git-core"
         - "/opt/homebrew/opt/postgresql@15/bin"
         - "/Users/delta/.deno/bin"
         - "/opt/miniconda3/condabin"
@@ -1505,6 +1504,7 @@ events:
         - "/opt/local/sbin"
         - "/Users/delta/Library/Python/3.13/bin"
         - "/Users/delta/.local/bin"
+        - "/Users/delta/.cursor/extensions/ms-python.debugpy-2025.14.1-darwin-arm64/bundled/scripts/noConfigScripts"
         - "/Users/delta/Library/Python/3.13/bin"
         - "/Users/delta/.local/bin"
         - "/Users/delta/Library/Python/3.13/bin"
@@ -1564,10 +1564,10 @@ events:
       - "/Library/Apple/usr/bin/"
       - "/Applications/VMware Fusion.app/Contents/Public/"
       - "/usr/local/go/bin/"
-      - "/Applications/Xcode.app/Contents/Developer/usr/libexec/git-core/"
       - "/opt/miniconda3/condabin/"
       - "/Users/delta/Library/Python/3.13/bin/"
       - "/Users/delta/.local/bin/"
+      - "/Users/delta/.cursor/extensions/ms-python.debugpy-2025.14.1-darwin-arm64/bundled/scripts/noConfigScripts/"
     searched_directories:
       - "/Users/delta/.espressif/tools/xtensa-esp-elf/esp-14.2.0_20241119/xtensa-esp-elf/bin/xtensa-esp32s3-elf-dlltool"
       - "/Users/delta/esp/v5.5/esp-idf/components/espcoredump/xtensa-esp32s3-elf-dlltool"
@@ -1602,10 +1602,10 @@ events:
       - "/Library/Apple/usr/bin/xtensa-esp32s3-elf-dlltool"
       - "/Applications/VMware Fusion.app/Contents/Public/xtensa-esp32s3-elf-dlltool"
       - "/usr/local/go/bin/xtensa-esp32s3-elf-dlltool"
-      - "/Applications/Xcode.app/Contents/Developer/usr/libexec/git-core/xtensa-esp32s3-elf-dlltool"
       - "/opt/miniconda3/condabin/xtensa-esp32s3-elf-dlltool"
       - "/Users/delta/Library/Python/3.13/bin/xtensa-esp32s3-elf-dlltool"
       - "/Users/delta/.local/bin/xtensa-esp32s3-elf-dlltool"
+      - "/Users/delta/.cursor/extensions/ms-python.debugpy-2025.14.1-darwin-arm64/bundled/scripts/noConfigScripts/xtensa-esp32s3-elf-dlltool"
       - "/Users/delta/.espressif/tools/xtensa-esp-elf/esp-14.2.0_20241119/xtensa-esp-elf/bin/dlltool"
       - "/Users/delta/esp/v5.5/esp-idf/components/espcoredump/dlltool"
       - "/Users/delta/esp/v5.5/esp-idf/components/partition_table/dlltool"
@@ -1639,10 +1639,10 @@ events:
       - "/Library/Apple/usr/bin/dlltool"
       - "/Applications/VMware Fusion.app/Contents/Public/dlltool"
       - "/usr/local/go/bin/dlltool"
-      - "/Applications/Xcode.app/Contents/Developer/usr/libexec/git-core/dlltool"
       - "/opt/miniconda3/condabin/dlltool"
       - "/Users/delta/Library/Python/3.13/bin/dlltool"
       - "/Users/delta/.local/bin/dlltool"
+      - "/Users/delta/.cursor/extensions/ms-python.debugpy-2025.14.1-darwin-arm64/bundled/scripts/noConfigScripts/dlltool"
     found: false
     search_context:
       ENV{PATH}:
@@ -1679,7 +1679,6 @@ events:
         - "/Library/Apple/usr/bin"
         - "/Applications/VMware Fusion.app/Contents/Public"
         - "/usr/local/go/bin"
-        - "/Applications/Xcode.app/Contents/Developer/usr/libexec/git-core"
         - "/opt/homebrew/opt/postgresql@15/bin"
         - "/Users/delta/.deno/bin"
         - "/opt/miniconda3/condabin"
@@ -1688,6 +1687,7 @@ events:
         - "/opt/local/sbin"
         - "/Users/delta/Library/Python/3.13/bin"
         - "/Users/delta/.local/bin"
+        - "/Users/delta/.cursor/extensions/ms-python.debugpy-2025.14.1-darwin-arm64/bundled/scripts/noConfigScripts"
         - "/Users/delta/Library/Python/3.13/bin"
         - "/Users/delta/.local/bin"
         - "/Users/delta/Library/Python/3.13/bin"
@@ -1747,10 +1747,10 @@ events:
       - "/Library/Apple/usr/bin/"
       - "/Applications/VMware Fusion.app/Contents/Public/"
       - "/usr/local/go/bin/"
-      - "/Applications/Xcode.app/Contents/Developer/usr/libexec/git-core/"
       - "/opt/miniconda3/condabin/"
       - "/Users/delta/Library/Python/3.13/bin/"
       - "/Users/delta/.local/bin/"
+      - "/Users/delta/.cursor/extensions/ms-python.debugpy-2025.14.1-darwin-arm64/bundled/scripts/noConfigScripts/"
     found: "/Users/delta/.espressif/tools/xtensa-esp-elf/esp-14.2.0_20241119/xtensa-esp-elf/bin/xtensa-esp32s3-elf-addr2line"
     search_context:
       ENV{PATH}:
@@ -1787,7 +1787,6 @@ events:
         - "/Library/Apple/usr/bin"
         - "/Applications/VMware Fusion.app/Contents/Public"
         - "/usr/local/go/bin"
-        - "/Applications/Xcode.app/Contents/Developer/usr/libexec/git-core"
         - "/opt/homebrew/opt/postgresql@15/bin"
         - "/Users/delta/.deno/bin"
         - "/opt/miniconda3/condabin"
@@ -1796,6 +1795,7 @@ events:
         - "/opt/local/sbin"
         - "/Users/delta/Library/Python/3.13/bin"
         - "/Users/delta/.local/bin"
+        - "/Users/delta/.cursor/extensions/ms-python.debugpy-2025.14.1-darwin-arm64/bundled/scripts/noConfigScripts"
         - "/Users/delta/Library/Python/3.13/bin"
         - "/Users/delta/.local/bin"
         - "/Users/delta/Library/Python/3.13/bin"
@@ -1855,10 +1855,10 @@ events:
       - "/Library/Apple/usr/bin/"
       - "/Applications/VMware Fusion.app/Contents/Public/"
       - "/usr/local/go/bin/"
-      - "/Applications/Xcode.app/Contents/Developer/usr/libexec/git-core/"
       - "/opt/miniconda3/condabin/"
       - "/Users/delta/Library/Python/3.13/bin/"
       - "/Users/delta/.local/bin/"
+      - "/Users/delta/.cursor/extensions/ms-python.debugpy-2025.14.1-darwin-arm64/bundled/scripts/noConfigScripts/"
     searched_directories:
       - "/Users/delta/.espressif/tools/xtensa-esp-elf/esp-14.2.0_20241119/xtensa-esp-elf/bin/xtensa-esp32s3-elf-tapi"
       - "/Users/delta/esp/v5.5/esp-idf/components/espcoredump/xtensa-esp32s3-elf-tapi"
@@ -1893,10 +1893,10 @@ events:
       - "/Library/Apple/usr/bin/xtensa-esp32s3-elf-tapi"
       - "/Applications/VMware Fusion.app/Contents/Public/xtensa-esp32s3-elf-tapi"
       - "/usr/local/go/bin/xtensa-esp32s3-elf-tapi"
-      - "/Applications/Xcode.app/Contents/Developer/usr/libexec/git-core/xtensa-esp32s3-elf-tapi"
       - "/opt/miniconda3/condabin/xtensa-esp32s3-elf-tapi"
       - "/Users/delta/Library/Python/3.13/bin/xtensa-esp32s3-elf-tapi"
       - "/Users/delta/.local/bin/xtensa-esp32s3-elf-tapi"
+      - "/Users/delta/.cursor/extensions/ms-python.debugpy-2025.14.1-darwin-arm64/bundled/scripts/noConfigScripts/xtensa-esp32s3-elf-tapi"
       - "/Users/delta/.espressif/tools/xtensa-esp-elf/esp-14.2.0_20241119/xtensa-esp-elf/bin/tapi"
       - "/Users/delta/esp/v5.5/esp-idf/components/espcoredump/tapi"
       - "/Users/delta/esp/v5.5/esp-idf/components/partition_table/tapi"
@@ -1930,10 +1930,10 @@ events:
       - "/Library/Apple/usr/bin/tapi"
       - "/Applications/VMware Fusion.app/Contents/Public/tapi"
       - "/usr/local/go/bin/tapi"
-      - "/Applications/Xcode.app/Contents/Developer/usr/libexec/git-core/tapi"
       - "/opt/miniconda3/condabin/tapi"
       - "/Users/delta/Library/Python/3.13/bin/tapi"
       - "/Users/delta/.local/bin/tapi"
+      - "/Users/delta/.cursor/extensions/ms-python.debugpy-2025.14.1-darwin-arm64/bundled/scripts/noConfigScripts/tapi"
     found: false
     search_context:
       ENV{PATH}:
@@ -1970,7 +1970,6 @@ events:
         - "/Library/Apple/usr/bin"
         - "/Applications/VMware Fusion.app/Contents/Public"
         - "/usr/local/go/bin"
-        - "/Applications/Xcode.app/Contents/Developer/usr/libexec/git-core"
         - "/opt/homebrew/opt/postgresql@15/bin"
         - "/Users/delta/.deno/bin"
         - "/opt/miniconda3/condabin"
@@ -1979,6 +1978,7 @@ events:
         - "/opt/local/sbin"
         - "/Users/delta/Library/Python/3.13/bin"
         - "/Users/delta/.local/bin"
+        - "/Users/delta/.cursor/extensions/ms-python.debugpy-2025.14.1-darwin-arm64/bundled/scripts/noConfigScripts"
         - "/Users/delta/Library/Python/3.13/bin"
         - "/Users/delta/.local/bin"
         - "/Users/delta/Library/Python/3.13/bin"
@@ -2040,10 +2040,10 @@ events:
       - "/Library/Apple/usr/bin/"
       - "/Applications/VMware Fusion.app/Contents/Public/"
       - "/usr/local/go/bin/"
-      - "/Applications/Xcode.app/Contents/Developer/usr/libexec/git-core/"
       - "/opt/miniconda3/condabin/"
       - "/Users/delta/Library/Python/3.13/bin/"
       - "/Users/delta/.local/bin/"
+      - "/Users/delta/.cursor/extensions/ms-python.debugpy-2025.14.1-darwin-arm64/bundled/scripts/noConfigScripts/"
     searched_directories:
       - "/Users/delta/.espressif/tools/xtensa-esp-elf/esp-14.2.0_20241119/xtensa-esp-elf/bin/xtensa-esp32s3-elf-gcc-ar-14.2"
       - "/Users/delta/esp/v5.5/esp-idf/components/espcoredump/xtensa-esp32s3-elf-gcc-ar-14.2"
@@ -2078,10 +2078,10 @@ events:
       - "/Library/Apple/usr/bin/xtensa-esp32s3-elf-gcc-ar-14.2"
       - "/Applications/VMware Fusion.app/Contents/Public/xtensa-esp32s3-elf-gcc-ar-14.2"
       - "/usr/local/go/bin/xtensa-esp32s3-elf-gcc-ar-14.2"
-      - "/Applications/Xcode.app/Contents/Developer/usr/libexec/git-core/xtensa-esp32s3-elf-gcc-ar-14.2"
       - "/opt/miniconda3/condabin/xtensa-esp32s3-elf-gcc-ar-14.2"
       - "/Users/delta/Library/Python/3.13/bin/xtensa-esp32s3-elf-gcc-ar-14.2"
       - "/Users/delta/.local/bin/xtensa-esp32s3-elf-gcc-ar-14.2"
+      - "/Users/delta/.cursor/extensions/ms-python.debugpy-2025.14.1-darwin-arm64/bundled/scripts/noConfigScripts/xtensa-esp32s3-elf-gcc-ar-14.2"
       - "/Users/delta/.espressif/tools/xtensa-esp-elf/esp-14.2.0_20241119/xtensa-esp-elf/bin/xtensa-esp32s3-elf-gcc-ar-14"
       - "/Users/delta/esp/v5.5/esp-idf/components/espcoredump/xtensa-esp32s3-elf-gcc-ar-14"
       - "/Users/delta/esp/v5.5/esp-idf/components/partition_table/xtensa-esp32s3-elf-gcc-ar-14"
@@ -2115,10 +2115,10 @@ events:
       - "/Library/Apple/usr/bin/xtensa-esp32s3-elf-gcc-ar-14"
       - "/Applications/VMware Fusion.app/Contents/Public/xtensa-esp32s3-elf-gcc-ar-14"
       - "/usr/local/go/bin/xtensa-esp32s3-elf-gcc-ar-14"
-      - "/Applications/Xcode.app/Contents/Developer/usr/libexec/git-core/xtensa-esp32s3-elf-gcc-ar-14"
       - "/opt/miniconda3/condabin/xtensa-esp32s3-elf-gcc-ar-14"
       - "/Users/delta/Library/Python/3.13/bin/xtensa-esp32s3-elf-gcc-ar-14"
       - "/Users/delta/.local/bin/xtensa-esp32s3-elf-gcc-ar-14"
+      - "/Users/delta/.cursor/extensions/ms-python.debugpy-2025.14.1-darwin-arm64/bundled/scripts/noConfigScripts/xtensa-esp32s3-elf-gcc-ar-14"
       - "/Users/delta/.espressif/tools/xtensa-esp-elf/esp-14.2.0_20241119/xtensa-esp-elf/bin/xtensa-esp32s3-elf-gcc-ar14"
       - "/Users/delta/esp/v5.5/esp-idf/components/espcoredump/xtensa-esp32s3-elf-gcc-ar14"
       - "/Users/delta/esp/v5.5/esp-idf/components/partition_table/xtensa-esp32s3-elf-gcc-ar14"
@@ -2152,10 +2152,10 @@ events:
       - "/Library/Apple/usr/bin/xtensa-esp32s3-elf-gcc-ar14"
       - "/Applications/VMware Fusion.app/Contents/Public/xtensa-esp32s3-elf-gcc-ar14"
       - "/usr/local/go/bin/xtensa-esp32s3-elf-gcc-ar14"
-      - "/Applications/Xcode.app/Contents/Developer/usr/libexec/git-core/xtensa-esp32s3-elf-gcc-ar14"
       - "/opt/miniconda3/condabin/xtensa-esp32s3-elf-gcc-ar14"
       - "/Users/delta/Library/Python/3.13/bin/xtensa-esp32s3-elf-gcc-ar14"
       - "/Users/delta/.local/bin/xtensa-esp32s3-elf-gcc-ar14"
+      - "/Users/delta/.cursor/extensions/ms-python.debugpy-2025.14.1-darwin-arm64/bundled/scripts/noConfigScripts/xtensa-esp32s3-elf-gcc-ar14"
     found: "/Users/delta/.espressif/tools/xtensa-esp-elf/esp-14.2.0_20241119/xtensa-esp-elf/bin/xtensa-esp32s3-elf-gcc-ar"
     search_context:
       ENV{PATH}:
@@ -2192,7 +2192,6 @@ events:
         - "/Library/Apple/usr/bin"
         - "/Applications/VMware Fusion.app/Contents/Public"
         - "/usr/local/go/bin"
-        - "/Applications/Xcode.app/Contents/Developer/usr/libexec/git-core"
         - "/opt/homebrew/opt/postgresql@15/bin"
         - "/Users/delta/.deno/bin"
         - "/opt/miniconda3/condabin"
@@ -2201,6 +2200,7 @@ events:
         - "/opt/local/sbin"
         - "/Users/delta/Library/Python/3.13/bin"
         - "/Users/delta/.local/bin"
+        - "/Users/delta/.cursor/extensions/ms-python.debugpy-2025.14.1-darwin-arm64/bundled/scripts/noConfigScripts"
         - "/Users/delta/Library/Python/3.13/bin"
         - "/Users/delta/.local/bin"
         - "/Users/delta/Library/Python/3.13/bin"
@@ -2262,10 +2262,10 @@ events:
       - "/Library/Apple/usr/bin/"
       - "/Applications/VMware Fusion.app/Contents/Public/"
       - "/usr/local/go/bin/"
-      - "/Applications/Xcode.app/Contents/Developer/usr/libexec/git-core/"
       - "/opt/miniconda3/condabin/"
       - "/Users/delta/Library/Python/3.13/bin/"
       - "/Users/delta/.local/bin/"
+      - "/Users/delta/.cursor/extensions/ms-python.debugpy-2025.14.1-darwin-arm64/bundled/scripts/noConfigScripts/"
     searched_directories:
       - "/Users/delta/.espressif/tools/xtensa-esp-elf/esp-14.2.0_20241119/xtensa-esp-elf/bin/xtensa-esp32s3-elf-gcc-ranlib-14.2"
       - "/Users/delta/esp/v5.5/esp-idf/components/espcoredump/xtensa-esp32s3-elf-gcc-ranlib-14.2"
@@ -2300,10 +2300,10 @@ events:
       - "/Library/Apple/usr/bin/xtensa-esp32s3-elf-gcc-ranlib-14.2"
       - "/Applications/VMware Fusion.app/Contents/Public/xtensa-esp32s3-elf-gcc-ranlib-14.2"
       - "/usr/local/go/bin/xtensa-esp32s3-elf-gcc-ranlib-14.2"
-      - "/Applications/Xcode.app/Contents/Developer/usr/libexec/git-core/xtensa-esp32s3-elf-gcc-ranlib-14.2"
       - "/opt/miniconda3/condabin/xtensa-esp32s3-elf-gcc-ranlib-14.2"
       - "/Users/delta/Library/Python/3.13/bin/xtensa-esp32s3-elf-gcc-ranlib-14.2"
       - "/Users/delta/.local/bin/xtensa-esp32s3-elf-gcc-ranlib-14.2"
+      - "/Users/delta/.cursor/extensions/ms-python.debugpy-2025.14.1-darwin-arm64/bundled/scripts/noConfigScripts/xtensa-esp32s3-elf-gcc-ranlib-14.2"
       - "/Users/delta/.espressif/tools/xtensa-esp-elf/esp-14.2.0_20241119/xtensa-esp-elf/bin/xtensa-esp32s3-elf-gcc-ranlib-14"
       - "/Users/delta/esp/v5.5/esp-idf/components/espcoredump/xtensa-esp32s3-elf-gcc-ranlib-14"
       - "/Users/delta/esp/v5.5/esp-idf/components/partition_table/xtensa-esp32s3-elf-gcc-ranlib-14"
@@ -2337,10 +2337,10 @@ events:
       - "/Library/Apple/usr/bin/xtensa-esp32s3-elf-gcc-ranlib-14"
       - "/Applications/VMware Fusion.app/Contents/Public/xtensa-esp32s3-elf-gcc-ranlib-14"
       - "/usr/local/go/bin/xtensa-esp32s3-elf-gcc-ranlib-14"
-      - "/Applications/Xcode.app/Contents/Developer/usr/libexec/git-core/xtensa-esp32s3-elf-gcc-ranlib-14"
       - "/opt/miniconda3/condabin/xtensa-esp32s3-elf-gcc-ranlib-14"
       - "/Users/delta/Library/Python/3.13/bin/xtensa-esp32s3-elf-gcc-ranlib-14"
       - "/Users/delta/.local/bin/xtensa-esp32s3-elf-gcc-ranlib-14"
+      - "/Users/delta/.cursor/extensions/ms-python.debugpy-2025.14.1-darwin-arm64/bundled/scripts/noConfigScripts/xtensa-esp32s3-elf-gcc-ranlib-14"
       - "/Users/delta/.espressif/tools/xtensa-esp-elf/esp-14.2.0_20241119/xtensa-esp-elf/bin/xtensa-esp32s3-elf-gcc-ranlib14"
       - "/Users/delta/esp/v5.5/esp-idf/components/espcoredump/xtensa-esp32s3-elf-gcc-ranlib14"
       - "/Users/delta/esp/v5.5/esp-idf/components/partition_table/xtensa-esp32s3-elf-gcc-ranlib14"
@@ -2374,10 +2374,10 @@ events:
       - "/Library/Apple/usr/bin/xtensa-esp32s3-elf-gcc-ranlib14"
       - "/Applications/VMware Fusion.app/Contents/Public/xtensa-esp32s3-elf-gcc-ranlib14"
       - "/usr/local/go/bin/xtensa-esp32s3-elf-gcc-ranlib14"
-      - "/Applications/Xcode.app/Contents/Developer/usr/libexec/git-core/xtensa-esp32s3-elf-gcc-ranlib14"
       - "/opt/miniconda3/condabin/xtensa-esp32s3-elf-gcc-ranlib14"
       - "/Users/delta/Library/Python/3.13/bin/xtensa-esp32s3-elf-gcc-ranlib14"
       - "/Users/delta/.local/bin/xtensa-esp32s3-elf-gcc-ranlib14"
+      - "/Users/delta/.cursor/extensions/ms-python.debugpy-2025.14.1-darwin-arm64/bundled/scripts/noConfigScripts/xtensa-esp32s3-elf-gcc-ranlib14"
     found: "/Users/delta/.espressif/tools/xtensa-esp-elf/esp-14.2.0_20241119/xtensa-esp-elf/bin/xtensa-esp32s3-elf-gcc-ranlib"
     search_context:
       ENV{PATH}:
@@ -2414,7 +2414,6 @@ events:
         - "/Library/Apple/usr/bin"
         - "/Applications/VMware Fusion.app/Contents/Public"
         - "/usr/local/go/bin"
-        - "/Applications/Xcode.app/Contents/Developer/usr/libexec/git-core"
         - "/opt/homebrew/opt/postgresql@15/bin"
         - "/Users/delta/.deno/bin"
         - "/opt/miniconda3/condabin"
@@ -2423,6 +2422,7 @@ events:
         - "/opt/local/sbin"
         - "/Users/delta/Library/Python/3.13/bin"
         - "/Users/delta/.local/bin"
+        - "/Users/delta/.cursor/extensions/ms-python.debugpy-2025.14.1-darwin-arm64/bundled/scripts/noConfigScripts"
         - "/Users/delta/Library/Python/3.13/bin"
         - "/Users/delta/.local/bin"
         - "/Users/delta/Library/Python/3.13/bin"
@@ -2481,10 +2481,10 @@ events:
       - "/Library/Apple/usr/bin/"
       - "/Applications/VMware Fusion.app/Contents/Public/"
       - "/usr/local/go/bin/"
-      - "/Applications/Xcode.app/Contents/Developer/usr/libexec/git-core/"
       - "/opt/miniconda3/condabin/"
       - "/Users/delta/Library/Python/3.13/bin/"
       - "/Users/delta/.local/bin/"
+      - "/Users/delta/.cursor/extensions/ms-python.debugpy-2025.14.1-darwin-arm64/bundled/scripts/noConfigScripts/"
     searched_directories:
       - "/Users/delta/esp/v5.5/esp-idf/components/espcoredump/xtensa-esp32s3-elf-g++"
       - "/Users/delta/esp/v5.5/esp-idf/components/partition_table/xtensa-esp32s3-elf-g++"
@@ -2527,7 +2527,6 @@ events:
         - "/Library/Apple/usr/bin"
         - "/Applications/VMware Fusion.app/Contents/Public"
         - "/usr/local/go/bin"
-        - "/Applications/Xcode.app/Contents/Developer/usr/libexec/git-core"
         - "/opt/homebrew/opt/postgresql@15/bin"
         - "/Users/delta/.deno/bin"
         - "/opt/miniconda3/condabin"
@@ -2536,6 +2535,7 @@ events:
         - "/opt/local/sbin"
         - "/Users/delta/Library/Python/3.13/bin"
         - "/Users/delta/.local/bin"
+        - "/Users/delta/.cursor/extensions/ms-python.debugpy-2025.14.1-darwin-arm64/bundled/scripts/noConfigScripts"
         - "/Users/delta/Library/Python/3.13/bin"
         - "/Users/delta/.local/bin"
         - "/Users/delta/Library/Python/3.13/bin"
@@ -2603,7 +2603,6 @@ events:
         - "/Library/Apple/usr/bin"
         - "/Applications/VMware Fusion.app/Contents/Public"
         - "/usr/local/go/bin"
-        - "/Applications/Xcode.app/Contents/Developer/usr/libexec/git-core"
         - "/opt/homebrew/opt/postgresql@15/bin"
         - "/Users/delta/.deno/bin"
         - "/opt/miniconda3/condabin"
@@ -2612,6 +2611,7 @@ events:
         - "/opt/local/sbin"
         - "/Users/delta/Library/Python/3.13/bin"
         - "/Users/delta/.local/bin"
+        - "/Users/delta/.cursor/extensions/ms-python.debugpy-2025.14.1-darwin-arm64/bundled/scripts/noConfigScripts"
         - "/Users/delta/Library/Python/3.13/bin"
         - "/Users/delta/.local/bin"
         - "/Users/delta/Library/Python/3.13/bin"
@@ -2696,10 +2696,10 @@ events:
       - "/Library/Apple/usr/bin/"
       - "/Applications/VMware Fusion.app/Contents/Public/"
       - "/usr/local/go/bin/"
-      - "/Applications/Xcode.app/Contents/Developer/usr/libexec/git-core/"
       - "/opt/miniconda3/condabin/"
       - "/Users/delta/Library/Python/3.13/bin/"
       - "/Users/delta/.local/bin/"
+      - "/Users/delta/.cursor/extensions/ms-python.debugpy-2025.14.1-darwin-arm64/bundled/scripts/noConfigScripts/"
     searched_directories:
       - "/Users/delta/.espressif/tools/xtensa-esp-elf/esp-14.2.0_20241119/xtensa-esp-elf/bin/xtensa-esp32s3-elf-gcc-ar-14.2"
       - "/Users/delta/esp/v5.5/esp-idf/components/espcoredump/xtensa-esp32s3-elf-gcc-ar-14.2"
@@ -2734,10 +2734,10 @@ events:
       - "/Library/Apple/usr/bin/xtensa-esp32s3-elf-gcc-ar-14.2"
       - "/Applications/VMware Fusion.app/Contents/Public/xtensa-esp32s3-elf-gcc-ar-14.2"
       - "/usr/local/go/bin/xtensa-esp32s3-elf-gcc-ar-14.2"
-      - "/Applications/Xcode.app/Contents/Developer/usr/libexec/git-core/xtensa-esp32s3-elf-gcc-ar-14.2"
       - "/opt/miniconda3/condabin/xtensa-esp32s3-elf-gcc-ar-14.2"
       - "/Users/delta/Library/Python/3.13/bin/xtensa-esp32s3-elf-gcc-ar-14.2"
       - "/Users/delta/.local/bin/xtensa-esp32s3-elf-gcc-ar-14.2"
+      - "/Users/delta/.cursor/extensions/ms-python.debugpy-2025.14.1-darwin-arm64/bundled/scripts/noConfigScripts/xtensa-esp32s3-elf-gcc-ar-14.2"
       - "/Users/delta/.espressif/tools/xtensa-esp-elf/esp-14.2.0_20241119/xtensa-esp-elf/bin/xtensa-esp32s3-elf-gcc-ar-14"
       - "/Users/delta/esp/v5.5/esp-idf/components/espcoredump/xtensa-esp32s3-elf-gcc-ar-14"
       - "/Users/delta/esp/v5.5/esp-idf/components/partition_table/xtensa-esp32s3-elf-gcc-ar-14"
@@ -2771,10 +2771,10 @@ events:
       - "/Library/Apple/usr/bin/xtensa-esp32s3-elf-gcc-ar-14"
       - "/Applications/VMware Fusion.app/Contents/Public/xtensa-esp32s3-elf-gcc-ar-14"
       - "/usr/local/go/bin/xtensa-esp32s3-elf-gcc-ar-14"
-      - "/Applications/Xcode.app/Contents/Developer/usr/libexec/git-core/xtensa-esp32s3-elf-gcc-ar-14"
       - "/opt/miniconda3/condabin/xtensa-esp32s3-elf-gcc-ar-14"
       - "/Users/delta/Library/Python/3.13/bin/xtensa-esp32s3-elf-gcc-ar-14"
       - "/Users/delta/.local/bin/xtensa-esp32s3-elf-gcc-ar-14"
+      - "/Users/delta/.cursor/extensions/ms-python.debugpy-2025.14.1-darwin-arm64/bundled/scripts/noConfigScripts/xtensa-esp32s3-elf-gcc-ar-14"
       - "/Users/delta/.espressif/tools/xtensa-esp-elf/esp-14.2.0_20241119/xtensa-esp-elf/bin/xtensa-esp32s3-elf-gcc-ar14"
       - "/Users/delta/esp/v5.5/esp-idf/components/espcoredump/xtensa-esp32s3-elf-gcc-ar14"
       - "/Users/delta/esp/v5.5/esp-idf/components/partition_table/xtensa-esp32s3-elf-gcc-ar14"
@@ -2808,10 +2808,10 @@ events:
       - "/Library/Apple/usr/bin/xtensa-esp32s3-elf-gcc-ar14"
       - "/Applications/VMware Fusion.app/Contents/Public/xtensa-esp32s3-elf-gcc-ar14"
       - "/usr/local/go/bin/xtensa-esp32s3-elf-gcc-ar14"
-      - "/Applications/Xcode.app/Contents/Developer/usr/libexec/git-core/xtensa-esp32s3-elf-gcc-ar14"
       - "/opt/miniconda3/condabin/xtensa-esp32s3-elf-gcc-ar14"
       - "/Users/delta/Library/Python/3.13/bin/xtensa-esp32s3-elf-gcc-ar14"
       - "/Users/delta/.local/bin/xtensa-esp32s3-elf-gcc-ar14"
+      - "/Users/delta/.cursor/extensions/ms-python.debugpy-2025.14.1-darwin-arm64/bundled/scripts/noConfigScripts/xtensa-esp32s3-elf-gcc-ar14"
     found: "/Users/delta/.espressif/tools/xtensa-esp-elf/esp-14.2.0_20241119/xtensa-esp-elf/bin/xtensa-esp32s3-elf-gcc-ar"
     search_context:
       ENV{PATH}:
@@ -2848,7 +2848,6 @@ events:
         - "/Library/Apple/usr/bin"
         - "/Applications/VMware Fusion.app/Contents/Public"
         - "/usr/local/go/bin"
-        - "/Applications/Xcode.app/Contents/Developer/usr/libexec/git-core"
         - "/opt/homebrew/opt/postgresql@15/bin"
         - "/Users/delta/.deno/bin"
         - "/opt/miniconda3/condabin"
@@ -2857,6 +2856,7 @@ events:
         - "/opt/local/sbin"
         - "/Users/delta/Library/Python/3.13/bin"
         - "/Users/delta/.local/bin"
+        - "/Users/delta/.cursor/extensions/ms-python.debugpy-2025.14.1-darwin-arm64/bundled/scripts/noConfigScripts"
         - "/Users/delta/Library/Python/3.13/bin"
         - "/Users/delta/.local/bin"
         - "/Users/delta/Library/Python/3.13/bin"
@@ -2918,10 +2918,10 @@ events:
       - "/Library/Apple/usr/bin/"
       - "/Applications/VMware Fusion.app/Contents/Public/"
       - "/usr/local/go/bin/"
-      - "/Applications/Xcode.app/Contents/Developer/usr/libexec/git-core/"
       - "/opt/miniconda3/condabin/"
       - "/Users/delta/Library/Python/3.13/bin/"
       - "/Users/delta/.local/bin/"
+      - "/Users/delta/.cursor/extensions/ms-python.debugpy-2025.14.1-darwin-arm64/bundled/scripts/noConfigScripts/"
     searched_directories:
       - "/Users/delta/.espressif/tools/xtensa-esp-elf/esp-14.2.0_20241119/xtensa-esp-elf/bin/xtensa-esp32s3-elf-gcc-ranlib-14.2"
       - "/Users/delta/esp/v5.5/esp-idf/components/espcoredump/xtensa-esp32s3-elf-gcc-ranlib-14.2"
@@ -2956,10 +2956,10 @@ events:
       - "/Library/Apple/usr/bin/xtensa-esp32s3-elf-gcc-ranlib-14.2"
       - "/Applications/VMware Fusion.app/Contents/Public/xtensa-esp32s3-elf-gcc-ranlib-14.2"
       - "/usr/local/go/bin/xtensa-esp32s3-elf-gcc-ranlib-14.2"
-      - "/Applications/Xcode.app/Contents/Developer/usr/libexec/git-core/xtensa-esp32s3-elf-gcc-ranlib-14.2"
       - "/opt/miniconda3/condabin/xtensa-esp32s3-elf-gcc-ranlib-14.2"
       - "/Users/delta/Library/Python/3.13/bin/xtensa-esp32s3-elf-gcc-ranlib-14.2"
       - "/Users/delta/.local/bin/xtensa-esp32s3-elf-gcc-ranlib-14.2"
+      - "/Users/delta/.cursor/extensions/ms-python.debugpy-2025.14.1-darwin-arm64/bundled/scripts/noConfigScripts/xtensa-esp32s3-elf-gcc-ranlib-14.2"
       - "/Users/delta/.espressif/tools/xtensa-esp-elf/esp-14.2.0_20241119/xtensa-esp-elf/bin/xtensa-esp32s3-elf-gcc-ranlib-14"
       - "/Users/delta/esp/v5.5/esp-idf/components/espcoredump/xtensa-esp32s3-elf-gcc-ranlib-14"
       - "/Users/delta/esp/v5.5/esp-idf/components/partition_table/xtensa-esp32s3-elf-gcc-ranlib-14"
@@ -2993,10 +2993,10 @@ events:
       - "/Library/Apple/usr/bin/xtensa-esp32s3-elf-gcc-ranlib-14"
       - "/Applications/VMware Fusion.app/Contents/Public/xtensa-esp32s3-elf-gcc-ranlib-14"
       - "/usr/local/go/bin/xtensa-esp32s3-elf-gcc-ranlib-14"
-      - "/Applications/Xcode.app/Contents/Developer/usr/libexec/git-core/xtensa-esp32s3-elf-gcc-ranlib-14"
       - "/opt/miniconda3/condabin/xtensa-esp32s3-elf-gcc-ranlib-14"
       - "/Users/delta/Library/Python/3.13/bin/xtensa-esp32s3-elf-gcc-ranlib-14"
       - "/Users/delta/.local/bin/xtensa-esp32s3-elf-gcc-ranlib-14"
+      - "/Users/delta/.cursor/extensions/ms-python.debugpy-2025.14.1-darwin-arm64/bundled/scripts/noConfigScripts/xtensa-esp32s3-elf-gcc-ranlib-14"
       - "/Users/delta/.espressif/tools/xtensa-esp-elf/esp-14.2.0_20241119/xtensa-esp-elf/bin/xtensa-esp32s3-elf-gcc-ranlib14"
       - "/Users/delta/esp/v5.5/esp-idf/components/espcoredump/xtensa-esp32s3-elf-gcc-ranlib14"
       - "/Users/delta/esp/v5.5/esp-idf/components/partition_table/xtensa-esp32s3-elf-gcc-ranlib14"
@@ -3030,10 +3030,10 @@ events:
       - "/Library/Apple/usr/bin/xtensa-esp32s3-elf-gcc-ranlib14"
       - "/Applications/VMware Fusion.app/Contents/Public/xtensa-esp32s3-elf-gcc-ranlib14"
       - "/usr/local/go/bin/xtensa-esp32s3-elf-gcc-ranlib14"
-      - "/Applications/Xcode.app/Contents/Developer/usr/libexec/git-core/xtensa-esp32s3-elf-gcc-ranlib14"
       - "/opt/miniconda3/condabin/xtensa-esp32s3-elf-gcc-ranlib14"
       - "/Users/delta/Library/Python/3.13/bin/xtensa-esp32s3-elf-gcc-ranlib14"
       - "/Users/delta/.local/bin/xtensa-esp32s3-elf-gcc-ranlib14"
+      - "/Users/delta/.cursor/extensions/ms-python.debugpy-2025.14.1-darwin-arm64/bundled/scripts/noConfigScripts/xtensa-esp32s3-elf-gcc-ranlib14"
     found: "/Users/delta/.espressif/tools/xtensa-esp-elf/esp-14.2.0_20241119/xtensa-esp-elf/bin/xtensa-esp32s3-elf-gcc-ranlib"
     search_context:
       ENV{PATH}:
@@ -3070,7 +3070,6 @@ events:
         - "/Library/Apple/usr/bin"
         - "/Applications/VMware Fusion.app/Contents/Public"
         - "/usr/local/go/bin"
-        - "/Applications/Xcode.app/Contents/Developer/usr/libexec/git-core"
         - "/opt/homebrew/opt/postgresql@15/bin"
         - "/Users/delta/.deno/bin"
         - "/opt/miniconda3/condabin"
@@ -3079,6 +3078,7 @@ events:
         - "/opt/local/sbin"
         - "/Users/delta/Library/Python/3.13/bin"
         - "/Users/delta/.local/bin"
+        - "/Users/delta/.cursor/extensions/ms-python.debugpy-2025.14.1-darwin-arm64/bundled/scripts/noConfigScripts"
         - "/Users/delta/Library/Python/3.13/bin"
         - "/Users/delta/.local/bin"
         - "/Users/delta/Library/Python/3.13/bin"
@@ -3137,10 +3137,10 @@ events:
       - "/Library/Apple/usr/bin/"
       - "/Applications/VMware Fusion.app/Contents/Public/"
       - "/usr/local/go/bin/"
-      - "/Applications/Xcode.app/Contents/Developer/usr/libexec/git-core/"
       - "/opt/miniconda3/condabin/"
       - "/Users/delta/Library/Python/3.13/bin/"
       - "/Users/delta/.local/bin/"
+      - "/Users/delta/.cursor/extensions/ms-python.debugpy-2025.14.1-darwin-arm64/bundled/scripts/noConfigScripts/"
     searched_directories:
       - "/Users/delta/esp/v5.5/esp-idf/components/espcoredump/xtensa-esp32s3-elf-gcc"
       - "/Users/delta/esp/v5.5/esp-idf/components/partition_table/xtensa-esp32s3-elf-gcc"
@@ -3183,7 +3183,6 @@ events:
         - "/Library/Apple/usr/bin"
         - "/Applications/VMware Fusion.app/Contents/Public"
         - "/usr/local/go/bin"
-        - "/Applications/Xcode.app/Contents/Developer/usr/libexec/git-core"
         - "/opt/homebrew/opt/postgresql@15/bin"
         - "/Users/delta/.deno/bin"
         - "/opt/miniconda3/condabin"
@@ -3192,6 +3191,7 @@ events:
         - "/opt/local/sbin"
         - "/Users/delta/Library/Python/3.13/bin"
         - "/Users/delta/.local/bin"
+        - "/Users/delta/.cursor/extensions/ms-python.debugpy-2025.14.1-darwin-arm64/bundled/scripts/noConfigScripts"
         - "/Users/delta/Library/Python/3.13/bin"
         - "/Users/delta/.local/bin"
         - "/Users/delta/Library/Python/3.13/bin"
@@ -3267,10 +3267,10 @@ events:
       - "/Library/Apple/usr/bin/"
       - "/Applications/VMware Fusion.app/Contents/Public/"
       - "/usr/local/go/bin/"
-      - "/Applications/Xcode.app/Contents/Developer/usr/libexec/git-core/"
       - "/opt/miniconda3/condabin/"
       - "/Users/delta/Library/Python/3.13/bin/"
       - "/Users/delta/.local/bin/"
+      - "/Users/delta/.cursor/extensions/ms-python.debugpy-2025.14.1-darwin-arm64/bundled/scripts/noConfigScripts/"
     searched_directories:
       - "/Users/delta/.espressif/tools/xtensa-esp-elf/esp-14.2.0_20241119/xtensa-esp-elf/bin/xtensa-esp32s3-elf-gcc-ar-"
       - "/Users/delta/esp/v5.5/esp-idf/components/espcoredump/xtensa-esp32s3-elf-gcc-ar-"
@@ -3305,10 +3305,10 @@ events:
       - "/Library/Apple/usr/bin/xtensa-esp32s3-elf-gcc-ar-"
       - "/Applications/VMware Fusion.app/Contents/Public/xtensa-esp32s3-elf-gcc-ar-"
       - "/usr/local/go/bin/xtensa-esp32s3-elf-gcc-ar-"
-      - "/Applications/Xcode.app/Contents/Developer/usr/libexec/git-core/xtensa-esp32s3-elf-gcc-ar-"
       - "/opt/miniconda3/condabin/xtensa-esp32s3-elf-gcc-ar-"
       - "/Users/delta/Library/Python/3.13/bin/xtensa-esp32s3-elf-gcc-ar-"
       - "/Users/delta/.local/bin/xtensa-esp32s3-elf-gcc-ar-"
+      - "/Users/delta/.cursor/extensions/ms-python.debugpy-2025.14.1-darwin-arm64/bundled/scripts/noConfigScripts/xtensa-esp32s3-elf-gcc-ar-"
       - "/Users/delta/.espressif/tools/xtensa-esp-elf/esp-14.2.0_20241119/xtensa-esp-elf/bin/xtensa-esp32s3-elf-gcc-ar-"
       - "/Users/delta/esp/v5.5/esp-idf/components/espcoredump/xtensa-esp32s3-elf-gcc-ar-"
       - "/Users/delta/esp/v5.5/esp-idf/components/partition_table/xtensa-esp32s3-elf-gcc-ar-"
@@ -3342,10 +3342,10 @@ events:
       - "/Library/Apple/usr/bin/xtensa-esp32s3-elf-gcc-ar-"
       - "/Applications/VMware Fusion.app/Contents/Public/xtensa-esp32s3-elf-gcc-ar-"
       - "/usr/local/go/bin/xtensa-esp32s3-elf-gcc-ar-"
-      - "/Applications/Xcode.app/Contents/Developer/usr/libexec/git-core/xtensa-esp32s3-elf-gcc-ar-"
       - "/opt/miniconda3/condabin/xtensa-esp32s3-elf-gcc-ar-"
       - "/Users/delta/Library/Python/3.13/bin/xtensa-esp32s3-elf-gcc-ar-"
       - "/Users/delta/.local/bin/xtensa-esp32s3-elf-gcc-ar-"
+      - "/Users/delta/.cursor/extensions/ms-python.debugpy-2025.14.1-darwin-arm64/bundled/scripts/noConfigScripts/xtensa-esp32s3-elf-gcc-ar-"
     found: "/Users/delta/.espressif/tools/xtensa-esp-elf/esp-14.2.0_20241119/xtensa-esp-elf/bin/xtensa-esp32s3-elf-gcc-ar"
     search_context:
       ENV{PATH}:
@@ -3382,7 +3382,6 @@ events:
         - "/Library/Apple/usr/bin"
         - "/Applications/VMware Fusion.app/Contents/Public"
         - "/usr/local/go/bin"
-        - "/Applications/Xcode.app/Contents/Developer/usr/libexec/git-core"
         - "/opt/homebrew/opt/postgresql@15/bin"
         - "/Users/delta/.deno/bin"
         - "/opt/miniconda3/condabin"
@@ -3391,6 +3390,7 @@ events:
         - "/opt/local/sbin"
         - "/Users/delta/Library/Python/3.13/bin"
         - "/Users/delta/.local/bin"
+        - "/Users/delta/.cursor/extensions/ms-python.debugpy-2025.14.1-darwin-arm64/bundled/scripts/noConfigScripts"
         - "/Users/delta/Library/Python/3.13/bin"
         - "/Users/delta/.local/bin"
         - "/Users/delta/Library/Python/3.13/bin"
@@ -3452,10 +3452,10 @@ events:
       - "/Library/Apple/usr/bin/"
       - "/Applications/VMware Fusion.app/Contents/Public/"
       - "/usr/local/go/bin/"
-      - "/Applications/Xcode.app/Contents/Developer/usr/libexec/git-core/"
       - "/opt/miniconda3/condabin/"
       - "/Users/delta/Library/Python/3.13/bin/"
       - "/Users/delta/.local/bin/"
+      - "/Users/delta/.cursor/extensions/ms-python.debugpy-2025.14.1-darwin-arm64/bundled/scripts/noConfigScripts/"
     searched_directories:
       - "/Users/delta/.espressif/tools/xtensa-esp-elf/esp-14.2.0_20241119/xtensa-esp-elf/bin/xtensa-esp32s3-elf-gcc-ranlib-"
       - "/Users/delta/esp/v5.5/esp-idf/components/espcoredump/xtensa-esp32s3-elf-gcc-ranlib-"
@@ -3490,10 +3490,10 @@ events:
       - "/Library/Apple/usr/bin/xtensa-esp32s3-elf-gcc-ranlib-"
       - "/Applications/VMware Fusion.app/Contents/Public/xtensa-esp32s3-elf-gcc-ranlib-"
       - "/usr/local/go/bin/xtensa-esp32s3-elf-gcc-ranlib-"
-      - "/Applications/Xcode.app/Contents/Developer/usr/libexec/git-core/xtensa-esp32s3-elf-gcc-ranlib-"
       - "/opt/miniconda3/condabin/xtensa-esp32s3-elf-gcc-ranlib-"
       - "/Users/delta/Library/Python/3.13/bin/xtensa-esp32s3-elf-gcc-ranlib-"
       - "/Users/delta/.local/bin/xtensa-esp32s3-elf-gcc-ranlib-"
+      - "/Users/delta/.cursor/extensions/ms-python.debugpy-2025.14.1-darwin-arm64/bundled/scripts/noConfigScripts/xtensa-esp32s3-elf-gcc-ranlib-"
       - "/Users/delta/.espressif/tools/xtensa-esp-elf/esp-14.2.0_20241119/xtensa-esp-elf/bin/xtensa-esp32s3-elf-gcc-ranlib-"
       - "/Users/delta/esp/v5.5/esp-idf/components/espcoredump/xtensa-esp32s3-elf-gcc-ranlib-"
       - "/Users/delta/esp/v5.5/esp-idf/components/partition_table/xtensa-esp32s3-elf-gcc-ranlib-"
@@ -3527,10 +3527,10 @@ events:
       - "/Library/Apple/usr/bin/xtensa-esp32s3-elf-gcc-ranlib-"
       - "/Applications/VMware Fusion.app/Contents/Public/xtensa-esp32s3-elf-gcc-ranlib-"
       - "/usr/local/go/bin/xtensa-esp32s3-elf-gcc-ranlib-"
-      - "/Applications/Xcode.app/Contents/Developer/usr/libexec/git-core/xtensa-esp32s3-elf-gcc-ranlib-"
       - "/opt/miniconda3/condabin/xtensa-esp32s3-elf-gcc-ranlib-"
       - "/Users/delta/Library/Python/3.13/bin/xtensa-esp32s3-elf-gcc-ranlib-"
       - "/Users/delta/.local/bin/xtensa-esp32s3-elf-gcc-ranlib-"
+      - "/Users/delta/.cursor/extensions/ms-python.debugpy-2025.14.1-darwin-arm64/bundled/scripts/noConfigScripts/xtensa-esp32s3-elf-gcc-ranlib-"
     found: "/Users/delta/.espressif/tools/xtensa-esp-elf/esp-14.2.0_20241119/xtensa-esp-elf/bin/xtensa-esp32s3-elf-gcc-ranlib"
     search_context:
       ENV{PATH}:
@@ -3567,7 +3567,6 @@ events:
         - "/Library/Apple/usr/bin"
         - "/Applications/VMware Fusion.app/Contents/Public"
         - "/usr/local/go/bin"
-        - "/Applications/Xcode.app/Contents/Developer/usr/libexec/git-core"
         - "/opt/homebrew/opt/postgresql@15/bin"
         - "/Users/delta/.deno/bin"
         - "/opt/miniconda3/condabin"
@@ -3576,6 +3575,7 @@ events:
         - "/opt/local/sbin"
         - "/Users/delta/Library/Python/3.13/bin"
         - "/Users/delta/.local/bin"
+        - "/Users/delta/.cursor/extensions/ms-python.debugpy-2025.14.1-darwin-arm64/bundled/scripts/noConfigScripts"
         - "/Users/delta/Library/Python/3.13/bin"
         - "/Users/delta/.local/bin"
         - "/Users/delta/Library/Python/3.13/bin"
@@ -3590,8 +3590,8 @@ events:
     checks:
       - "Detecting C compiler ABI info"
     directories:
-      source: "/Users/delta/streamrtcm/rtkesp32s3/build/CMakeFiles/CMakeScratch/TryCompile-bWSAKM"
-      binary: "/Users/delta/streamrtcm/rtkesp32s3/build/CMakeFiles/CMakeScratch/TryCompile-bWSAKM"
+      source: "/Users/delta/streamrtcm/rtkesp32s3/build/CMakeFiles/CMakeScratch/TryCompile-suMgAJ"
+      binary: "/Users/delta/streamrtcm/rtkesp32s3/build/CMakeFiles/CMakeScratch/TryCompile-suMgAJ"
     cmakeVariables:
       CMAKE_C_FLAGS: "-mlongcalls  -fno-builtin-memcpy -fno-builtin-memset -fno-builtin-bzero -fno-builtin-stpcpy -fno-builtin-strncpy"
       CMAKE_C_FLAGS_DEBUG: "-g"
@@ -3601,10 +3601,10 @@ events:
       variable: "CMAKE_C_ABI_COMPILED"
       cached: true
       stdout: |
-        Change Dir: '/Users/delta/streamrtcm/rtkesp32s3/build/CMakeFiles/CMakeScratch/TryCompile-bWSAKM'
+        Change Dir: '/Users/delta/streamrtcm/rtkesp32s3/build/CMakeFiles/CMakeScratch/TryCompile-suMgAJ'
         
-        Run Build Command(s): /opt/local/bin/ninja -v cmTC_35526
-        [1/2] /Users/delta/.espressif/tools/xtensa-esp-elf/esp-14.2.0_20241119/xtensa-esp-elf/bin/xtensa-esp32s3-elf-gcc   -mlongcalls  -fno-builtin-memcpy -fno-builtin-memset -fno-builtin-bzero -fno-builtin-stpcpy -fno-builtin-strncpy    -v -o CMakeFiles/cmTC_35526.dir/CMakeCCompilerABI.c.obj -c /opt/homebrew/share/cmake/Modules/CMakeCCompilerABI.c
+        Run Build Command(s): /opt/local/bin/ninja -v cmTC_3a005
+        [1/2] /Users/delta/.espressif/tools/xtensa-esp-elf/esp-14.2.0_20241119/xtensa-esp-elf/bin/xtensa-esp32s3-elf-gcc   -mlongcalls  -fno-builtin-memcpy -fno-builtin-memset -fno-builtin-bzero -fno-builtin-stpcpy -fno-builtin-strncpy    -v -o CMakeFiles/cmTC_3a005.dir/CMakeCCompilerABI.c.obj -c /opt/homebrew/share/cmake/Modules/CMakeCCompilerABI.c
         Using built-in specs.
         COLLECT_GCC=/Users/delta/.espressif/tools/xtensa-esp-elf/esp-14.2.0_20241119/xtensa-esp-elf/bin/xtensa-esp-elf-gcc
         Target: xtensa-esp-elf
@@ -3612,8 +3612,8 @@ events:
         Thread model: posix
         Supported LTO compression algorithms: zlib
         gcc version 14.2.0 (crosstool-NG esp-14.2.0_20241119) 
-        COLLECT_GCC_OPTIONS='-mdynconfig=xtensa_esp32s3.so' '-mlongcalls' '-fno-builtin-memcpy' '-fno-builtin-memset' '-fno-builtin-bzero' '-fno-builtin-stpcpy' '-fno-builtin-strncpy' '-v' '-o' 'CMakeFiles/cmTC_35526.dir/CMakeCCompilerABI.c.obj' '-c' '-dumpdir' 'CMakeFiles/cmTC_35526.dir/'
-         /Users/delta/.espressif/tools/xtensa-esp-elf/esp-14.2.0_20241119/xtensa-esp-elf/bin/../libexec/gcc/xtensa-esp-elf/14.2.0/cc1 -quiet -v -imultilib esp32s3 -iprefix /Users/delta/.espressif/tools/xtensa-esp-elf/esp-14.2.0_20241119/xtensa-esp-elf/bin/../lib/gcc/xtensa-esp-elf/14.2.0/ -isysroot /Users/delta/.espressif/tools/xtensa-esp-elf/esp-14.2.0_20241119/xtensa-esp-elf/bin/../xtensa-esp-elf /opt/homebrew/share/cmake/Modules/CMakeCCompilerABI.c -quiet -dumpdir CMakeFiles/cmTC_35526.dir/ -dumpbase CMakeCCompilerABI.c.c -dumpbase-ext .c -mdynconfig=xtensa_esp32s3.so -mlongcalls -version -fno-builtin-memcpy -fno-builtin-memset -fno-builtin-bzero -fno-builtin-stpcpy -fno-builtin-strncpy -o /var/folders/z3/zx69jtps1453fm834nc2z2p80000gn/T//cc0GHrgu.s
+        COLLECT_GCC_OPTIONS='-mdynconfig=xtensa_esp32s3.so' '-mlongcalls' '-fno-builtin-memcpy' '-fno-builtin-memset' '-fno-builtin-bzero' '-fno-builtin-stpcpy' '-fno-builtin-strncpy' '-v' '-o' 'CMakeFiles/cmTC_3a005.dir/CMakeCCompilerABI.c.obj' '-c' '-dumpdir' 'CMakeFiles/cmTC_3a005.dir/'
+         /Users/delta/.espressif/tools/xtensa-esp-elf/esp-14.2.0_20241119/xtensa-esp-elf/bin/../libexec/gcc/xtensa-esp-elf/14.2.0/cc1 -quiet -v -imultilib esp32s3 -iprefix /Users/delta/.espressif/tools/xtensa-esp-elf/esp-14.2.0_20241119/xtensa-esp-elf/bin/../lib/gcc/xtensa-esp-elf/14.2.0/ -isysroot /Users/delta/.espressif/tools/xtensa-esp-elf/esp-14.2.0_20241119/xtensa-esp-elf/bin/../xtensa-esp-elf /opt/homebrew/share/cmake/Modules/CMakeCCompilerABI.c -quiet -dumpdir CMakeFiles/cmTC_3a005.dir/ -dumpbase CMakeCCompilerABI.c.c -dumpbase-ext .c -mdynconfig=xtensa_esp32s3.so -mlongcalls -version -fno-builtin-memcpy -fno-builtin-memset -fno-builtin-bzero -fno-builtin-stpcpy -fno-builtin-strncpy -o /var/folders/z3/zx69jtps1453fm834nc2z2p80000gn/T//cc7A0n3z.s
         GNU C17 (crosstool-NG esp-14.2.0_20241119) version 14.2.0 (xtensa-esp-elf)
         	compiled by GNU C version Debian Clang 11.0.1, GMP version 6.2.1, MPFR version 4.2.1, MPC version 1.2.1, isl version isl-0.26-GMP
         
@@ -3625,18 +3625,17 @@ events:
         ignoring duplicate directory "/Users/delta/.espressif/tools/xtensa-esp-elf/esp-14.2.0_20241119/xtensa-esp-elf/bin/../xtensa-esp-elf/include"
         #include "..." search starts here:
         #include <...> search starts here:
-         /usr/local/include
          /Users/delta/.espressif/tools/xtensa-esp-elf/esp-14.2.0_20241119/xtensa-esp-elf/bin/../lib/gcc/xtensa-esp-elf/14.2.0/include
          /Users/delta/.espressif/tools/xtensa-esp-elf/esp-14.2.0_20241119/xtensa-esp-elf/bin/../lib/gcc/xtensa-esp-elf/14.2.0/include-fixed
          /Users/delta/.espressif/tools/xtensa-esp-elf/esp-14.2.0_20241119/xtensa-esp-elf/bin/../lib/gcc/xtensa-esp-elf/14.2.0/../../../../xtensa-esp-elf/include
         End of search list.
         Compiler executable checksum: af69fd9f9a101617223bab54c4450538
-        COLLECT_GCC_OPTIONS='-mdynconfig=xtensa_esp32s3.so' '-mlongcalls' '-fno-builtin-memcpy' '-fno-builtin-memset' '-fno-builtin-bzero' '-fno-builtin-stpcpy' '-fno-builtin-strncpy' '-v' '-o' 'CMakeFiles/cmTC_35526.dir/CMakeCCompilerABI.c.obj' '-c' '-dumpdir' 'CMakeFiles/cmTC_35526.dir/'
-         /Users/delta/.espressif/tools/xtensa-esp-elf/esp-14.2.0_20241119/xtensa-esp-elf/bin/../lib/gcc/xtensa-esp-elf/14.2.0/../../../../xtensa-esp-elf/bin/as --traditional-format --longcalls --dynconfig=xtensa_esp32s3.so -o CMakeFiles/cmTC_35526.dir/CMakeCCompilerABI.c.obj /var/folders/z3/zx69jtps1453fm834nc2z2p80000gn/T//cc0GHrgu.s
+        COLLECT_GCC_OPTIONS='-mdynconfig=xtensa_esp32s3.so' '-mlongcalls' '-fno-builtin-memcpy' '-fno-builtin-memset' '-fno-builtin-bzero' '-fno-builtin-stpcpy' '-fno-builtin-strncpy' '-v' '-o' 'CMakeFiles/cmTC_3a005.dir/CMakeCCompilerABI.c.obj' '-c' '-dumpdir' 'CMakeFiles/cmTC_3a005.dir/'
+         /Users/delta/.espressif/tools/xtensa-esp-elf/esp-14.2.0_20241119/xtensa-esp-elf/bin/../lib/gcc/xtensa-esp-elf/14.2.0/../../../../xtensa-esp-elf/bin/as --traditional-format --longcalls --dynconfig=xtensa_esp32s3.so -o CMakeFiles/cmTC_3a005.dir/CMakeCCompilerABI.c.obj /var/folders/z3/zx69jtps1453fm834nc2z2p80000gn/T//cc7A0n3z.s
         COMPILER_PATH=/Users/delta/.espressif/tools/xtensa-esp-elf/esp-14.2.0_20241119/xtensa-esp-elf/bin/../libexec/gcc/xtensa-esp-elf/14.2.0/:/Users/delta/.espressif/tools/xtensa-esp-elf/esp-14.2.0_20241119/xtensa-esp-elf/bin/../libexec/gcc/:/Users/delta/.espressif/tools/xtensa-esp-elf/esp-14.2.0_20241119/xtensa-esp-elf/bin/../lib/gcc/xtensa-esp-elf/14.2.0/../../../../xtensa-esp-elf/bin/
         LIBRARY_PATH=/Users/delta/.espressif/tools/xtensa-esp-elf/esp-14.2.0_20241119/xtensa-esp-elf/bin/../lib/gcc/xtensa-esp-elf/14.2.0/esp32s3/:/Users/delta/.espressif/tools/xtensa-esp-elf/esp-14.2.0_20241119/xtensa-esp-elf/bin/../lib/gcc/xtensa-esp-elf/14.2.0/../../../../xtensa-esp-elf/lib/esp32s3/:/Users/delta/.espressif/tools/xtensa-esp-elf/esp-14.2.0_20241119/xtensa-esp-elf/bin/../xtensa-esp-elf/lib/esp32s3/:/Users/delta/.espressif/tools/xtensa-esp-elf/esp-14.2.0_20241119/xtensa-esp-elf/bin/../lib/gcc/xtensa-esp-elf/14.2.0/:/Users/delta/.espressif/tools/xtensa-esp-elf/esp-14.2.0_20241119/xtensa-esp-elf/bin/../lib/gcc/:/Users/delta/.espressif/tools/xtensa-esp-elf/esp-14.2.0_20241119/xtensa-esp-elf/bin/../lib/gcc/xtensa-esp-elf/14.2.0/../../../../xtensa-esp-elf/lib/:/Users/delta/.espressif/tools/xtensa-esp-elf/esp-14.2.0_20241119/xtensa-esp-elf/bin/../xtensa-esp-elf/lib/:/Users/delta/.espressif/tools/xtensa-esp-elf/esp-14.2.0_20241119/xtensa-esp-elf/bin/../xtensa-esp-elf/usr/lib/
-        COLLECT_GCC_OPTIONS='-mdynconfig=xtensa_esp32s3.so' '-mlongcalls' '-fno-builtin-memcpy' '-fno-builtin-memset' '-fno-builtin-bzero' '-fno-builtin-stpcpy' '-fno-builtin-strncpy' '-v' '-o' 'CMakeFiles/cmTC_35526.dir/CMakeCCompilerABI.c.obj' '-c' '-dumpdir' 'CMakeFiles/cmTC_35526.dir/CMakeCCompilerABI.c.'
-        [2/2] : && /Users/delta/.espressif/tools/xtensa-esp-elf/esp-14.2.0_20241119/xtensa-esp-elf/bin/xtensa-esp32s3-elf-gcc -mlongcalls  -fno-builtin-memcpy -fno-builtin-memset -fno-builtin-bzero -fno-builtin-stpcpy -fno-builtin-strncpy -nostartfiles  -v CMakeFiles/cmTC_35526.dir/CMakeCCompilerABI.c.obj -o cmTC_35526   && :
+        COLLECT_GCC_OPTIONS='-mdynconfig=xtensa_esp32s3.so' '-mlongcalls' '-fno-builtin-memcpy' '-fno-builtin-memset' '-fno-builtin-bzero' '-fno-builtin-stpcpy' '-fno-builtin-strncpy' '-v' '-o' 'CMakeFiles/cmTC_3a005.dir/CMakeCCompilerABI.c.obj' '-c' '-dumpdir' 'CMakeFiles/cmTC_3a005.dir/CMakeCCompilerABI.c.'
+        [2/2] : && /Users/delta/.espressif/tools/xtensa-esp-elf/esp-14.2.0_20241119/xtensa-esp-elf/bin/xtensa-esp32s3-elf-gcc -mlongcalls  -fno-builtin-memcpy -fno-builtin-memset -fno-builtin-bzero -fno-builtin-stpcpy -fno-builtin-strncpy -nostartfiles  -v CMakeFiles/cmTC_3a005.dir/CMakeCCompilerABI.c.obj -o cmTC_3a005   && :
         Using built-in specs.
         COLLECT_GCC=/Users/delta/.espressif/tools/xtensa-esp-elf/esp-14.2.0_20241119/xtensa-esp-elf/bin/xtensa-esp-elf-gcc
         COLLECT_LTO_WRAPPER=/Users/delta/.espressif/tools/xtensa-esp-elf/esp-14.2.0_20241119/xtensa-esp-elf/bin/../libexec/gcc/xtensa-esp-elf/14.2.0/lto-wrapper
@@ -3647,10 +3646,10 @@ events:
         gcc version 14.2.0 (crosstool-NG esp-14.2.0_20241119) 
         COMPILER_PATH=/Users/delta/.espressif/tools/xtensa-esp-elf/esp-14.2.0_20241119/xtensa-esp-elf/bin/../libexec/gcc/xtensa-esp-elf/14.2.0/:/Users/delta/.espressif/tools/xtensa-esp-elf/esp-14.2.0_20241119/xtensa-esp-elf/bin/../libexec/gcc/:/Users/delta/.espressif/tools/xtensa-esp-elf/esp-14.2.0_20241119/xtensa-esp-elf/bin/../lib/gcc/xtensa-esp-elf/14.2.0/../../../../xtensa-esp-elf/bin/
         LIBRARY_PATH=/Users/delta/.espressif/tools/xtensa-esp-elf/esp-14.2.0_20241119/xtensa-esp-elf/bin/../lib/gcc/xtensa-esp-elf/14.2.0/esp32s3/:/Users/delta/.espressif/tools/xtensa-esp-elf/esp-14.2.0_20241119/xtensa-esp-elf/bin/../lib/gcc/xtensa-esp-elf/14.2.0/../../../../xtensa-esp-elf/lib/esp32s3/:/Users/delta/.espressif/tools/xtensa-esp-elf/esp-14.2.0_20241119/xtensa-esp-elf/bin/../xtensa-esp-elf/lib/esp32s3/:/Users/delta/.espressif/tools/xtensa-esp-elf/esp-14.2.0_20241119/xtensa-esp-elf/bin/../lib/gcc/xtensa-esp-elf/14.2.0/:/Users/delta/.espressif/tools/xtensa-esp-elf/esp-14.2.0_20241119/xtensa-esp-elf/bin/../lib/gcc/:/Users/delta/.espressif/tools/xtensa-esp-elf/esp-14.2.0_20241119/xtensa-esp-elf/bin/../lib/gcc/xtensa-esp-elf/14.2.0/../../../../xtensa-esp-elf/lib/:/Users/delta/.espressif/tools/xtensa-esp-elf/esp-14.2.0_20241119/xtensa-esp-elf/bin/../xtensa-esp-elf/lib/:/Users/delta/.espressif/tools/xtensa-esp-elf/esp-14.2.0_20241119/xtensa-esp-elf/bin/../xtensa-esp-elf/usr/lib/
-        COLLECT_GCC_OPTIONS='-mdynconfig=xtensa_esp32s3.so' '-mlongcalls' '-fno-builtin-memcpy' '-fno-builtin-memset' '-fno-builtin-bzero' '-fno-builtin-stpcpy' '-fno-builtin-strncpy' '-nostartfiles' '-v' '-o' 'cmTC_35526' '-dumpdir' 'cmTC_35526.'
-         /Users/delta/.espressif/tools/xtensa-esp-elf/esp-14.2.0_20241119/xtensa-esp-elf/bin/../libexec/gcc/xtensa-esp-elf/14.2.0/collect2 -plugin /Users/delta/.espressif/tools/xtensa-esp-elf/esp-14.2.0_20241119/xtensa-esp-elf/bin/../libexec/gcc/xtensa-esp-elf/14.2.0/liblto_plugin.so -plugin-opt=/Users/delta/.espressif/tools/xtensa-esp-elf/esp-14.2.0_20241119/xtensa-esp-elf/bin/../libexec/gcc/xtensa-esp-elf/14.2.0/lto-wrapper -plugin-opt=-fresolution=/var/folders/z3/zx69jtps1453fm834nc2z2p80000gn/T//cc1ycWwf.res -plugin-opt=-pass-through=-lgcc -plugin-opt=-pass-through=-lc -plugin-opt=-pass-through=-lnosys -plugin-opt=-pass-through=-lc -plugin-opt=-pass-through=-lgcc --sysroot=/Users/delta/.espressif/tools/xtensa-esp-elf/esp-14.2.0_20241119/xtensa-esp-elf/bin/../xtensa-esp-elf --dynconfig=xtensa_esp32s3.so -o cmTC_35526 -L/Users/delta/.espressif/tools/xtensa-esp-elf/esp-14.2.0_20241119/xtensa-esp-elf/bin/../lib/gcc/xtensa-esp-elf/14.2.0/esp32s3 -L/Users/delta/.espressif/tools/xtensa-esp-elf/esp-14.2.0_20241119/xtensa-esp-elf/bin/../lib/gcc/xtensa-esp-elf/14.2.0/../../../../xtensa-esp-elf/lib/esp32s3 -L/Users/delta/.espressif/tools/xtensa-esp-elf/esp-14.2.0_20241119/xtensa-esp-elf/bin/../xtensa-esp-elf/lib/esp32s3 -L/Users/delta/.espressif/tools/xtensa-esp-elf/esp-14.2.0_20241119/xtensa-esp-elf/bin/../lib/gcc/xtensa-esp-elf/14.2.0 -L/Users/delta/.espressif/tools/xtensa-esp-elf/esp-14.2.0_20241119/xtensa-esp-elf/bin/../lib/gcc -L/Users/delta/.espressif/tools/xtensa-esp-elf/esp-14.2.0_20241119/xtensa-esp-elf/bin/../lib/gcc/xtensa-esp-elf/14.2.0/../../../../xtensa-esp-elf/lib -L/Users/delta/.espressif/tools/xtensa-esp-elf/esp-14.2.0_20241119/xtensa-esp-elf/bin/../xtensa-esp-elf/lib -L/Users/delta/.espressif/tools/xtensa-esp-elf/esp-14.2.0_20241119/xtensa-esp-elf/bin/../xtensa-esp-elf/usr/lib CMakeFiles/cmTC_35526.dir/CMakeCCompilerABI.c.obj -lgcc -lc -lnosys -lc -lgcc
+        COLLECT_GCC_OPTIONS='-mdynconfig=xtensa_esp32s3.so' '-mlongcalls' '-fno-builtin-memcpy' '-fno-builtin-memset' '-fno-builtin-bzero' '-fno-builtin-stpcpy' '-fno-builtin-strncpy' '-nostartfiles' '-v' '-o' 'cmTC_3a005' '-dumpdir' 'cmTC_3a005.'
+         /Users/delta/.espressif/tools/xtensa-esp-elf/esp-14.2.0_20241119/xtensa-esp-elf/bin/../libexec/gcc/xtensa-esp-elf/14.2.0/collect2 -plugin /Users/delta/.espressif/tools/xtensa-esp-elf/esp-14.2.0_20241119/xtensa-esp-elf/bin/../libexec/gcc/xtensa-esp-elf/14.2.0/liblto_plugin.so -plugin-opt=/Users/delta/.espressif/tools/xtensa-esp-elf/esp-14.2.0_20241119/xtensa-esp-elf/bin/../libexec/gcc/xtensa-esp-elf/14.2.0/lto-wrapper -plugin-opt=-fresolution=/var/folders/z3/zx69jtps1453fm834nc2z2p80000gn/T//cceqwW0A.res -plugin-opt=-pass-through=-lgcc -plugin-opt=-pass-through=-lc -plugin-opt=-pass-through=-lnosys -plugin-opt=-pass-through=-lc -plugin-opt=-pass-through=-lgcc --sysroot=/Users/delta/.espressif/tools/xtensa-esp-elf/esp-14.2.0_20241119/xtensa-esp-elf/bin/../xtensa-esp-elf --dynconfig=xtensa_esp32s3.so -o cmTC_3a005 -L/Users/delta/.espressif/tools/xtensa-esp-elf/esp-14.2.0_20241119/xtensa-esp-elf/bin/../lib/gcc/xtensa-esp-elf/14.2.0/esp32s3 -L/Users/delta/.espressif/tools/xtensa-esp-elf/esp-14.2.0_20241119/xtensa-esp-elf/bin/../lib/gcc/xtensa-esp-elf/14.2.0/../../../../xtensa-esp-elf/lib/esp32s3 -L/Users/delta/.espressif/tools/xtensa-esp-elf/esp-14.2.0_20241119/xtensa-esp-elf/bin/../xtensa-esp-elf/lib/esp32s3 -L/Users/delta/.espressif/tools/xtensa-esp-elf/esp-14.2.0_20241119/xtensa-esp-elf/bin/../lib/gcc/xtensa-esp-elf/14.2.0 -L/Users/delta/.espressif/tools/xtensa-esp-elf/esp-14.2.0_20241119/xtensa-esp-elf/bin/../lib/gcc -L/Users/delta/.espressif/tools/xtensa-esp-elf/esp-14.2.0_20241119/xtensa-esp-elf/bin/../lib/gcc/xtensa-esp-elf/14.2.0/../../../../xtensa-esp-elf/lib -L/Users/delta/.espressif/tools/xtensa-esp-elf/esp-14.2.0_20241119/xtensa-esp-elf/bin/../xtensa-esp-elf/lib -L/Users/delta/.espressif/tools/xtensa-esp-elf/esp-14.2.0_20241119/xtensa-esp-elf/bin/../xtensa-esp-elf/usr/lib CMakeFiles/cmTC_3a005.dir/CMakeCCompilerABI.c.obj -lgcc -lc -lnosys -lc -lgcc
         /Users/delta/.espressif/tools/xtensa-esp-elf/esp-14.2.0_20241119/xtensa-esp-elf/bin/../lib/gcc/xtensa-esp-elf/14.2.0/../../../../xtensa-esp-elf/bin/ld: warning: cannot find entry symbol _start; defaulting to 00400074
-        COLLECT_GCC_OPTIONS='-mdynconfig=xtensa_esp32s3.so' '-mlongcalls' '-fno-builtin-memcpy' '-fno-builtin-memset' '-fno-builtin-bzero' '-fno-builtin-stpcpy' '-fno-builtin-strncpy' '-nostartfiles' '-v' '-o' 'cmTC_35526' '-dumpdir' 'cmTC_35526.'
+        COLLECT_GCC_OPTIONS='-mdynconfig=xtensa_esp32s3.so' '-mlongcalls' '-fno-builtin-memcpy' '-fno-builtin-memset' '-fno-builtin-bzero' '-fno-builtin-stpcpy' '-fno-builtin-strncpy' '-nostartfiles' '-v' '-o' 'cmTC_3a005' '-dumpdir' 'cmTC_3a005.'
         
       exitCode: 0
   -
@@ -3664,16 +3663,14 @@ events:
       Parsed C implicit include dir info: rv=done
         found start of include info
         found start of implicit include info
-          add: [/usr/local/include]
           add: [/Users/delta/.espressif/tools/xtensa-esp-elf/esp-14.2.0_20241119/xtensa-esp-elf/bin/../lib/gcc/xtensa-esp-elf/14.2.0/include]
           add: [/Users/delta/.espressif/tools/xtensa-esp-elf/esp-14.2.0_20241119/xtensa-esp-elf/bin/../lib/gcc/xtensa-esp-elf/14.2.0/include-fixed]
           add: [/Users/delta/.espressif/tools/xtensa-esp-elf/esp-14.2.0_20241119/xtensa-esp-elf/bin/../lib/gcc/xtensa-esp-elf/14.2.0/../../../../xtensa-esp-elf/include]
         end of search list found
-        collapse include dir [/usr/local/include] ==> [/usr/local/include]
         collapse include dir [/Users/delta/.espressif/tools/xtensa-esp-elf/esp-14.2.0_20241119/xtensa-esp-elf/bin/../lib/gcc/xtensa-esp-elf/14.2.0/include] ==> [/Users/delta/.espressif/tools/xtensa-esp-elf/esp-14.2.0_20241119/xtensa-esp-elf/lib/gcc/xtensa-esp-elf/14.2.0/include]
         collapse include dir [/Users/delta/.espressif/tools/xtensa-esp-elf/esp-14.2.0_20241119/xtensa-esp-elf/bin/../lib/gcc/xtensa-esp-elf/14.2.0/include-fixed] ==> [/Users/delta/.espressif/tools/xtensa-esp-elf/esp-14.2.0_20241119/xtensa-esp-elf/lib/gcc/xtensa-esp-elf/14.2.0/include-fixed]
         collapse include dir [/Users/delta/.espressif/tools/xtensa-esp-elf/esp-14.2.0_20241119/xtensa-esp-elf/bin/../lib/gcc/xtensa-esp-elf/14.2.0/../../../../xtensa-esp-elf/include] ==> [/Users/delta/.espressif/tools/xtensa-esp-elf/esp-14.2.0_20241119/xtensa-esp-elf/xtensa-esp-elf/include]
-        implicit include dirs: [/usr/local/include;/Users/delta/.espressif/tools/xtensa-esp-elf/esp-14.2.0_20241119/xtensa-esp-elf/lib/gcc/xtensa-esp-elf/14.2.0/include;/Users/delta/.espressif/tools/xtensa-esp-elf/esp-14.2.0_20241119/xtensa-esp-elf/lib/gcc/xtensa-esp-elf/14.2.0/include-fixed;/Users/delta/.espressif/tools/xtensa-esp-elf/esp-14.2.0_20241119/xtensa-esp-elf/xtensa-esp-elf/include]
+        implicit include dirs: [/Users/delta/.espressif/tools/xtensa-esp-elf/esp-14.2.0_20241119/xtensa-esp-elf/lib/gcc/xtensa-esp-elf/14.2.0/include;/Users/delta/.espressif/tools/xtensa-esp-elf/esp-14.2.0_20241119/xtensa-esp-elf/lib/gcc/xtensa-esp-elf/14.2.0/include-fixed;/Users/delta/.espressif/tools/xtensa-esp-elf/esp-14.2.0_20241119/xtensa-esp-elf/xtensa-esp-elf/include]
       
       
   -
@@ -3687,10 +3684,10 @@ events:
       Parsed C implicit link information:
         link line regex: [^( *|.*[/\\])(ld[0-9]*(|\\.[a-rt-z][a-z]*|\\.s[a-np-z][a-z]*|\\.so[a-z]+)|CMAKE_LINK_STARTFILE-NOTFOUND|([^/\\]+-)?ld|collect2)[^/\\]*( |$)]
         linker tool regex: [^[ 	]*(->|")?[ 	]*(([^"]*[/\\])?(ld[0-9]*(|\\.[a-rt-z][a-z]*|\\.s[a-np-z][a-z]*|\\.so[a-z]+)))("|,| |$)]
-        ignore line: [Change Dir: '/Users/delta/streamrtcm/rtkesp32s3/build/CMakeFiles/CMakeScratch/TryCompile-bWSAKM']
+        ignore line: [Change Dir: '/Users/delta/streamrtcm/rtkesp32s3/build/CMakeFiles/CMakeScratch/TryCompile-suMgAJ']
         ignore line: []
-        ignore line: [Run Build Command(s): /opt/local/bin/ninja -v cmTC_35526]
-        ignore line: [[1/2] /Users/delta/.espressif/tools/xtensa-esp-elf/esp-14.2.0_20241119/xtensa-esp-elf/bin/xtensa-esp32s3-elf-gcc   -mlongcalls  -fno-builtin-memcpy -fno-builtin-memset -fno-builtin-bzero -fno-builtin-stpcpy -fno-builtin-strncpy    -v -o CMakeFiles/cmTC_35526.dir/CMakeCCompilerABI.c.obj -c /opt/homebrew/share/cmake/Modules/CMakeCCompilerABI.c]
+        ignore line: [Run Build Command(s): /opt/local/bin/ninja -v cmTC_3a005]
+        ignore line: [[1/2] /Users/delta/.espressif/tools/xtensa-esp-elf/esp-14.2.0_20241119/xtensa-esp-elf/bin/xtensa-esp32s3-elf-gcc   -mlongcalls  -fno-builtin-memcpy -fno-builtin-memset -fno-builtin-bzero -fno-builtin-stpcpy -fno-builtin-strncpy    -v -o CMakeFiles/cmTC_3a005.dir/CMakeCCompilerABI.c.obj -c /opt/homebrew/share/cmake/Modules/CMakeCCompilerABI.c]
         ignore line: [Using built-in specs.]
         ignore line: [COLLECT_GCC=/Users/delta/.espressif/tools/xtensa-esp-elf/esp-14.2.0_20241119/xtensa-esp-elf/bin/xtensa-esp-elf-gcc]
         ignore line: [Target: xtensa-esp-elf]
@@ -3698,8 +3695,8 @@ events:
         ignore line: [Thread model: posix]
         ignore line: [Supported LTO compression algorithms: zlib]
         ignore line: [gcc version 14.2.0 (crosstool-NG esp-14.2.0_20241119) ]
-        ignore line: [COLLECT_GCC_OPTIONS='-mdynconfig=xtensa_esp32s3.so' '-mlongcalls' '-fno-builtin-memcpy' '-fno-builtin-memset' '-fno-builtin-bzero' '-fno-builtin-stpcpy' '-fno-builtin-strncpy' '-v' '-o' 'CMakeFiles/cmTC_35526.dir/CMakeCCompilerABI.c.obj' '-c' '-dumpdir' 'CMakeFiles/cmTC_35526.dir/']
-        ignore line: [ /Users/delta/.espressif/tools/xtensa-esp-elf/esp-14.2.0_20241119/xtensa-esp-elf/bin/../libexec/gcc/xtensa-esp-elf/14.2.0/cc1 -quiet -v -imultilib esp32s3 -iprefix /Users/delta/.espressif/tools/xtensa-esp-elf/esp-14.2.0_20241119/xtensa-esp-elf/bin/../lib/gcc/xtensa-esp-elf/14.2.0/ -isysroot /Users/delta/.espressif/tools/xtensa-esp-elf/esp-14.2.0_20241119/xtensa-esp-elf/bin/../xtensa-esp-elf /opt/homebrew/share/cmake/Modules/CMakeCCompilerABI.c -quiet -dumpdir CMakeFiles/cmTC_35526.dir/ -dumpbase CMakeCCompilerABI.c.c -dumpbase-ext .c -mdynconfig=xtensa_esp32s3.so -mlongcalls -version -fno-builtin-memcpy -fno-builtin-memset -fno-builtin-bzero -fno-builtin-stpcpy -fno-builtin-strncpy -o /var/folders/z3/zx69jtps1453fm834nc2z2p80000gn/T//cc0GHrgu.s]
+        ignore line: [COLLECT_GCC_OPTIONS='-mdynconfig=xtensa_esp32s3.so' '-mlongcalls' '-fno-builtin-memcpy' '-fno-builtin-memset' '-fno-builtin-bzero' '-fno-builtin-stpcpy' '-fno-builtin-strncpy' '-v' '-o' 'CMakeFiles/cmTC_3a005.dir/CMakeCCompilerABI.c.obj' '-c' '-dumpdir' 'CMakeFiles/cmTC_3a005.dir/']
+        ignore line: [ /Users/delta/.espressif/tools/xtensa-esp-elf/esp-14.2.0_20241119/xtensa-esp-elf/bin/../libexec/gcc/xtensa-esp-elf/14.2.0/cc1 -quiet -v -imultilib esp32s3 -iprefix /Users/delta/.espressif/tools/xtensa-esp-elf/esp-14.2.0_20241119/xtensa-esp-elf/bin/../lib/gcc/xtensa-esp-elf/14.2.0/ -isysroot /Users/delta/.espressif/tools/xtensa-esp-elf/esp-14.2.0_20241119/xtensa-esp-elf/bin/../xtensa-esp-elf /opt/homebrew/share/cmake/Modules/CMakeCCompilerABI.c -quiet -dumpdir CMakeFiles/cmTC_3a005.dir/ -dumpbase CMakeCCompilerABI.c.c -dumpbase-ext .c -mdynconfig=xtensa_esp32s3.so -mlongcalls -version -fno-builtin-memcpy -fno-builtin-memset -fno-builtin-bzero -fno-builtin-stpcpy -fno-builtin-strncpy -o /var/folders/z3/zx69jtps1453fm834nc2z2p80000gn/T//cc7A0n3z.s]
         ignore line: [GNU C17 (crosstool-NG esp-14.2.0_20241119) version 14.2.0 (xtensa-esp-elf)]
         ignore line: [	compiled by GNU C version Debian Clang 11.0.1  GMP version 6.2.1  MPFR version 4.2.1  MPC version 1.2.1  isl version isl-0.26-GMP]
         ignore line: []
@@ -3711,18 +3708,17 @@ events:
         ignore line: [ignoring duplicate directory "/Users/delta/.espressif/tools/xtensa-esp-elf/esp-14.2.0_20241119/xtensa-esp-elf/bin/../xtensa-esp-elf/include"]
         ignore line: [#include "..." search starts here:]
         ignore line: [#include <...> search starts here:]
-        ignore line: [ /usr/local/include]
         ignore line: [ /Users/delta/.espressif/tools/xtensa-esp-elf/esp-14.2.0_20241119/xtensa-esp-elf/bin/../lib/gcc/xtensa-esp-elf/14.2.0/include]
         ignore line: [ /Users/delta/.espressif/tools/xtensa-esp-elf/esp-14.2.0_20241119/xtensa-esp-elf/bin/../lib/gcc/xtensa-esp-elf/14.2.0/include-fixed]
         ignore line: [ /Users/delta/.espressif/tools/xtensa-esp-elf/esp-14.2.0_20241119/xtensa-esp-elf/bin/../lib/gcc/xtensa-esp-elf/14.2.0/../../../../xtensa-esp-elf/include]
         ignore line: [End of search list.]
         ignore line: [Compiler executable checksum: af69fd9f9a101617223bab54c4450538]
-        ignore line: [COLLECT_GCC_OPTIONS='-mdynconfig=xtensa_esp32s3.so' '-mlongcalls' '-fno-builtin-memcpy' '-fno-builtin-memset' '-fno-builtin-bzero' '-fno-builtin-stpcpy' '-fno-builtin-strncpy' '-v' '-o' 'CMakeFiles/cmTC_35526.dir/CMakeCCompilerABI.c.obj' '-c' '-dumpdir' 'CMakeFiles/cmTC_35526.dir/']
-        ignore line: [ /Users/delta/.espressif/tools/xtensa-esp-elf/esp-14.2.0_20241119/xtensa-esp-elf/bin/../lib/gcc/xtensa-esp-elf/14.2.0/../../../../xtensa-esp-elf/bin/as --traditional-format --longcalls --dynconfig=xtensa_esp32s3.so -o CMakeFiles/cmTC_35526.dir/CMakeCCompilerABI.c.obj /var/folders/z3/zx69jtps1453fm834nc2z2p80000gn/T//cc0GHrgu.s]
+        ignore line: [COLLECT_GCC_OPTIONS='-mdynconfig=xtensa_esp32s3.so' '-mlongcalls' '-fno-builtin-memcpy' '-fno-builtin-memset' '-fno-builtin-bzero' '-fno-builtin-stpcpy' '-fno-builtin-strncpy' '-v' '-o' 'CMakeFiles/cmTC_3a005.dir/CMakeCCompilerABI.c.obj' '-c' '-dumpdir' 'CMakeFiles/cmTC_3a005.dir/']
+        ignore line: [ /Users/delta/.espressif/tools/xtensa-esp-elf/esp-14.2.0_20241119/xtensa-esp-elf/bin/../lib/gcc/xtensa-esp-elf/14.2.0/../../../../xtensa-esp-elf/bin/as --traditional-format --longcalls --dynconfig=xtensa_esp32s3.so -o CMakeFiles/cmTC_3a005.dir/CMakeCCompilerABI.c.obj /var/folders/z3/zx69jtps1453fm834nc2z2p80000gn/T//cc7A0n3z.s]
         ignore line: [COMPILER_PATH=/Users/delta/.espressif/tools/xtensa-esp-elf/esp-14.2.0_20241119/xtensa-esp-elf/bin/../libexec/gcc/xtensa-esp-elf/14.2.0/:/Users/delta/.espressif/tools/xtensa-esp-elf/esp-14.2.0_20241119/xtensa-esp-elf/bin/../libexec/gcc/:/Users/delta/.espressif/tools/xtensa-esp-elf/esp-14.2.0_20241119/xtensa-esp-elf/bin/../lib/gcc/xtensa-esp-elf/14.2.0/../../../../xtensa-esp-elf/bin/]
         ignore line: [LIBRARY_PATH=/Users/delta/.espressif/tools/xtensa-esp-elf/esp-14.2.0_20241119/xtensa-esp-elf/bin/../lib/gcc/xtensa-esp-elf/14.2.0/esp32s3/:/Users/delta/.espressif/tools/xtensa-esp-elf/esp-14.2.0_20241119/xtensa-esp-elf/bin/../lib/gcc/xtensa-esp-elf/14.2.0/../../../../xtensa-esp-elf/lib/esp32s3/:/Users/delta/.espressif/tools/xtensa-esp-elf/esp-14.2.0_20241119/xtensa-esp-elf/bin/../xtensa-esp-elf/lib/esp32s3/:/Users/delta/.espressif/tools/xtensa-esp-elf/esp-14.2.0_20241119/xtensa-esp-elf/bin/../lib/gcc/xtensa-esp-elf/14.2.0/:/Users/delta/.espressif/tools/xtensa-esp-elf/esp-14.2.0_20241119/xtensa-esp-elf/bin/../lib/gcc/:/Users/delta/.espressif/tools/xtensa-esp-elf/esp-14.2.0_20241119/xtensa-esp-elf/bin/../lib/gcc/xtensa-esp-elf/14.2.0/../../../../xtensa-esp-elf/lib/:/Users/delta/.espressif/tools/xtensa-esp-elf/esp-14.2.0_20241119/xtensa-esp-elf/bin/../xtensa-esp-elf/lib/:/Users/delta/.espressif/tools/xtensa-esp-elf/esp-14.2.0_20241119/xtensa-esp-elf/bin/../xtensa-esp-elf/usr/lib/]
-        ignore line: [COLLECT_GCC_OPTIONS='-mdynconfig=xtensa_esp32s3.so' '-mlongcalls' '-fno-builtin-memcpy' '-fno-builtin-memset' '-fno-builtin-bzero' '-fno-builtin-stpcpy' '-fno-builtin-strncpy' '-v' '-o' 'CMakeFiles/cmTC_35526.dir/CMakeCCompilerABI.c.obj' '-c' '-dumpdir' 'CMakeFiles/cmTC_35526.dir/CMakeCCompilerABI.c.']
-        ignore line: [[2/2] : && /Users/delta/.espressif/tools/xtensa-esp-elf/esp-14.2.0_20241119/xtensa-esp-elf/bin/xtensa-esp32s3-elf-gcc -mlongcalls  -fno-builtin-memcpy -fno-builtin-memset -fno-builtin-bzero -fno-builtin-stpcpy -fno-builtin-strncpy -nostartfiles  -v CMakeFiles/cmTC_35526.dir/CMakeCCompilerABI.c.obj -o cmTC_35526   && :]
+        ignore line: [COLLECT_GCC_OPTIONS='-mdynconfig=xtensa_esp32s3.so' '-mlongcalls' '-fno-builtin-memcpy' '-fno-builtin-memset' '-fno-builtin-bzero' '-fno-builtin-stpcpy' '-fno-builtin-strncpy' '-v' '-o' 'CMakeFiles/cmTC_3a005.dir/CMakeCCompilerABI.c.obj' '-c' '-dumpdir' 'CMakeFiles/cmTC_3a005.dir/CMakeCCompilerABI.c.']
+        ignore line: [[2/2] : && /Users/delta/.espressif/tools/xtensa-esp-elf/esp-14.2.0_20241119/xtensa-esp-elf/bin/xtensa-esp32s3-elf-gcc -mlongcalls  -fno-builtin-memcpy -fno-builtin-memset -fno-builtin-bzero -fno-builtin-stpcpy -fno-builtin-strncpy -nostartfiles  -v CMakeFiles/cmTC_3a005.dir/CMakeCCompilerABI.c.obj -o cmTC_3a005   && :]
         ignore line: [Using built-in specs.]
         ignore line: [COLLECT_GCC=/Users/delta/.espressif/tools/xtensa-esp-elf/esp-14.2.0_20241119/xtensa-esp-elf/bin/xtensa-esp-elf-gcc]
         ignore line: [COLLECT_LTO_WRAPPER=/Users/delta/.espressif/tools/xtensa-esp-elf/esp-14.2.0_20241119/xtensa-esp-elf/bin/../libexec/gcc/xtensa-esp-elf/14.2.0/lto-wrapper]
@@ -3733,13 +3729,13 @@ events:
         ignore line: [gcc version 14.2.0 (crosstool-NG esp-14.2.0_20241119) ]
         ignore line: [COMPILER_PATH=/Users/delta/.espressif/tools/xtensa-esp-elf/esp-14.2.0_20241119/xtensa-esp-elf/bin/../libexec/gcc/xtensa-esp-elf/14.2.0/:/Users/delta/.espressif/tools/xtensa-esp-elf/esp-14.2.0_20241119/xtensa-esp-elf/bin/../libexec/gcc/:/Users/delta/.espressif/tools/xtensa-esp-elf/esp-14.2.0_20241119/xtensa-esp-elf/bin/../lib/gcc/xtensa-esp-elf/14.2.0/../../../../xtensa-esp-elf/bin/]
         ignore line: [LIBRARY_PATH=/Users/delta/.espressif/tools/xtensa-esp-elf/esp-14.2.0_20241119/xtensa-esp-elf/bin/../lib/gcc/xtensa-esp-elf/14.2.0/esp32s3/:/Users/delta/.espressif/tools/xtensa-esp-elf/esp-14.2.0_20241119/xtensa-esp-elf/bin/../lib/gcc/xtensa-esp-elf/14.2.0/../../../../xtensa-esp-elf/lib/esp32s3/:/Users/delta/.espressif/tools/xtensa-esp-elf/esp-14.2.0_20241119/xtensa-esp-elf/bin/../xtensa-esp-elf/lib/esp32s3/:/Users/delta/.espressif/tools/xtensa-esp-elf/esp-14.2.0_20241119/xtensa-esp-elf/bin/../lib/gcc/xtensa-esp-elf/14.2.0/:/Users/delta/.espressif/tools/xtensa-esp-elf/esp-14.2.0_20241119/xtensa-esp-elf/bin/../lib/gcc/:/Users/delta/.espressif/tools/xtensa-esp-elf/esp-14.2.0_20241119/xtensa-esp-elf/bin/../lib/gcc/xtensa-esp-elf/14.2.0/../../../../xtensa-esp-elf/lib/:/Users/delta/.espressif/tools/xtensa-esp-elf/esp-14.2.0_20241119/xtensa-esp-elf/bin/../xtensa-esp-elf/lib/:/Users/delta/.espressif/tools/xtensa-esp-elf/esp-14.2.0_20241119/xtensa-esp-elf/bin/../xtensa-esp-elf/usr/lib/]
-        ignore line: [COLLECT_GCC_OPTIONS='-mdynconfig=xtensa_esp32s3.so' '-mlongcalls' '-fno-builtin-memcpy' '-fno-builtin-memset' '-fno-builtin-bzero' '-fno-builtin-stpcpy' '-fno-builtin-strncpy' '-nostartfiles' '-v' '-o' 'cmTC_35526' '-dumpdir' 'cmTC_35526.']
-        link line: [ /Users/delta/.espressif/tools/xtensa-esp-elf/esp-14.2.0_20241119/xtensa-esp-elf/bin/../libexec/gcc/xtensa-esp-elf/14.2.0/collect2 -plugin /Users/delta/.espressif/tools/xtensa-esp-elf/esp-14.2.0_20241119/xtensa-esp-elf/bin/../libexec/gcc/xtensa-esp-elf/14.2.0/liblto_plugin.so -plugin-opt=/Users/delta/.espressif/tools/xtensa-esp-elf/esp-14.2.0_20241119/xtensa-esp-elf/bin/../libexec/gcc/xtensa-esp-elf/14.2.0/lto-wrapper -plugin-opt=-fresolution=/var/folders/z3/zx69jtps1453fm834nc2z2p80000gn/T//cc1ycWwf.res -plugin-opt=-pass-through=-lgcc -plugin-opt=-pass-through=-lc -plugin-opt=-pass-through=-lnosys -plugin-opt=-pass-through=-lc -plugin-opt=-pass-through=-lgcc --sysroot=/Users/delta/.espressif/tools/xtensa-esp-elf/esp-14.2.0_20241119/xtensa-esp-elf/bin/../xtensa-esp-elf --dynconfig=xtensa_esp32s3.so -o cmTC_35526 -L/Users/delta/.espressif/tools/xtensa-esp-elf/esp-14.2.0_20241119/xtensa-esp-elf/bin/../lib/gcc/xtensa-esp-elf/14.2.0/esp32s3 -L/Users/delta/.espressif/tools/xtensa-esp-elf/esp-14.2.0_20241119/xtensa-esp-elf/bin/../lib/gcc/xtensa-esp-elf/14.2.0/../../../../xtensa-esp-elf/lib/esp32s3 -L/Users/delta/.espressif/tools/xtensa-esp-elf/esp-14.2.0_20241119/xtensa-esp-elf/bin/../xtensa-esp-elf/lib/esp32s3 -L/Users/delta/.espressif/tools/xtensa-esp-elf/esp-14.2.0_20241119/xtensa-esp-elf/bin/../lib/gcc/xtensa-esp-elf/14.2.0 -L/Users/delta/.espressif/tools/xtensa-esp-elf/esp-14.2.0_20241119/xtensa-esp-elf/bin/../lib/gcc -L/Users/delta/.espressif/tools/xtensa-esp-elf/esp-14.2.0_20241119/xtensa-esp-elf/bin/../lib/gcc/xtensa-esp-elf/14.2.0/../../../../xtensa-esp-elf/lib -L/Users/delta/.espressif/tools/xtensa-esp-elf/esp-14.2.0_20241119/xtensa-esp-elf/bin/../xtensa-esp-elf/lib -L/Users/delta/.espressif/tools/xtensa-esp-elf/esp-14.2.0_20241119/xtensa-esp-elf/bin/../xtensa-esp-elf/usr/lib CMakeFiles/cmTC_35526.dir/CMakeCCompilerABI.c.obj -lgcc -lc -lnosys -lc -lgcc]
+        ignore line: [COLLECT_GCC_OPTIONS='-mdynconfig=xtensa_esp32s3.so' '-mlongcalls' '-fno-builtin-memcpy' '-fno-builtin-memset' '-fno-builtin-bzero' '-fno-builtin-stpcpy' '-fno-builtin-strncpy' '-nostartfiles' '-v' '-o' 'cmTC_3a005' '-dumpdir' 'cmTC_3a005.']
+        link line: [ /Users/delta/.espressif/tools/xtensa-esp-elf/esp-14.2.0_20241119/xtensa-esp-elf/bin/../libexec/gcc/xtensa-esp-elf/14.2.0/collect2 -plugin /Users/delta/.espressif/tools/xtensa-esp-elf/esp-14.2.0_20241119/xtensa-esp-elf/bin/../libexec/gcc/xtensa-esp-elf/14.2.0/liblto_plugin.so -plugin-opt=/Users/delta/.espressif/tools/xtensa-esp-elf/esp-14.2.0_20241119/xtensa-esp-elf/bin/../libexec/gcc/xtensa-esp-elf/14.2.0/lto-wrapper -plugin-opt=-fresolution=/var/folders/z3/zx69jtps1453fm834nc2z2p80000gn/T//cceqwW0A.res -plugin-opt=-pass-through=-lgcc -plugin-opt=-pass-through=-lc -plugin-opt=-pass-through=-lnosys -plugin-opt=-pass-through=-lc -plugin-opt=-pass-through=-lgcc --sysroot=/Users/delta/.espressif/tools/xtensa-esp-elf/esp-14.2.0_20241119/xtensa-esp-elf/bin/../xtensa-esp-elf --dynconfig=xtensa_esp32s3.so -o cmTC_3a005 -L/Users/delta/.espressif/tools/xtensa-esp-elf/esp-14.2.0_20241119/xtensa-esp-elf/bin/../lib/gcc/xtensa-esp-elf/14.2.0/esp32s3 -L/Users/delta/.espressif/tools/xtensa-esp-elf/esp-14.2.0_20241119/xtensa-esp-elf/bin/../lib/gcc/xtensa-esp-elf/14.2.0/../../../../xtensa-esp-elf/lib/esp32s3 -L/Users/delta/.espressif/tools/xtensa-esp-elf/esp-14.2.0_20241119/xtensa-esp-elf/bin/../xtensa-esp-elf/lib/esp32s3 -L/Users/delta/.espressif/tools/xtensa-esp-elf/esp-14.2.0_20241119/xtensa-esp-elf/bin/../lib/gcc/xtensa-esp-elf/14.2.0 -L/Users/delta/.espressif/tools/xtensa-esp-elf/esp-14.2.0_20241119/xtensa-esp-elf/bin/../lib/gcc -L/Users/delta/.espressif/tools/xtensa-esp-elf/esp-14.2.0_20241119/xtensa-esp-elf/bin/../lib/gcc/xtensa-esp-elf/14.2.0/../../../../xtensa-esp-elf/lib -L/Users/delta/.espressif/tools/xtensa-esp-elf/esp-14.2.0_20241119/xtensa-esp-elf/bin/../xtensa-esp-elf/lib -L/Users/delta/.espressif/tools/xtensa-esp-elf/esp-14.2.0_20241119/xtensa-esp-elf/bin/../xtensa-esp-elf/usr/lib CMakeFiles/cmTC_3a005.dir/CMakeCCompilerABI.c.obj -lgcc -lc -lnosys -lc -lgcc]
           arg [/Users/delta/.espressif/tools/xtensa-esp-elf/esp-14.2.0_20241119/xtensa-esp-elf/bin/../libexec/gcc/xtensa-esp-elf/14.2.0/collect2] ==> ignore
           arg [-plugin] ==> ignore
           arg [/Users/delta/.espressif/tools/xtensa-esp-elf/esp-14.2.0_20241119/xtensa-esp-elf/bin/../libexec/gcc/xtensa-esp-elf/14.2.0/liblto_plugin.so] ==> ignore
           arg [-plugin-opt=/Users/delta/.espressif/tools/xtensa-esp-elf/esp-14.2.0_20241119/xtensa-esp-elf/bin/../libexec/gcc/xtensa-esp-elf/14.2.0/lto-wrapper] ==> ignore
-          arg [-plugin-opt=-fresolution=/var/folders/z3/zx69jtps1453fm834nc2z2p80000gn/T//cc1ycWwf.res] ==> ignore
+          arg [-plugin-opt=-fresolution=/var/folders/z3/zx69jtps1453fm834nc2z2p80000gn/T//cceqwW0A.res] ==> ignore
           arg [-plugin-opt=-pass-through=-lgcc] ==> ignore
           arg [-plugin-opt=-pass-through=-lc] ==> ignore
           arg [-plugin-opt=-pass-through=-lnosys] ==> ignore
@@ -3748,7 +3744,7 @@ events:
           arg [--sysroot=/Users/delta/.espressif/tools/xtensa-esp-elf/esp-14.2.0_20241119/xtensa-esp-elf/bin/../xtensa-esp-elf] ==> ignore
           arg [--dynconfig=xtensa_esp32s3.so] ==> ignore
           arg [-o] ==> ignore
-          arg [cmTC_35526] ==> ignore
+          arg [cmTC_3a005] ==> ignore
           arg [-L/Users/delta/.espressif/tools/xtensa-esp-elf/esp-14.2.0_20241119/xtensa-esp-elf/bin/../lib/gcc/xtensa-esp-elf/14.2.0/esp32s3] ==> dir [/Users/delta/.espressif/tools/xtensa-esp-elf/esp-14.2.0_20241119/xtensa-esp-elf/bin/../lib/gcc/xtensa-esp-elf/14.2.0/esp32s3]
           arg [-L/Users/delta/.espressif/tools/xtensa-esp-elf/esp-14.2.0_20241119/xtensa-esp-elf/bin/../lib/gcc/xtensa-esp-elf/14.2.0/../../../../xtensa-esp-elf/lib/esp32s3] ==> dir [/Users/delta/.espressif/tools/xtensa-esp-elf/esp-14.2.0_20241119/xtensa-esp-elf/bin/../lib/gcc/xtensa-esp-elf/14.2.0/../../../../xtensa-esp-elf/lib/esp32s3]
           arg [-L/Users/delta/.espressif/tools/xtensa-esp-elf/esp-14.2.0_20241119/xtensa-esp-elf/bin/../xtensa-esp-elf/lib/esp32s3] ==> dir [/Users/delta/.espressif/tools/xtensa-esp-elf/esp-14.2.0_20241119/xtensa-esp-elf/bin/../xtensa-esp-elf/lib/esp32s3]
@@ -3757,7 +3753,7 @@ events:
           arg [-L/Users/delta/.espressif/tools/xtensa-esp-elf/esp-14.2.0_20241119/xtensa-esp-elf/bin/../lib/gcc/xtensa-esp-elf/14.2.0/../../../../xtensa-esp-elf/lib] ==> dir [/Users/delta/.espressif/tools/xtensa-esp-elf/esp-14.2.0_20241119/xtensa-esp-elf/bin/../lib/gcc/xtensa-esp-elf/14.2.0/../../../../xtensa-esp-elf/lib]
           arg [-L/Users/delta/.espressif/tools/xtensa-esp-elf/esp-14.2.0_20241119/xtensa-esp-elf/bin/../xtensa-esp-elf/lib] ==> dir [/Users/delta/.espressif/tools/xtensa-esp-elf/esp-14.2.0_20241119/xtensa-esp-elf/bin/../xtensa-esp-elf/lib]
           arg [-L/Users/delta/.espressif/tools/xtensa-esp-elf/esp-14.2.0_20241119/xtensa-esp-elf/bin/../xtensa-esp-elf/usr/lib] ==> dir [/Users/delta/.espressif/tools/xtensa-esp-elf/esp-14.2.0_20241119/xtensa-esp-elf/bin/../xtensa-esp-elf/usr/lib]
-          arg [CMakeFiles/cmTC_35526.dir/CMakeCCompilerABI.c.obj] ==> ignore
+          arg [CMakeFiles/cmTC_3a005.dir/CMakeCCompilerABI.c.obj] ==> ignore
           arg [-lgcc] ==> lib [gcc]
           arg [-lc] ==> lib [c]
           arg [-lnosys] ==> lib [nosys]
@@ -3765,7 +3761,7 @@ events:
           arg [-lgcc] ==> lib [gcc]
         ignore line: [/Users/delta/.espressif/tools/xtensa-esp-elf/esp-14.2.0_20241119/xtensa-esp-elf/bin/../lib/gcc/xtensa-esp-elf/14.2.0/../../../../xtensa-esp-elf/bin/ld: warning: cannot find entry symbol _start]
         ignore line: [ defaulting to 00400074]
-        ignore line: [COLLECT_GCC_OPTIONS='-mdynconfig=xtensa_esp32s3.so' '-mlongcalls' '-fno-builtin-memcpy' '-fno-builtin-memset' '-fno-builtin-bzero' '-fno-builtin-stpcpy' '-fno-builtin-strncpy' '-nostartfiles' '-v' '-o' 'cmTC_35526' '-dumpdir' 'cmTC_35526.']
+        ignore line: [COLLECT_GCC_OPTIONS='-mdynconfig=xtensa_esp32s3.so' '-mlongcalls' '-fno-builtin-memcpy' '-fno-builtin-memset' '-fno-builtin-bzero' '-fno-builtin-stpcpy' '-fno-builtin-strncpy' '-nostartfiles' '-v' '-o' 'cmTC_3a005' '-dumpdir' 'cmTC_3a005.']
         ignore line: []
         ignore line: []
         collapse library dir [/Users/delta/.espressif/tools/xtensa-esp-elf/esp-14.2.0_20241119/xtensa-esp-elf/bin/../lib/gcc/xtensa-esp-elf/14.2.0/esp32s3] ==> [/Users/delta/.espressif/tools/xtensa-esp-elf/esp-14.2.0_20241119/xtensa-esp-elf/lib/gcc/xtensa-esp-elf/14.2.0/esp32s3]
@@ -3792,8 +3788,8 @@ events:
     checks:
       - "Detecting CXX compiler ABI info"
     directories:
-      source: "/Users/delta/streamrtcm/rtkesp32s3/build/CMakeFiles/CMakeScratch/TryCompile-8walNi"
-      binary: "/Users/delta/streamrtcm/rtkesp32s3/build/CMakeFiles/CMakeScratch/TryCompile-8walNi"
+      source: "/Users/delta/streamrtcm/rtkesp32s3/build/CMakeFiles/CMakeScratch/TryCompile-fzvIIp"
+      binary: "/Users/delta/streamrtcm/rtkesp32s3/build/CMakeFiles/CMakeScratch/TryCompile-fzvIIp"
     cmakeVariables:
       CMAKE_CXX_FLAGS: "-mlongcalls  -fno-builtin-memcpy -fno-builtin-memset -fno-builtin-bzero -fno-builtin-stpcpy -fno-builtin-strncpy"
       CMAKE_CXX_FLAGS_DEBUG: "-g"
@@ -3804,10 +3800,10 @@ events:
       variable: "CMAKE_CXX_ABI_COMPILED"
       cached: true
       stdout: |
-        Change Dir: '/Users/delta/streamrtcm/rtkesp32s3/build/CMakeFiles/CMakeScratch/TryCompile-8walNi'
+        Change Dir: '/Users/delta/streamrtcm/rtkesp32s3/build/CMakeFiles/CMakeScratch/TryCompile-fzvIIp'
         
-        Run Build Command(s): /opt/local/bin/ninja -v cmTC_c5b54
-        [1/2] /Users/delta/.espressif/tools/xtensa-esp-elf/esp-14.2.0_20241119/xtensa-esp-elf/bin/xtensa-esp32s3-elf-g++   -mlongcalls  -fno-builtin-memcpy -fno-builtin-memset -fno-builtin-bzero -fno-builtin-stpcpy -fno-builtin-strncpy    -v -o CMakeFiles/cmTC_c5b54.dir/CMakeCXXCompilerABI.cpp.obj -c /opt/homebrew/share/cmake/Modules/CMakeCXXCompilerABI.cpp
+        Run Build Command(s): /opt/local/bin/ninja -v cmTC_098e9
+        [1/2] /Users/delta/.espressif/tools/xtensa-esp-elf/esp-14.2.0_20241119/xtensa-esp-elf/bin/xtensa-esp32s3-elf-g++   -mlongcalls  -fno-builtin-memcpy -fno-builtin-memset -fno-builtin-bzero -fno-builtin-stpcpy -fno-builtin-strncpy    -v -o CMakeFiles/cmTC_098e9.dir/CMakeCXXCompilerABI.cpp.obj -c /opt/homebrew/share/cmake/Modules/CMakeCXXCompilerABI.cpp
         Using built-in specs.
         COLLECT_GCC=/Users/delta/.espressif/tools/xtensa-esp-elf/esp-14.2.0_20241119/xtensa-esp-elf/bin/xtensa-esp-elf-g++
         Target: xtensa-esp-elf
@@ -3815,8 +3811,8 @@ events:
         Thread model: posix
         Supported LTO compression algorithms: zlib
         gcc version 14.2.0 (crosstool-NG esp-14.2.0_20241119) 
-        COLLECT_GCC_OPTIONS='-mdynconfig=xtensa_esp32s3.so' '-mlongcalls' '-fno-builtin-memcpy' '-fno-builtin-memset' '-fno-builtin-bzero' '-fno-builtin-stpcpy' '-fno-builtin-strncpy' '-v' '-o' 'CMakeFiles/cmTC_c5b54.dir/CMakeCXXCompilerABI.cpp.obj' '-c' '-dumpdir' 'CMakeFiles/cmTC_c5b54.dir/'
-         /Users/delta/.espressif/tools/xtensa-esp-elf/esp-14.2.0_20241119/xtensa-esp-elf/bin/../libexec/gcc/xtensa-esp-elf/14.2.0/cc1plus -quiet -v -imultilib esp32s3 -iprefix /Users/delta/.espressif/tools/xtensa-esp-elf/esp-14.2.0_20241119/xtensa-esp-elf/bin/../lib/gcc/xtensa-esp-elf/14.2.0/ -isysroot /Users/delta/.espressif/tools/xtensa-esp-elf/esp-14.2.0_20241119/xtensa-esp-elf/bin/../xtensa-esp-elf /opt/homebrew/share/cmake/Modules/CMakeCXXCompilerABI.cpp -quiet -dumpdir CMakeFiles/cmTC_c5b54.dir/ -dumpbase CMakeCXXCompilerABI.cpp.cpp -dumpbase-ext .cpp -mdynconfig=xtensa_esp32s3.so -mlongcalls -version -fno-builtin-memcpy -fno-builtin-memset -fno-builtin-bzero -fno-builtin-stpcpy -fno-builtin-strncpy -o /var/folders/z3/zx69jtps1453fm834nc2z2p80000gn/T//cceXEJTj.s
+        COLLECT_GCC_OPTIONS='-mdynconfig=xtensa_esp32s3.so' '-mlongcalls' '-fno-builtin-memcpy' '-fno-builtin-memset' '-fno-builtin-bzero' '-fno-builtin-stpcpy' '-fno-builtin-strncpy' '-v' '-o' 'CMakeFiles/cmTC_098e9.dir/CMakeCXXCompilerABI.cpp.obj' '-c' '-dumpdir' 'CMakeFiles/cmTC_098e9.dir/'
+         /Users/delta/.espressif/tools/xtensa-esp-elf/esp-14.2.0_20241119/xtensa-esp-elf/bin/../libexec/gcc/xtensa-esp-elf/14.2.0/cc1plus -quiet -v -imultilib esp32s3 -iprefix /Users/delta/.espressif/tools/xtensa-esp-elf/esp-14.2.0_20241119/xtensa-esp-elf/bin/../lib/gcc/xtensa-esp-elf/14.2.0/ -isysroot /Users/delta/.espressif/tools/xtensa-esp-elf/esp-14.2.0_20241119/xtensa-esp-elf/bin/../xtensa-esp-elf /opt/homebrew/share/cmake/Modules/CMakeCXXCompilerABI.cpp -quiet -dumpdir CMakeFiles/cmTC_098e9.dir/ -dumpbase CMakeCXXCompilerABI.cpp.cpp -dumpbase-ext .cpp -mdynconfig=xtensa_esp32s3.so -mlongcalls -version -fno-builtin-memcpy -fno-builtin-memset -fno-builtin-bzero -fno-builtin-stpcpy -fno-builtin-strncpy -o /var/folders/z3/zx69jtps1453fm834nc2z2p80000gn/T//ccrCWOjd.s
         GNU C++17 (crosstool-NG esp-14.2.0_20241119) version 14.2.0 (xtensa-esp-elf)
         	compiled by GNU C version Debian Clang 11.0.1, GMP version 6.2.1, MPFR version 4.2.1, MPC version 1.2.1, isl version isl-0.26-GMP
         
@@ -3831,7 +3827,6 @@ events:
         ignoring duplicate directory "/Users/delta/.espressif/tools/xtensa-esp-elf/esp-14.2.0_20241119/xtensa-esp-elf/bin/../xtensa-esp-elf/include"
         #include "..." search starts here:
         #include <...> search starts here:
-         /usr/local/include
          /Users/delta/.espressif/tools/xtensa-esp-elf/esp-14.2.0_20241119/xtensa-esp-elf/bin/../lib/gcc/xtensa-esp-elf/14.2.0/../../../../xtensa-esp-elf/include/c++/14.2.0
          /Users/delta/.espressif/tools/xtensa-esp-elf/esp-14.2.0_20241119/xtensa-esp-elf/bin/../lib/gcc/xtensa-esp-elf/14.2.0/../../../../xtensa-esp-elf/include/c++/14.2.0/xtensa-esp-elf/esp32s3
          /Users/delta/.espressif/tools/xtensa-esp-elf/esp-14.2.0_20241119/xtensa-esp-elf/bin/../lib/gcc/xtensa-esp-elf/14.2.0/../../../../xtensa-esp-elf/include/c++/14.2.0/backward
@@ -3840,12 +3835,12 @@ events:
          /Users/delta/.espressif/tools/xtensa-esp-elf/esp-14.2.0_20241119/xtensa-esp-elf/bin/../lib/gcc/xtensa-esp-elf/14.2.0/../../../../xtensa-esp-elf/include
         End of search list.
         Compiler executable checksum: f95fb27b9d6b101b60d0ece4239a97f9
-        COLLECT_GCC_OPTIONS='-mdynconfig=xtensa_esp32s3.so' '-mlongcalls' '-fno-builtin-memcpy' '-fno-builtin-memset' '-fno-builtin-bzero' '-fno-builtin-stpcpy' '-fno-builtin-strncpy' '-v' '-o' 'CMakeFiles/cmTC_c5b54.dir/CMakeCXXCompilerABI.cpp.obj' '-c' '-dumpdir' 'CMakeFiles/cmTC_c5b54.dir/'
-         /Users/delta/.espressif/tools/xtensa-esp-elf/esp-14.2.0_20241119/xtensa-esp-elf/bin/../lib/gcc/xtensa-esp-elf/14.2.0/../../../../xtensa-esp-elf/bin/as --traditional-format --longcalls --dynconfig=xtensa_esp32s3.so -o CMakeFiles/cmTC_c5b54.dir/CMakeCXXCompilerABI.cpp.obj /var/folders/z3/zx69jtps1453fm834nc2z2p80000gn/T//cceXEJTj.s
+        COLLECT_GCC_OPTIONS='-mdynconfig=xtensa_esp32s3.so' '-mlongcalls' '-fno-builtin-memcpy' '-fno-builtin-memset' '-fno-builtin-bzero' '-fno-builtin-stpcpy' '-fno-builtin-strncpy' '-v' '-o' 'CMakeFiles/cmTC_098e9.dir/CMakeCXXCompilerABI.cpp.obj' '-c' '-dumpdir' 'CMakeFiles/cmTC_098e9.dir/'
+         /Users/delta/.espressif/tools/xtensa-esp-elf/esp-14.2.0_20241119/xtensa-esp-elf/bin/../lib/gcc/xtensa-esp-elf/14.2.0/../../../../xtensa-esp-elf/bin/as --traditional-format --longcalls --dynconfig=xtensa_esp32s3.so -o CMakeFiles/cmTC_098e9.dir/CMakeCXXCompilerABI.cpp.obj /var/folders/z3/zx69jtps1453fm834nc2z2p80000gn/T//ccrCWOjd.s
         COMPILER_PATH=/Users/delta/.espressif/tools/xtensa-esp-elf/esp-14.2.0_20241119/xtensa-esp-elf/bin/../libexec/gcc/xtensa-esp-elf/14.2.0/:/Users/delta/.espressif/tools/xtensa-esp-elf/esp-14.2.0_20241119/xtensa-esp-elf/bin/../libexec/gcc/:/Users/delta/.espressif/tools/xtensa-esp-elf/esp-14.2.0_20241119/xtensa-esp-elf/bin/../lib/gcc/xtensa-esp-elf/14.2.0/../../../../xtensa-esp-elf/bin/
         LIBRARY_PATH=/Users/delta/.espressif/tools/xtensa-esp-elf/esp-14.2.0_20241119/xtensa-esp-elf/bin/../lib/gcc/xtensa-esp-elf/14.2.0/esp32s3/:/Users/delta/.espressif/tools/xtensa-esp-elf/esp-14.2.0_20241119/xtensa-esp-elf/bin/../lib/gcc/xtensa-esp-elf/14.2.0/../../../../xtensa-esp-elf/lib/esp32s3/:/Users/delta/.espressif/tools/xtensa-esp-elf/esp-14.2.0_20241119/xtensa-esp-elf/bin/../xtensa-esp-elf/lib/esp32s3/:/Users/delta/.espressif/tools/xtensa-esp-elf/esp-14.2.0_20241119/xtensa-esp-elf/bin/../lib/gcc/xtensa-esp-elf/14.2.0/:/Users/delta/.espressif/tools/xtensa-esp-elf/esp-14.2.0_20241119/xtensa-esp-elf/bin/../lib/gcc/:/Users/delta/.espressif/tools/xtensa-esp-elf/esp-14.2.0_20241119/xtensa-esp-elf/bin/../lib/gcc/xtensa-esp-elf/14.2.0/../../../../xtensa-esp-elf/lib/:/Users/delta/.espressif/tools/xtensa-esp-elf/esp-14.2.0_20241119/xtensa-esp-elf/bin/../xtensa-esp-elf/lib/:/Users/delta/.espressif/tools/xtensa-esp-elf/esp-14.2.0_20241119/xtensa-esp-elf/bin/../xtensa-esp-elf/usr/lib/
-        COLLECT_GCC_OPTIONS='-mdynconfig=xtensa_esp32s3.so' '-mlongcalls' '-fno-builtin-memcpy' '-fno-builtin-memset' '-fno-builtin-bzero' '-fno-builtin-stpcpy' '-fno-builtin-strncpy' '-v' '-o' 'CMakeFiles/cmTC_c5b54.dir/CMakeCXXCompilerABI.cpp.obj' '-c' '-dumpdir' 'CMakeFiles/cmTC_c5b54.dir/CMakeCXXCompilerABI.cpp.'
-        [2/2] : && /Users/delta/.espressif/tools/xtensa-esp-elf/esp-14.2.0_20241119/xtensa-esp-elf/bin/xtensa-esp32s3-elf-g++ -mlongcalls  -fno-builtin-memcpy -fno-builtin-memset -fno-builtin-bzero -fno-builtin-stpcpy -fno-builtin-strncpy -nostartfiles  -v CMakeFiles/cmTC_c5b54.dir/CMakeCXXCompilerABI.cpp.obj -o cmTC_c5b54   && :
+        COLLECT_GCC_OPTIONS='-mdynconfig=xtensa_esp32s3.so' '-mlongcalls' '-fno-builtin-memcpy' '-fno-builtin-memset' '-fno-builtin-bzero' '-fno-builtin-stpcpy' '-fno-builtin-strncpy' '-v' '-o' 'CMakeFiles/cmTC_098e9.dir/CMakeCXXCompilerABI.cpp.obj' '-c' '-dumpdir' 'CMakeFiles/cmTC_098e9.dir/CMakeCXXCompilerABI.cpp.'
+        [2/2] : && /Users/delta/.espressif/tools/xtensa-esp-elf/esp-14.2.0_20241119/xtensa-esp-elf/bin/xtensa-esp32s3-elf-g++ -mlongcalls  -fno-builtin-memcpy -fno-builtin-memset -fno-builtin-bzero -fno-builtin-stpcpy -fno-builtin-strncpy -nostartfiles  -v CMakeFiles/cmTC_098e9.dir/CMakeCXXCompilerABI.cpp.obj -o cmTC_098e9   && :
         Using built-in specs.
         COLLECT_GCC=/Users/delta/.espressif/tools/xtensa-esp-elf/esp-14.2.0_20241119/xtensa-esp-elf/bin/xtensa-esp-elf-g++
         COLLECT_LTO_WRAPPER=/Users/delta/.espressif/tools/xtensa-esp-elf/esp-14.2.0_20241119/xtensa-esp-elf/bin/../libexec/gcc/xtensa-esp-elf/14.2.0/lto-wrapper
@@ -3856,10 +3851,10 @@ events:
         gcc version 14.2.0 (crosstool-NG esp-14.2.0_20241119) 
         COMPILER_PATH=/Users/delta/.espressif/tools/xtensa-esp-elf/esp-14.2.0_20241119/xtensa-esp-elf/bin/../libexec/gcc/xtensa-esp-elf/14.2.0/:/Users/delta/.espressif/tools/xtensa-esp-elf/esp-14.2.0_20241119/xtensa-esp-elf/bin/../libexec/gcc/:/Users/delta/.espressif/tools/xtensa-esp-elf/esp-14.2.0_20241119/xtensa-esp-elf/bin/../lib/gcc/xtensa-esp-elf/14.2.0/../../../../xtensa-esp-elf/bin/
         LIBRARY_PATH=/Users/delta/.espressif/tools/xtensa-esp-elf/esp-14.2.0_20241119/xtensa-esp-elf/bin/../lib/gcc/xtensa-esp-elf/14.2.0/esp32s3/:/Users/delta/.espressif/tools/xtensa-esp-elf/esp-14.2.0_20241119/xtensa-esp-elf/bin/../lib/gcc/xtensa-esp-elf/14.2.0/../../../../xtensa-esp-elf/lib/esp32s3/:/Users/delta/.espressif/tools/xtensa-esp-elf/esp-14.2.0_20241119/xtensa-esp-elf/bin/../xtensa-esp-elf/lib/esp32s3/:/Users/delta/.espressif/tools/xtensa-esp-elf/esp-14.2.0_20241119/xtensa-esp-elf/bin/../lib/gcc/xtensa-esp-elf/14.2.0/:/Users/delta/.espressif/tools/xtensa-esp-elf/esp-14.2.0_20241119/xtensa-esp-elf/bin/../lib/gcc/:/Users/delta/.espressif/tools/xtensa-esp-elf/esp-14.2.0_20241119/xtensa-esp-elf/bin/../lib/gcc/xtensa-esp-elf/14.2.0/../../../../xtensa-esp-elf/lib/:/Users/delta/.espressif/tools/xtensa-esp-elf/esp-14.2.0_20241119/xtensa-esp-elf/bin/../xtensa-esp-elf/lib/:/Users/delta/.espressif/tools/xtensa-esp-elf/esp-14.2.0_20241119/xtensa-esp-elf/bin/../xtensa-esp-elf/usr/lib/
-        COLLECT_GCC_OPTIONS='-mdynconfig=xtensa_esp32s3.so' '-mlongcalls' '-fno-builtin-memcpy' '-fno-builtin-memset' '-fno-builtin-bzero' '-fno-builtin-stpcpy' '-fno-builtin-strncpy' '-nostartfiles' '-v' '-o' 'cmTC_c5b54' '-dumpdir' 'cmTC_c5b54.'
-         /Users/delta/.espressif/tools/xtensa-esp-elf/esp-14.2.0_20241119/xtensa-esp-elf/bin/../libexec/gcc/xtensa-esp-elf/14.2.0/collect2 -plugin /Users/delta/.espressif/tools/xtensa-esp-elf/esp-14.2.0_20241119/xtensa-esp-elf/bin/../libexec/gcc/xtensa-esp-elf/14.2.0/liblto_plugin.so -plugin-opt=/Users/delta/.espressif/tools/xtensa-esp-elf/esp-14.2.0_20241119/xtensa-esp-elf/bin/../libexec/gcc/xtensa-esp-elf/14.2.0/lto-wrapper -plugin-opt=-fresolution=/var/folders/z3/zx69jtps1453fm834nc2z2p80000gn/T//ccWUGrDh.res -plugin-opt=-pass-through=-lgcc -plugin-opt=-pass-through=-lc -plugin-opt=-pass-through=-lnosys -plugin-opt=-pass-through=-lc -plugin-opt=-pass-through=-lgcc --sysroot=/Users/delta/.espressif/tools/xtensa-esp-elf/esp-14.2.0_20241119/xtensa-esp-elf/bin/../xtensa-esp-elf --dynconfig=xtensa_esp32s3.so -o cmTC_c5b54 -L/Users/delta/.espressif/tools/xtensa-esp-elf/esp-14.2.0_20241119/xtensa-esp-elf/bin/../lib/gcc/xtensa-esp-elf/14.2.0/esp32s3 -L/Users/delta/.espressif/tools/xtensa-esp-elf/esp-14.2.0_20241119/xtensa-esp-elf/bin/../lib/gcc/xtensa-esp-elf/14.2.0/../../../../xtensa-esp-elf/lib/esp32s3 -L/Users/delta/.espressif/tools/xtensa-esp-elf/esp-14.2.0_20241119/xtensa-esp-elf/bin/../xtensa-esp-elf/lib/esp32s3 -L/Users/delta/.espressif/tools/xtensa-esp-elf/esp-14.2.0_20241119/xtensa-esp-elf/bin/../lib/gcc/xtensa-esp-elf/14.2.0 -L/Users/delta/.espressif/tools/xtensa-esp-elf/esp-14.2.0_20241119/xtensa-esp-elf/bin/../lib/gcc -L/Users/delta/.espressif/tools/xtensa-esp-elf/esp-14.2.0_20241119/xtensa-esp-elf/bin/../lib/gcc/xtensa-esp-elf/14.2.0/../../../../xtensa-esp-elf/lib -L/Users/delta/.espressif/tools/xtensa-esp-elf/esp-14.2.0_20241119/xtensa-esp-elf/bin/../xtensa-esp-elf/lib -L/Users/delta/.espressif/tools/xtensa-esp-elf/esp-14.2.0_20241119/xtensa-esp-elf/bin/../xtensa-esp-elf/usr/lib CMakeFiles/cmTC_c5b54.dir/CMakeCXXCompilerABI.cpp.obj -lstdc++ -lm -lgcc -lc -lnosys -lc -lgcc
+        COLLECT_GCC_OPTIONS='-mdynconfig=xtensa_esp32s3.so' '-mlongcalls' '-fno-builtin-memcpy' '-fno-builtin-memset' '-fno-builtin-bzero' '-fno-builtin-stpcpy' '-fno-builtin-strncpy' '-nostartfiles' '-v' '-o' 'cmTC_098e9' '-dumpdir' 'cmTC_098e9.'
+         /Users/delta/.espressif/tools/xtensa-esp-elf/esp-14.2.0_20241119/xtensa-esp-elf/bin/../libexec/gcc/xtensa-esp-elf/14.2.0/collect2 -plugin /Users/delta/.espressif/tools/xtensa-esp-elf/esp-14.2.0_20241119/xtensa-esp-elf/bin/../libexec/gcc/xtensa-esp-elf/14.2.0/liblto_plugin.so -plugin-opt=/Users/delta/.espressif/tools/xtensa-esp-elf/esp-14.2.0_20241119/xtensa-esp-elf/bin/../libexec/gcc/xtensa-esp-elf/14.2.0/lto-wrapper -plugin-opt=-fresolution=/var/folders/z3/zx69jtps1453fm834nc2z2p80000gn/T//cc9htTFS.res -plugin-opt=-pass-through=-lgcc -plugin-opt=-pass-through=-lc -plugin-opt=-pass-through=-lnosys -plugin-opt=-pass-through=-lc -plugin-opt=-pass-through=-lgcc --sysroot=/Users/delta/.espressif/tools/xtensa-esp-elf/esp-14.2.0_20241119/xtensa-esp-elf/bin/../xtensa-esp-elf --dynconfig=xtensa_esp32s3.so -o cmTC_098e9 -L/Users/delta/.espressif/tools/xtensa-esp-elf/esp-14.2.0_20241119/xtensa-esp-elf/bin/../lib/gcc/xtensa-esp-elf/14.2.0/esp32s3 -L/Users/delta/.espressif/tools/xtensa-esp-elf/esp-14.2.0_20241119/xtensa-esp-elf/bin/../lib/gcc/xtensa-esp-elf/14.2.0/../../../../xtensa-esp-elf/lib/esp32s3 -L/Users/delta/.espressif/tools/xtensa-esp-elf/esp-14.2.0_20241119/xtensa-esp-elf/bin/../xtensa-esp-elf/lib/esp32s3 -L/Users/delta/.espressif/tools/xtensa-esp-elf/esp-14.2.0_20241119/xtensa-esp-elf/bin/../lib/gcc/xtensa-esp-elf/14.2.0 -L/Users/delta/.espressif/tools/xtensa-esp-elf/esp-14.2.0_20241119/xtensa-esp-elf/bin/../lib/gcc -L/Users/delta/.espressif/tools/xtensa-esp-elf/esp-14.2.0_20241119/xtensa-esp-elf/bin/../lib/gcc/xtensa-esp-elf/14.2.0/../../../../xtensa-esp-elf/lib -L/Users/delta/.espressif/tools/xtensa-esp-elf/esp-14.2.0_20241119/xtensa-esp-elf/bin/../xtensa-esp-elf/lib -L/Users/delta/.espressif/tools/xtensa-esp-elf/esp-14.2.0_20241119/xtensa-esp-elf/bin/../xtensa-esp-elf/usr/lib CMakeFiles/cmTC_098e9.dir/CMakeCXXCompilerABI.cpp.obj -lstdc++ -lm -lgcc -lc -lnosys -lc -lgcc
         /Users/delta/.espressif/tools/xtensa-esp-elf/esp-14.2.0_20241119/xtensa-esp-elf/bin/../lib/gcc/xtensa-esp-elf/14.2.0/../../../../xtensa-esp-elf/bin/ld: warning: cannot find entry symbol _start; defaulting to 00400074
-        COLLECT_GCC_OPTIONS='-mdynconfig=xtensa_esp32s3.so' '-mlongcalls' '-fno-builtin-memcpy' '-fno-builtin-memset' '-fno-builtin-bzero' '-fno-builtin-stpcpy' '-fno-builtin-strncpy' '-nostartfiles' '-v' '-o' 'cmTC_c5b54' '-dumpdir' 'cmTC_c5b54.'
+        COLLECT_GCC_OPTIONS='-mdynconfig=xtensa_esp32s3.so' '-mlongcalls' '-fno-builtin-memcpy' '-fno-builtin-memset' '-fno-builtin-bzero' '-fno-builtin-stpcpy' '-fno-builtin-strncpy' '-nostartfiles' '-v' '-o' 'cmTC_098e9' '-dumpdir' 'cmTC_098e9.'
         
       exitCode: 0
   -
@@ -3873,7 +3868,6 @@ events:
       Parsed CXX implicit include dir info: rv=done
         found start of include info
         found start of implicit include info
-          add: [/usr/local/include]
           add: [/Users/delta/.espressif/tools/xtensa-esp-elf/esp-14.2.0_20241119/xtensa-esp-elf/bin/../lib/gcc/xtensa-esp-elf/14.2.0/../../../../xtensa-esp-elf/include/c++/14.2.0]
           add: [/Users/delta/.espressif/tools/xtensa-esp-elf/esp-14.2.0_20241119/xtensa-esp-elf/bin/../lib/gcc/xtensa-esp-elf/14.2.0/../../../../xtensa-esp-elf/include/c++/14.2.0/xtensa-esp-elf/esp32s3]
           add: [/Users/delta/.espressif/tools/xtensa-esp-elf/esp-14.2.0_20241119/xtensa-esp-elf/bin/../lib/gcc/xtensa-esp-elf/14.2.0/../../../../xtensa-esp-elf/include/c++/14.2.0/backward]
@@ -3881,14 +3875,13 @@ events:
           add: [/Users/delta/.espressif/tools/xtensa-esp-elf/esp-14.2.0_20241119/xtensa-esp-elf/bin/../lib/gcc/xtensa-esp-elf/14.2.0/include-fixed]
           add: [/Users/delta/.espressif/tools/xtensa-esp-elf/esp-14.2.0_20241119/xtensa-esp-elf/bin/../lib/gcc/xtensa-esp-elf/14.2.0/../../../../xtensa-esp-elf/include]
         end of search list found
-        collapse include dir [/usr/local/include] ==> [/usr/local/include]
         collapse include dir [/Users/delta/.espressif/tools/xtensa-esp-elf/esp-14.2.0_20241119/xtensa-esp-elf/bin/../lib/gcc/xtensa-esp-elf/14.2.0/../../../../xtensa-esp-elf/include/c++/14.2.0] ==> [/Users/delta/.espressif/tools/xtensa-esp-elf/esp-14.2.0_20241119/xtensa-esp-elf/xtensa-esp-elf/include/c++/14.2.0]
         collapse include dir [/Users/delta/.espressif/tools/xtensa-esp-elf/esp-14.2.0_20241119/xtensa-esp-elf/bin/../lib/gcc/xtensa-esp-elf/14.2.0/../../../../xtensa-esp-elf/include/c++/14.2.0/xtensa-esp-elf/esp32s3] ==> [/Users/delta/.espressif/tools/xtensa-esp-elf/esp-14.2.0_20241119/xtensa-esp-elf/xtensa-esp-elf/include/c++/14.2.0/xtensa-esp-elf/esp32s3]
         collapse include dir [/Users/delta/.espressif/tools/xtensa-esp-elf/esp-14.2.0_20241119/xtensa-esp-elf/bin/../lib/gcc/xtensa-esp-elf/14.2.0/../../../../xtensa-esp-elf/include/c++/14.2.0/backward] ==> [/Users/delta/.espressif/tools/xtensa-esp-elf/esp-14.2.0_20241119/xtensa-esp-elf/xtensa-esp-elf/include/c++/14.2.0/backward]
         collapse include dir [/Users/delta/.espressif/tools/xtensa-esp-elf/esp-14.2.0_20241119/xtensa-esp-elf/bin/../lib/gcc/xtensa-esp-elf/14.2.0/include] ==> [/Users/delta/.espressif/tools/xtensa-esp-elf/esp-14.2.0_20241119/xtensa-esp-elf/lib/gcc/xtensa-esp-elf/14.2.0/include]
         collapse include dir [/Users/delta/.espressif/tools/xtensa-esp-elf/esp-14.2.0_20241119/xtensa-esp-elf/bin/../lib/gcc/xtensa-esp-elf/14.2.0/include-fixed] ==> [/Users/delta/.espressif/tools/xtensa-esp-elf/esp-14.2.0_20241119/xtensa-esp-elf/lib/gcc/xtensa-esp-elf/14.2.0/include-fixed]
         collapse include dir [/Users/delta/.espressif/tools/xtensa-esp-elf/esp-14.2.0_20241119/xtensa-esp-elf/bin/../lib/gcc/xtensa-esp-elf/14.2.0/../../../../xtensa-esp-elf/include] ==> [/Users/delta/.espressif/tools/xtensa-esp-elf/esp-14.2.0_20241119/xtensa-esp-elf/xtensa-esp-elf/include]
-        implicit include dirs: [/usr/local/include;/Users/delta/.espressif/tools/xtensa-esp-elf/esp-14.2.0_20241119/xtensa-esp-elf/xtensa-esp-elf/include/c++/14.2.0;/Users/delta/.espressif/tools/xtensa-esp-elf/esp-14.2.0_20241119/xtensa-esp-elf/xtensa-esp-elf/include/c++/14.2.0/xtensa-esp-elf/esp32s3;/Users/delta/.espressif/tools/xtensa-esp-elf/esp-14.2.0_20241119/xtensa-esp-elf/xtensa-esp-elf/include/c++/14.2.0/backward;/Users/delta/.espressif/tools/xtensa-esp-elf/esp-14.2.0_20241119/xtensa-esp-elf/lib/gcc/xtensa-esp-elf/14.2.0/include;/Users/delta/.espressif/tools/xtensa-esp-elf/esp-14.2.0_20241119/xtensa-esp-elf/lib/gcc/xtensa-esp-elf/14.2.0/include-fixed;/Users/delta/.espressif/tools/xtensa-esp-elf/esp-14.2.0_20241119/xtensa-esp-elf/xtensa-esp-elf/include]
+        implicit include dirs: [/Users/delta/.espressif/tools/xtensa-esp-elf/esp-14.2.0_20241119/xtensa-esp-elf/xtensa-esp-elf/include/c++/14.2.0;/Users/delta/.espressif/tools/xtensa-esp-elf/esp-14.2.0_20241119/xtensa-esp-elf/xtensa-esp-elf/include/c++/14.2.0/xtensa-esp-elf/esp32s3;/Users/delta/.espressif/tools/xtensa-esp-elf/esp-14.2.0_20241119/xtensa-esp-elf/xtensa-esp-elf/include/c++/14.2.0/backward;/Users/delta/.espressif/tools/xtensa-esp-elf/esp-14.2.0_20241119/xtensa-esp-elf/lib/gcc/xtensa-esp-elf/14.2.0/include;/Users/delta/.espressif/tools/xtensa-esp-elf/esp-14.2.0_20241119/xtensa-esp-elf/lib/gcc/xtensa-esp-elf/14.2.0/include-fixed;/Users/delta/.espressif/tools/xtensa-esp-elf/esp-14.2.0_20241119/xtensa-esp-elf/xtensa-esp-elf/include]
       
       
   -
@@ -3902,10 +3895,10 @@ events:
       Parsed CXX implicit link information:
         link line regex: [^( *|.*[/\\])(ld[0-9]*(|\\.[a-rt-z][a-z]*|\\.s[a-np-z][a-z]*|\\.so[a-z]+)|CMAKE_LINK_STARTFILE-NOTFOUND|([^/\\]+-)?ld|collect2)[^/\\]*( |$)]
         linker tool regex: [^[ 	]*(->|")?[ 	]*(([^"]*[/\\])?(ld[0-9]*(|\\.[a-rt-z][a-z]*|\\.s[a-np-z][a-z]*|\\.so[a-z]+)))("|,| |$)]
-        ignore line: [Change Dir: '/Users/delta/streamrtcm/rtkesp32s3/build/CMakeFiles/CMakeScratch/TryCompile-8walNi']
+        ignore line: [Change Dir: '/Users/delta/streamrtcm/rtkesp32s3/build/CMakeFiles/CMakeScratch/TryCompile-fzvIIp']
         ignore line: []
-        ignore line: [Run Build Command(s): /opt/local/bin/ninja -v cmTC_c5b54]
-        ignore line: [[1/2] /Users/delta/.espressif/tools/xtensa-esp-elf/esp-14.2.0_20241119/xtensa-esp-elf/bin/xtensa-esp32s3-elf-g++   -mlongcalls  -fno-builtin-memcpy -fno-builtin-memset -fno-builtin-bzero -fno-builtin-stpcpy -fno-builtin-strncpy    -v -o CMakeFiles/cmTC_c5b54.dir/CMakeCXXCompilerABI.cpp.obj -c /opt/homebrew/share/cmake/Modules/CMakeCXXCompilerABI.cpp]
+        ignore line: [Run Build Command(s): /opt/local/bin/ninja -v cmTC_098e9]
+        ignore line: [[1/2] /Users/delta/.espressif/tools/xtensa-esp-elf/esp-14.2.0_20241119/xtensa-esp-elf/bin/xtensa-esp32s3-elf-g++   -mlongcalls  -fno-builtin-memcpy -fno-builtin-memset -fno-builtin-bzero -fno-builtin-stpcpy -fno-builtin-strncpy    -v -o CMakeFiles/cmTC_098e9.dir/CMakeCXXCompilerABI.cpp.obj -c /opt/homebrew/share/cmake/Modules/CMakeCXXCompilerABI.cpp]
         ignore line: [Using built-in specs.]
         ignore line: [COLLECT_GCC=/Users/delta/.espressif/tools/xtensa-esp-elf/esp-14.2.0_20241119/xtensa-esp-elf/bin/xtensa-esp-elf-g++]
         ignore line: [Target: xtensa-esp-elf]
@@ -3913,8 +3906,8 @@ events:
         ignore line: [Thread model: posix]
         ignore line: [Supported LTO compression algorithms: zlib]
         ignore line: [gcc version 14.2.0 (crosstool-NG esp-14.2.0_20241119) ]
-        ignore line: [COLLECT_GCC_OPTIONS='-mdynconfig=xtensa_esp32s3.so' '-mlongcalls' '-fno-builtin-memcpy' '-fno-builtin-memset' '-fno-builtin-bzero' '-fno-builtin-stpcpy' '-fno-builtin-strncpy' '-v' '-o' 'CMakeFiles/cmTC_c5b54.dir/CMakeCXXCompilerABI.cpp.obj' '-c' '-dumpdir' 'CMakeFiles/cmTC_c5b54.dir/']
-        ignore line: [ /Users/delta/.espressif/tools/xtensa-esp-elf/esp-14.2.0_20241119/xtensa-esp-elf/bin/../libexec/gcc/xtensa-esp-elf/14.2.0/cc1plus -quiet -v -imultilib esp32s3 -iprefix /Users/delta/.espressif/tools/xtensa-esp-elf/esp-14.2.0_20241119/xtensa-esp-elf/bin/../lib/gcc/xtensa-esp-elf/14.2.0/ -isysroot /Users/delta/.espressif/tools/xtensa-esp-elf/esp-14.2.0_20241119/xtensa-esp-elf/bin/../xtensa-esp-elf /opt/homebrew/share/cmake/Modules/CMakeCXXCompilerABI.cpp -quiet -dumpdir CMakeFiles/cmTC_c5b54.dir/ -dumpbase CMakeCXXCompilerABI.cpp.cpp -dumpbase-ext .cpp -mdynconfig=xtensa_esp32s3.so -mlongcalls -version -fno-builtin-memcpy -fno-builtin-memset -fno-builtin-bzero -fno-builtin-stpcpy -fno-builtin-strncpy -o /var/folders/z3/zx69jtps1453fm834nc2z2p80000gn/T//cceXEJTj.s]
+        ignore line: [COLLECT_GCC_OPTIONS='-mdynconfig=xtensa_esp32s3.so' '-mlongcalls' '-fno-builtin-memcpy' '-fno-builtin-memset' '-fno-builtin-bzero' '-fno-builtin-stpcpy' '-fno-builtin-strncpy' '-v' '-o' 'CMakeFiles/cmTC_098e9.dir/CMakeCXXCompilerABI.cpp.obj' '-c' '-dumpdir' 'CMakeFiles/cmTC_098e9.dir/']
+        ignore line: [ /Users/delta/.espressif/tools/xtensa-esp-elf/esp-14.2.0_20241119/xtensa-esp-elf/bin/../libexec/gcc/xtensa-esp-elf/14.2.0/cc1plus -quiet -v -imultilib esp32s3 -iprefix /Users/delta/.espressif/tools/xtensa-esp-elf/esp-14.2.0_20241119/xtensa-esp-elf/bin/../lib/gcc/xtensa-esp-elf/14.2.0/ -isysroot /Users/delta/.espressif/tools/xtensa-esp-elf/esp-14.2.0_20241119/xtensa-esp-elf/bin/../xtensa-esp-elf /opt/homebrew/share/cmake/Modules/CMakeCXXCompilerABI.cpp -quiet -dumpdir CMakeFiles/cmTC_098e9.dir/ -dumpbase CMakeCXXCompilerABI.cpp.cpp -dumpbase-ext .cpp -mdynconfig=xtensa_esp32s3.so -mlongcalls -version -fno-builtin-memcpy -fno-builtin-memset -fno-builtin-bzero -fno-builtin-stpcpy -fno-builtin-strncpy -o /var/folders/z3/zx69jtps1453fm834nc2z2p80000gn/T//ccrCWOjd.s]
         ignore line: [GNU C++17 (crosstool-NG esp-14.2.0_20241119) version 14.2.0 (xtensa-esp-elf)]
         ignore line: [	compiled by GNU C version Debian Clang 11.0.1  GMP version 6.2.1  MPFR version 4.2.1  MPC version 1.2.1  isl version isl-0.26-GMP]
         ignore line: []
@@ -3929,7 +3922,6 @@ events:
         ignore line: [ignoring duplicate directory "/Users/delta/.espressif/tools/xtensa-esp-elf/esp-14.2.0_20241119/xtensa-esp-elf/bin/../xtensa-esp-elf/include"]
         ignore line: [#include "..." search starts here:]
         ignore line: [#include <...> search starts here:]
-        ignore line: [ /usr/local/include]
         ignore line: [ /Users/delta/.espressif/tools/xtensa-esp-elf/esp-14.2.0_20241119/xtensa-esp-elf/bin/../lib/gcc/xtensa-esp-elf/14.2.0/../../../../xtensa-esp-elf/include/c++/14.2.0]
         ignore line: [ /Users/delta/.espressif/tools/xtensa-esp-elf/esp-14.2.0_20241119/xtensa-esp-elf/bin/../lib/gcc/xtensa-esp-elf/14.2.0/../../../../xtensa-esp-elf/include/c++/14.2.0/xtensa-esp-elf/esp32s3]
         ignore line: [ /Users/delta/.espressif/tools/xtensa-esp-elf/esp-14.2.0_20241119/xtensa-esp-elf/bin/../lib/gcc/xtensa-esp-elf/14.2.0/../../../../xtensa-esp-elf/include/c++/14.2.0/backward]
@@ -3938,12 +3930,12 @@ events:
         ignore line: [ /Users/delta/.espressif/tools/xtensa-esp-elf/esp-14.2.0_20241119/xtensa-esp-elf/bin/../lib/gcc/xtensa-esp-elf/14.2.0/../../../../xtensa-esp-elf/include]
         ignore line: [End of search list.]
         ignore line: [Compiler executable checksum: f95fb27b9d6b101b60d0ece4239a97f9]
-        ignore line: [COLLECT_GCC_OPTIONS='-mdynconfig=xtensa_esp32s3.so' '-mlongcalls' '-fno-builtin-memcpy' '-fno-builtin-memset' '-fno-builtin-bzero' '-fno-builtin-stpcpy' '-fno-builtin-strncpy' '-v' '-o' 'CMakeFiles/cmTC_c5b54.dir/CMakeCXXCompilerABI.cpp.obj' '-c' '-dumpdir' 'CMakeFiles/cmTC_c5b54.dir/']
-        ignore line: [ /Users/delta/.espressif/tools/xtensa-esp-elf/esp-14.2.0_20241119/xtensa-esp-elf/bin/../lib/gcc/xtensa-esp-elf/14.2.0/../../../../xtensa-esp-elf/bin/as --traditional-format --longcalls --dynconfig=xtensa_esp32s3.so -o CMakeFiles/cmTC_c5b54.dir/CMakeCXXCompilerABI.cpp.obj /var/folders/z3/zx69jtps1453fm834nc2z2p80000gn/T//cceXEJTj.s]
+        ignore line: [COLLECT_GCC_OPTIONS='-mdynconfig=xtensa_esp32s3.so' '-mlongcalls' '-fno-builtin-memcpy' '-fno-builtin-memset' '-fno-builtin-bzero' '-fno-builtin-stpcpy' '-fno-builtin-strncpy' '-v' '-o' 'CMakeFiles/cmTC_098e9.dir/CMakeCXXCompilerABI.cpp.obj' '-c' '-dumpdir' 'CMakeFiles/cmTC_098e9.dir/']
+        ignore line: [ /Users/delta/.espressif/tools/xtensa-esp-elf/esp-14.2.0_20241119/xtensa-esp-elf/bin/../lib/gcc/xtensa-esp-elf/14.2.0/../../../../xtensa-esp-elf/bin/as --traditional-format --longcalls --dynconfig=xtensa_esp32s3.so -o CMakeFiles/cmTC_098e9.dir/CMakeCXXCompilerABI.cpp.obj /var/folders/z3/zx69jtps1453fm834nc2z2p80000gn/T//ccrCWOjd.s]
         ignore line: [COMPILER_PATH=/Users/delta/.espressif/tools/xtensa-esp-elf/esp-14.2.0_20241119/xtensa-esp-elf/bin/../libexec/gcc/xtensa-esp-elf/14.2.0/:/Users/delta/.espressif/tools/xtensa-esp-elf/esp-14.2.0_20241119/xtensa-esp-elf/bin/../libexec/gcc/:/Users/delta/.espressif/tools/xtensa-esp-elf/esp-14.2.0_20241119/xtensa-esp-elf/bin/../lib/gcc/xtensa-esp-elf/14.2.0/../../../../xtensa-esp-elf/bin/]
         ignore line: [LIBRARY_PATH=/Users/delta/.espressif/tools/xtensa-esp-elf/esp-14.2.0_20241119/xtensa-esp-elf/bin/../lib/gcc/xtensa-esp-elf/14.2.0/esp32s3/:/Users/delta/.espressif/tools/xtensa-esp-elf/esp-14.2.0_20241119/xtensa-esp-elf/bin/../lib/gcc/xtensa-esp-elf/14.2.0/../../../../xtensa-esp-elf/lib/esp32s3/:/Users/delta/.espressif/tools/xtensa-esp-elf/esp-14.2.0_20241119/xtensa-esp-elf/bin/../xtensa-esp-elf/lib/esp32s3/:/Users/delta/.espressif/tools/xtensa-esp-elf/esp-14.2.0_20241119/xtensa-esp-elf/bin/../lib/gcc/xtensa-esp-elf/14.2.0/:/Users/delta/.espressif/tools/xtensa-esp-elf/esp-14.2.0_20241119/xtensa-esp-elf/bin/../lib/gcc/:/Users/delta/.espressif/tools/xtensa-esp-elf/esp-14.2.0_20241119/xtensa-esp-elf/bin/../lib/gcc/xtensa-esp-elf/14.2.0/../../../../xtensa-esp-elf/lib/:/Users/delta/.espressif/tools/xtensa-esp-elf/esp-14.2.0_20241119/xtensa-esp-elf/bin/../xtensa-esp-elf/lib/:/Users/delta/.espressif/tools/xtensa-esp-elf/esp-14.2.0_20241119/xtensa-esp-elf/bin/../xtensa-esp-elf/usr/lib/]
-        ignore line: [COLLECT_GCC_OPTIONS='-mdynconfig=xtensa_esp32s3.so' '-mlongcalls' '-fno-builtin-memcpy' '-fno-builtin-memset' '-fno-builtin-bzero' '-fno-builtin-stpcpy' '-fno-builtin-strncpy' '-v' '-o' 'CMakeFiles/cmTC_c5b54.dir/CMakeCXXCompilerABI.cpp.obj' '-c' '-dumpdir' 'CMakeFiles/cmTC_c5b54.dir/CMakeCXXCompilerABI.cpp.']
-        ignore line: [[2/2] : && /Users/delta/.espressif/tools/xtensa-esp-elf/esp-14.2.0_20241119/xtensa-esp-elf/bin/xtensa-esp32s3-elf-g++ -mlongcalls  -fno-builtin-memcpy -fno-builtin-memset -fno-builtin-bzero -fno-builtin-stpcpy -fno-builtin-strncpy -nostartfiles  -v CMakeFiles/cmTC_c5b54.dir/CMakeCXXCompilerABI.cpp.obj -o cmTC_c5b54   && :]
+        ignore line: [COLLECT_GCC_OPTIONS='-mdynconfig=xtensa_esp32s3.so' '-mlongcalls' '-fno-builtin-memcpy' '-fno-builtin-memset' '-fno-builtin-bzero' '-fno-builtin-stpcpy' '-fno-builtin-strncpy' '-v' '-o' 'CMakeFiles/cmTC_098e9.dir/CMakeCXXCompilerABI.cpp.obj' '-c' '-dumpdir' 'CMakeFiles/cmTC_098e9.dir/CMakeCXXCompilerABI.cpp.']
+        ignore line: [[2/2] : && /Users/delta/.espressif/tools/xtensa-esp-elf/esp-14.2.0_20241119/xtensa-esp-elf/bin/xtensa-esp32s3-elf-g++ -mlongcalls  -fno-builtin-memcpy -fno-builtin-memset -fno-builtin-bzero -fno-builtin-stpcpy -fno-builtin-strncpy -nostartfiles  -v CMakeFiles/cmTC_098e9.dir/CMakeCXXCompilerABI.cpp.obj -o cmTC_098e9   && :]
         ignore line: [Using built-in specs.]
         ignore line: [COLLECT_GCC=/Users/delta/.espressif/tools/xtensa-esp-elf/esp-14.2.0_20241119/xtensa-esp-elf/bin/xtensa-esp-elf-g++]
         ignore line: [COLLECT_LTO_WRAPPER=/Users/delta/.espressif/tools/xtensa-esp-elf/esp-14.2.0_20241119/xtensa-esp-elf/bin/../libexec/gcc/xtensa-esp-elf/14.2.0/lto-wrapper]
@@ -3954,13 +3946,13 @@ events:
         ignore line: [gcc version 14.2.0 (crosstool-NG esp-14.2.0_20241119) ]
         ignore line: [COMPILER_PATH=/Users/delta/.espressif/tools/xtensa-esp-elf/esp-14.2.0_20241119/xtensa-esp-elf/bin/../libexec/gcc/xtensa-esp-elf/14.2.0/:/Users/delta/.espressif/tools/xtensa-esp-elf/esp-14.2.0_20241119/xtensa-esp-elf/bin/../libexec/gcc/:/Users/delta/.espressif/tools/xtensa-esp-elf/esp-14.2.0_20241119/xtensa-esp-elf/bin/../lib/gcc/xtensa-esp-elf/14.2.0/../../../../xtensa-esp-elf/bin/]
         ignore line: [LIBRARY_PATH=/Users/delta/.espressif/tools/xtensa-esp-elf/esp-14.2.0_20241119/xtensa-esp-elf/bin/../lib/gcc/xtensa-esp-elf/14.2.0/esp32s3/:/Users/delta/.espressif/tools/xtensa-esp-elf/esp-14.2.0_20241119/xtensa-esp-elf/bin/../lib/gcc/xtensa-esp-elf/14.2.0/../../../../xtensa-esp-elf/lib/esp32s3/:/Users/delta/.espressif/tools/xtensa-esp-elf/esp-14.2.0_20241119/xtensa-esp-elf/bin/../xtensa-esp-elf/lib/esp32s3/:/Users/delta/.espressif/tools/xtensa-esp-elf/esp-14.2.0_20241119/xtensa-esp-elf/bin/../lib/gcc/xtensa-esp-elf/14.2.0/:/Users/delta/.espressif/tools/xtensa-esp-elf/esp-14.2.0_20241119/xtensa-esp-elf/bin/../lib/gcc/:/Users/delta/.espressif/tools/xtensa-esp-elf/esp-14.2.0_20241119/xtensa-esp-elf/bin/../lib/gcc/xtensa-esp-elf/14.2.0/../../../../xtensa-esp-elf/lib/:/Users/delta/.espressif/tools/xtensa-esp-elf/esp-14.2.0_20241119/xtensa-esp-elf/bin/../xtensa-esp-elf/lib/:/Users/delta/.espressif/tools/xtensa-esp-elf/esp-14.2.0_20241119/xtensa-esp-elf/bin/../xtensa-esp-elf/usr/lib/]
-        ignore line: [COLLECT_GCC_OPTIONS='-mdynconfig=xtensa_esp32s3.so' '-mlongcalls' '-fno-builtin-memcpy' '-fno-builtin-memset' '-fno-builtin-bzero' '-fno-builtin-stpcpy' '-fno-builtin-strncpy' '-nostartfiles' '-v' '-o' 'cmTC_c5b54' '-dumpdir' 'cmTC_c5b54.']
-        link line: [ /Users/delta/.espressif/tools/xtensa-esp-elf/esp-14.2.0_20241119/xtensa-esp-elf/bin/../libexec/gcc/xtensa-esp-elf/14.2.0/collect2 -plugin /Users/delta/.espressif/tools/xtensa-esp-elf/esp-14.2.0_20241119/xtensa-esp-elf/bin/../libexec/gcc/xtensa-esp-elf/14.2.0/liblto_plugin.so -plugin-opt=/Users/delta/.espressif/tools/xtensa-esp-elf/esp-14.2.0_20241119/xtensa-esp-elf/bin/../libexec/gcc/xtensa-esp-elf/14.2.0/lto-wrapper -plugin-opt=-fresolution=/var/folders/z3/zx69jtps1453fm834nc2z2p80000gn/T//ccWUGrDh.res -plugin-opt=-pass-through=-lgcc -plugin-opt=-pass-through=-lc -plugin-opt=-pass-through=-lnosys -plugin-opt=-pass-through=-lc -plugin-opt=-pass-through=-lgcc --sysroot=/Users/delta/.espressif/tools/xtensa-esp-elf/esp-14.2.0_20241119/xtensa-esp-elf/bin/../xtensa-esp-elf --dynconfig=xtensa_esp32s3.so -o cmTC_c5b54 -L/Users/delta/.espressif/tools/xtensa-esp-elf/esp-14.2.0_20241119/xtensa-esp-elf/bin/../lib/gcc/xtensa-esp-elf/14.2.0/esp32s3 -L/Users/delta/.espressif/tools/xtensa-esp-elf/esp-14.2.0_20241119/xtensa-esp-elf/bin/../lib/gcc/xtensa-esp-elf/14.2.0/../../../../xtensa-esp-elf/lib/esp32s3 -L/Users/delta/.espressif/tools/xtensa-esp-elf/esp-14.2.0_20241119/xtensa-esp-elf/bin/../xtensa-esp-elf/lib/esp32s3 -L/Users/delta/.espressif/tools/xtensa-esp-elf/esp-14.2.0_20241119/xtensa-esp-elf/bin/../lib/gcc/xtensa-esp-elf/14.2.0 -L/Users/delta/.espressif/tools/xtensa-esp-elf/esp-14.2.0_20241119/xtensa-esp-elf/bin/../lib/gcc -L/Users/delta/.espressif/tools/xtensa-esp-elf/esp-14.2.0_20241119/xtensa-esp-elf/bin/../lib/gcc/xtensa-esp-elf/14.2.0/../../../../xtensa-esp-elf/lib -L/Users/delta/.espressif/tools/xtensa-esp-elf/esp-14.2.0_20241119/xtensa-esp-elf/bin/../xtensa-esp-elf/lib -L/Users/delta/.espressif/tools/xtensa-esp-elf/esp-14.2.0_20241119/xtensa-esp-elf/bin/../xtensa-esp-elf/usr/lib CMakeFiles/cmTC_c5b54.dir/CMakeCXXCompilerABI.cpp.obj -lstdc++ -lm -lgcc -lc -lnosys -lc -lgcc]
+        ignore line: [COLLECT_GCC_OPTIONS='-mdynconfig=xtensa_esp32s3.so' '-mlongcalls' '-fno-builtin-memcpy' '-fno-builtin-memset' '-fno-builtin-bzero' '-fno-builtin-stpcpy' '-fno-builtin-strncpy' '-nostartfiles' '-v' '-o' 'cmTC_098e9' '-dumpdir' 'cmTC_098e9.']
+        link line: [ /Users/delta/.espressif/tools/xtensa-esp-elf/esp-14.2.0_20241119/xtensa-esp-elf/bin/../libexec/gcc/xtensa-esp-elf/14.2.0/collect2 -plugin /Users/delta/.espressif/tools/xtensa-esp-elf/esp-14.2.0_20241119/xtensa-esp-elf/bin/../libexec/gcc/xtensa-esp-elf/14.2.0/liblto_plugin.so -plugin-opt=/Users/delta/.espressif/tools/xtensa-esp-elf/esp-14.2.0_20241119/xtensa-esp-elf/bin/../libexec/gcc/xtensa-esp-elf/14.2.0/lto-wrapper -plugin-opt=-fresolution=/var/folders/z3/zx69jtps1453fm834nc2z2p80000gn/T//cc9htTFS.res -plugin-opt=-pass-through=-lgcc -plugin-opt=-pass-through=-lc -plugin-opt=-pass-through=-lnosys -plugin-opt=-pass-through=-lc -plugin-opt=-pass-through=-lgcc --sysroot=/Users/delta/.espressif/tools/xtensa-esp-elf/esp-14.2.0_20241119/xtensa-esp-elf/bin/../xtensa-esp-elf --dynconfig=xtensa_esp32s3.so -o cmTC_098e9 -L/Users/delta/.espressif/tools/xtensa-esp-elf/esp-14.2.0_20241119/xtensa-esp-elf/bin/../lib/gcc/xtensa-esp-elf/14.2.0/esp32s3 -L/Users/delta/.espressif/tools/xtensa-esp-elf/esp-14.2.0_20241119/xtensa-esp-elf/bin/../lib/gcc/xtensa-esp-elf/14.2.0/../../../../xtensa-esp-elf/lib/esp32s3 -L/Users/delta/.espressif/tools/xtensa-esp-elf/esp-14.2.0_20241119/xtensa-esp-elf/bin/../xtensa-esp-elf/lib/esp32s3 -L/Users/delta/.espressif/tools/xtensa-esp-elf/esp-14.2.0_20241119/xtensa-esp-elf/bin/../lib/gcc/xtensa-esp-elf/14.2.0 -L/Users/delta/.espressif/tools/xtensa-esp-elf/esp-14.2.0_20241119/xtensa-esp-elf/bin/../lib/gcc -L/Users/delta/.espressif/tools/xtensa-esp-elf/esp-14.2.0_20241119/xtensa-esp-elf/bin/../lib/gcc/xtensa-esp-elf/14.2.0/../../../../xtensa-esp-elf/lib -L/Users/delta/.espressif/tools/xtensa-esp-elf/esp-14.2.0_20241119/xtensa-esp-elf/bin/../xtensa-esp-elf/lib -L/Users/delta/.espressif/tools/xtensa-esp-elf/esp-14.2.0_20241119/xtensa-esp-elf/bin/../xtensa-esp-elf/usr/lib CMakeFiles/cmTC_098e9.dir/CMakeCXXCompilerABI.cpp.obj -lstdc++ -lm -lgcc -lc -lnosys -lc -lgcc]
           arg [/Users/delta/.espressif/tools/xtensa-esp-elf/esp-14.2.0_20241119/xtensa-esp-elf/bin/../libexec/gcc/xtensa-esp-elf/14.2.0/collect2] ==> ignore
           arg [-plugin] ==> ignore
           arg [/Users/delta/.espressif/tools/xtensa-esp-elf/esp-14.2.0_20241119/xtensa-esp-elf/bin/../libexec/gcc/xtensa-esp-elf/14.2.0/liblto_plugin.so] ==> ignore
           arg [-plugin-opt=/Users/delta/.espressif/tools/xtensa-esp-elf/esp-14.2.0_20241119/xtensa-esp-elf/bin/../libexec/gcc/xtensa-esp-elf/14.2.0/lto-wrapper] ==> ignore
-          arg [-plugin-opt=-fresolution=/var/folders/z3/zx69jtps1453fm834nc2z2p80000gn/T//ccWUGrDh.res] ==> ignore
+          arg [-plugin-opt=-fresolution=/var/folders/z3/zx69jtps1453fm834nc2z2p80000gn/T//cc9htTFS.res] ==> ignore
           arg [-plugin-opt=-pass-through=-lgcc] ==> ignore
           arg [-plugin-opt=-pass-through=-lc] ==> ignore
           arg [-plugin-opt=-pass-through=-lnosys] ==> ignore
@@ -3969,7 +3961,7 @@ events:
           arg [--sysroot=/Users/delta/.espressif/tools/xtensa-esp-elf/esp-14.2.0_20241119/xtensa-esp-elf/bin/../xtensa-esp-elf] ==> ignore
           arg [--dynconfig=xtensa_esp32s3.so] ==> ignore
           arg [-o] ==> ignore
-          arg [cmTC_c5b54] ==> ignore
+          arg [cmTC_098e9] ==> ignore
           arg [-L/Users/delta/.espressif/tools/xtensa-esp-elf/esp-14.2.0_20241119/xtensa-esp-elf/bin/../lib/gcc/xtensa-esp-elf/14.2.0/esp32s3] ==> dir [/Users/delta/.espressif/tools/xtensa-esp-elf/esp-14.2.0_20241119/xtensa-esp-elf/bin/../lib/gcc/xtensa-esp-elf/14.2.0/esp32s3]
           arg [-L/Users/delta/.espressif/tools/xtensa-esp-elf/esp-14.2.0_20241119/xtensa-esp-elf/bin/../lib/gcc/xtensa-esp-elf/14.2.0/../../../../xtensa-esp-elf/lib/esp32s3] ==> dir [/Users/delta/.espressif/tools/xtensa-esp-elf/esp-14.2.0_20241119/xtensa-esp-elf/bin/../lib/gcc/xtensa-esp-elf/14.2.0/../../../../xtensa-esp-elf/lib/esp32s3]
           arg [-L/Users/delta/.espressif/tools/xtensa-esp-elf/esp-14.2.0_20241119/xtensa-esp-elf/bin/../xtensa-esp-elf/lib/esp32s3] ==> dir [/Users/delta/.espressif/tools/xtensa-esp-elf/esp-14.2.0_20241119/xtensa-esp-elf/bin/../xtensa-esp-elf/lib/esp32s3]
@@ -3978,7 +3970,7 @@ events:
           arg [-L/Users/delta/.espressif/tools/xtensa-esp-elf/esp-14.2.0_20241119/xtensa-esp-elf/bin/../lib/gcc/xtensa-esp-elf/14.2.0/../../../../xtensa-esp-elf/lib] ==> dir [/Users/delta/.espressif/tools/xtensa-esp-elf/esp-14.2.0_20241119/xtensa-esp-elf/bin/../lib/gcc/xtensa-esp-elf/14.2.0/../../../../xtensa-esp-elf/lib]
           arg [-L/Users/delta/.espressif/tools/xtensa-esp-elf/esp-14.2.0_20241119/xtensa-esp-elf/bin/../xtensa-esp-elf/lib] ==> dir [/Users/delta/.espressif/tools/xtensa-esp-elf/esp-14.2.0_20241119/xtensa-esp-elf/bin/../xtensa-esp-elf/lib]
           arg [-L/Users/delta/.espressif/tools/xtensa-esp-elf/esp-14.2.0_20241119/xtensa-esp-elf/bin/../xtensa-esp-elf/usr/lib] ==> dir [/Users/delta/.espressif/tools/xtensa-esp-elf/esp-14.2.0_20241119/xtensa-esp-elf/bin/../xtensa-esp-elf/usr/lib]
-          arg [CMakeFiles/cmTC_c5b54.dir/CMakeCXXCompilerABI.cpp.obj] ==> ignore
+          arg [CMakeFiles/cmTC_098e9.dir/CMakeCXXCompilerABI.cpp.obj] ==> ignore
           arg [-lstdc++] ==> lib [stdc++]
           arg [-lm] ==> lib [m]
           arg [-lgcc] ==> lib [gcc]
@@ -3988,7 +3980,7 @@ events:
           arg [-lgcc] ==> lib [gcc]
         ignore line: [/Users/delta/.espressif/tools/xtensa-esp-elf/esp-14.2.0_20241119/xtensa-esp-elf/bin/../lib/gcc/xtensa-esp-elf/14.2.0/../../../../xtensa-esp-elf/bin/ld: warning: cannot find entry symbol _start]
         ignore line: [ defaulting to 00400074]
-        ignore line: [COLLECT_GCC_OPTIONS='-mdynconfig=xtensa_esp32s3.so' '-mlongcalls' '-fno-builtin-memcpy' '-fno-builtin-memset' '-fno-builtin-bzero' '-fno-builtin-stpcpy' '-fno-builtin-strncpy' '-nostartfiles' '-v' '-o' 'cmTC_c5b54' '-dumpdir' 'cmTC_c5b54.']
+        ignore line: [COLLECT_GCC_OPTIONS='-mdynconfig=xtensa_esp32s3.so' '-mlongcalls' '-fno-builtin-memcpy' '-fno-builtin-memset' '-fno-builtin-bzero' '-fno-builtin-stpcpy' '-fno-builtin-strncpy' '-nostartfiles' '-v' '-o' 'cmTC_098e9' '-dumpdir' 'cmTC_098e9.']
         ignore line: []
         ignore line: []
         collapse library dir [/Users/delta/.espressif/tools/xtensa-esp-elf/esp-14.2.0_20241119/xtensa-esp-elf/bin/../lib/gcc/xtensa-esp-elf/14.2.0/esp32s3] ==> [/Users/delta/.espressif/tools/xtensa-esp-elf/esp-14.2.0_20241119/xtensa-esp-elf/lib/gcc/xtensa-esp-elf/14.2.0/esp32s3]
@@ -4016,8 +4008,8 @@ events:
     checks:
       - "Performing Test CMAKE_HAVE_LIBC_PTHREAD"
     directories:
-      source: "/Users/delta/streamrtcm/rtkesp32s3/build/CMakeFiles/CMakeScratch/TryCompile-yP4ghz"
-      binary: "/Users/delta/streamrtcm/rtkesp32s3/build/CMakeFiles/CMakeScratch/TryCompile-yP4ghz"
+      source: "/Users/delta/streamrtcm/rtkesp32s3/build/CMakeFiles/CMakeScratch/TryCompile-avqG5n"
+      binary: "/Users/delta/streamrtcm/rtkesp32s3/build/CMakeFiles/CMakeScratch/TryCompile-avqG5n"
     cmakeVariables:
       CMAKE_C_FLAGS: "-mlongcalls  -fno-builtin-memcpy -fno-builtin-memset -fno-builtin-bzero -fno-builtin-stpcpy -fno-builtin-strncpy"
       CMAKE_C_FLAGS_DEBUG: "-g"
@@ -4027,17 +4019,17 @@ events:
       variable: "CMAKE_HAVE_LIBC_PTHREAD"
       cached: true
       stdout: |
-        Change Dir: '/Users/delta/streamrtcm/rtkesp32s3/build/CMakeFiles/CMakeScratch/TryCompile-yP4ghz'
+        Change Dir: '/Users/delta/streamrtcm/rtkesp32s3/build/CMakeFiles/CMakeScratch/TryCompile-avqG5n'
         
-        Run Build Command(s): /opt/local/bin/ninja -v cmTC_ab31e
-        [1/2] /Users/delta/.espressif/tools/xtensa-esp-elf/esp-14.2.0_20241119/xtensa-esp-elf/bin/xtensa-esp32s3-elf-gcc -DCMAKE_HAVE_LIBC_PTHREAD  -mlongcalls  -fno-builtin-memcpy -fno-builtin-memset -fno-builtin-bzero -fno-builtin-stpcpy -fno-builtin-strncpy -o CMakeFiles/cmTC_ab31e.dir/src.c.obj -c /Users/delta/streamrtcm/rtkesp32s3/build/CMakeFiles/CMakeScratch/TryCompile-yP4ghz/src.c
-        [2/2] : && /Users/delta/.espressif/tools/xtensa-esp-elf/esp-14.2.0_20241119/xtensa-esp-elf/bin/xtensa-esp32s3-elf-gcc -mlongcalls  -fno-builtin-memcpy -fno-builtin-memset -fno-builtin-bzero -fno-builtin-stpcpy -fno-builtin-strncpy -nostartfiles CMakeFiles/cmTC_ab31e.dir/src.c.obj -o cmTC_ab31e   && :
-        /Users/delta/.espressif/tools/xtensa-esp-elf/esp-14.2.0_20241119/xtensa-esp-elf/bin/../lib/gcc/xtensa-esp-elf/14.2.0/../../../../xtensa-esp-elf/bin/ld: CMakeFiles/cmTC_ab31e.dir/src.c.obj:(.literal+0x14): warning: pthread_atfork is not implemented and will always fail
-        /Users/delta/.espressif/tools/xtensa-esp-elf/esp-14.2.0_20241119/xtensa-esp-elf/bin/../lib/gcc/xtensa-esp-elf/14.2.0/../../../../xtensa-esp-elf/bin/ld: CMakeFiles/cmTC_ab31e.dir/src.c.obj:(.literal+0xc): warning: pthread_cancel is not implemented and will always fail
-        /Users/delta/.espressif/tools/xtensa-esp-elf/esp-14.2.0_20241119/xtensa-esp-elf/bin/../lib/gcc/xtensa-esp-elf/14.2.0/../../../../xtensa-esp-elf/bin/ld: CMakeFiles/cmTC_ab31e.dir/src.c.obj:(.literal+0x4): warning: pthread_create is not implemented and will always fail
-        /Users/delta/.espressif/tools/xtensa-esp-elf/esp-14.2.0_20241119/xtensa-esp-elf/bin/../lib/gcc/xtensa-esp-elf/14.2.0/../../../../xtensa-esp-elf/bin/ld: CMakeFiles/cmTC_ab31e.dir/src.c.obj:(.literal+0x8): warning: pthread_detach is not implemented and will always fail
-        /Users/delta/.espressif/tools/xtensa-esp-elf/esp-14.2.0_20241119/xtensa-esp-elf/bin/../lib/gcc/xtensa-esp-elf/14.2.0/../../../../xtensa-esp-elf/bin/ld: CMakeFiles/cmTC_ab31e.dir/src.c.obj:(.literal+0x18): warning: pthread_exit is not implemented and will always fail
-        /Users/delta/.espressif/tools/xtensa-esp-elf/esp-14.2.0_20241119/xtensa-esp-elf/bin/../lib/gcc/xtensa-esp-elf/14.2.0/../../../../xtensa-esp-elf/bin/ld: CMakeFiles/cmTC_ab31e.dir/src.c.obj:(.literal+0x10): warning: pthread_join is not implemented and will always fail
+        Run Build Command(s): /opt/local/bin/ninja -v cmTC_05545
+        [1/2] /Users/delta/.espressif/tools/xtensa-esp-elf/esp-14.2.0_20241119/xtensa-esp-elf/bin/xtensa-esp32s3-elf-gcc -DCMAKE_HAVE_LIBC_PTHREAD  -mlongcalls  -fno-builtin-memcpy -fno-builtin-memset -fno-builtin-bzero -fno-builtin-stpcpy -fno-builtin-strncpy -o CMakeFiles/cmTC_05545.dir/src.c.obj -c /Users/delta/streamrtcm/rtkesp32s3/build/CMakeFiles/CMakeScratch/TryCompile-avqG5n/src.c
+        [2/2] : && /Users/delta/.espressif/tools/xtensa-esp-elf/esp-14.2.0_20241119/xtensa-esp-elf/bin/xtensa-esp32s3-elf-gcc -mlongcalls  -fno-builtin-memcpy -fno-builtin-memset -fno-builtin-bzero -fno-builtin-stpcpy -fno-builtin-strncpy -nostartfiles CMakeFiles/cmTC_05545.dir/src.c.obj -o cmTC_05545   && :
+        /Users/delta/.espressif/tools/xtensa-esp-elf/esp-14.2.0_20241119/xtensa-esp-elf/bin/../lib/gcc/xtensa-esp-elf/14.2.0/../../../../xtensa-esp-elf/bin/ld: CMakeFiles/cmTC_05545.dir/src.c.obj:(.literal+0x14): warning: pthread_atfork is not implemented and will always fail
+        /Users/delta/.espressif/tools/xtensa-esp-elf/esp-14.2.0_20241119/xtensa-esp-elf/bin/../lib/gcc/xtensa-esp-elf/14.2.0/../../../../xtensa-esp-elf/bin/ld: CMakeFiles/cmTC_05545.dir/src.c.obj:(.literal+0xc): warning: pthread_cancel is not implemented and will always fail
+        /Users/delta/.espressif/tools/xtensa-esp-elf/esp-14.2.0_20241119/xtensa-esp-elf/bin/../lib/gcc/xtensa-esp-elf/14.2.0/../../../../xtensa-esp-elf/bin/ld: CMakeFiles/cmTC_05545.dir/src.c.obj:(.literal+0x4): warning: pthread_create is not implemented and will always fail
+        /Users/delta/.espressif/tools/xtensa-esp-elf/esp-14.2.0_20241119/xtensa-esp-elf/bin/../lib/gcc/xtensa-esp-elf/14.2.0/../../../../xtensa-esp-elf/bin/ld: CMakeFiles/cmTC_05545.dir/src.c.obj:(.literal+0x8): warning: pthread_detach is not implemented and will always fail
+        /Users/delta/.espressif/tools/xtensa-esp-elf/esp-14.2.0_20241119/xtensa-esp-elf/bin/../lib/gcc/xtensa-esp-elf/14.2.0/../../../../xtensa-esp-elf/bin/ld: CMakeFiles/cmTC_05545.dir/src.c.obj:(.literal+0x18): warning: pthread_exit is not implemented and will always fail
+        /Users/delta/.espressif/tools/xtensa-esp-elf/esp-14.2.0_20241119/xtensa-esp-elf/bin/../lib/gcc/xtensa-esp-elf/14.2.0/../../../../xtensa-esp-elf/bin/ld: CMakeFiles/cmTC_05545.dir/src.c.obj:(.literal+0x10): warning: pthread_join is not implemented and will always fail
         /Users/delta/.espressif/tools/xtensa-esp-elf/esp-14.2.0_20241119/xtensa-esp-elf/bin/../lib/gcc/xtensa-esp-elf/14.2.0/../../../../xtensa-esp-elf/bin/ld: warning: cannot find entry symbol _start; defaulting to 00400054
         
       exitCode: 0
@@ -4051,8 +4043,8 @@ events:
     checks:
       - "Performing Test C_COMPILER_SUPPORTS_WFORMAT_SIGNEDNESS"
     directories:
-      source: "/Users/delta/streamrtcm/rtkesp32s3/build/CMakeFiles/CMakeScratch/TryCompile-n9q0YR"
-      binary: "/Users/delta/streamrtcm/rtkesp32s3/build/CMakeFiles/CMakeScratch/TryCompile-n9q0YR"
+      source: "/Users/delta/streamrtcm/rtkesp32s3/build/CMakeFiles/CMakeScratch/TryCompile-THBITY"
+      binary: "/Users/delta/streamrtcm/rtkesp32s3/build/CMakeFiles/CMakeScratch/TryCompile-THBITY"
     cmakeVariables:
       CMAKE_C_FLAGS: "-mlongcalls  -fno-builtin-memcpy -fno-builtin-memset -fno-builtin-bzero -fno-builtin-stpcpy -fno-builtin-strncpy -Wall -Wextra -Wwrite-strings -Wmissing-prototypes -Wformat=2 -Wno-format-nonliteral -Wvla -Wlogical-op -Wshadow"
       CMAKE_C_FLAGS_DEBUG: "-g"
@@ -4062,11 +4054,11 @@ events:
       variable: "C_COMPILER_SUPPORTS_WFORMAT_SIGNEDNESS"
       cached: true
       stdout: |
-        Change Dir: '/Users/delta/streamrtcm/rtkesp32s3/build/CMakeFiles/CMakeScratch/TryCompile-n9q0YR'
+        Change Dir: '/Users/delta/streamrtcm/rtkesp32s3/build/CMakeFiles/CMakeScratch/TryCompile-THBITY'
         
-        Run Build Command(s): /opt/local/bin/ninja -v cmTC_3828b
-        [1/2] /Users/delta/.espressif/tools/xtensa-esp-elf/esp-14.2.0_20241119/xtensa-esp-elf/bin/xtensa-esp32s3-elf-gcc -DC_COMPILER_SUPPORTS_WFORMAT_SIGNEDNESS  -mlongcalls  -fno-builtin-memcpy -fno-builtin-memset -fno-builtin-bzero -fno-builtin-stpcpy -fno-builtin-strncpy -Wall -Wextra -Wwrite-strings -Wmissing-prototypes -Wformat=2 -Wno-format-nonliteral -Wvla -Wlogical-op -Wshadow    -Wformat-signedness -o CMakeFiles/cmTC_3828b.dir/src.c.obj -c /Users/delta/streamrtcm/rtkesp32s3/build/CMakeFiles/CMakeScratch/TryCompile-n9q0YR/src.c
-        [2/2] : && /Users/delta/.espressif/tools/xtensa-esp-elf/esp-14.2.0_20241119/xtensa-esp-elf/bin/xtensa-esp32s3-elf-gcc -mlongcalls  -fno-builtin-memcpy -fno-builtin-memset -fno-builtin-bzero -fno-builtin-stpcpy -fno-builtin-strncpy -Wall -Wextra -Wwrite-strings -Wmissing-prototypes -Wformat=2 -Wno-format-nonliteral -Wvla -Wlogical-op -Wshadow -nostartfiles CMakeFiles/cmTC_3828b.dir/src.c.obj -o cmTC_3828b   && :
+        Run Build Command(s): /opt/local/bin/ninja -v cmTC_cc6b2
+        [1/2] /Users/delta/.espressif/tools/xtensa-esp-elf/esp-14.2.0_20241119/xtensa-esp-elf/bin/xtensa-esp32s3-elf-gcc -DC_COMPILER_SUPPORTS_WFORMAT_SIGNEDNESS  -mlongcalls  -fno-builtin-memcpy -fno-builtin-memset -fno-builtin-bzero -fno-builtin-stpcpy -fno-builtin-strncpy -Wall -Wextra -Wwrite-strings -Wmissing-prototypes -Wformat=2 -Wno-format-nonliteral -Wvla -Wlogical-op -Wshadow    -Wformat-signedness -o CMakeFiles/cmTC_cc6b2.dir/src.c.obj -c /Users/delta/streamrtcm/rtkesp32s3/build/CMakeFiles/CMakeScratch/TryCompile-THBITY/src.c
+        [2/2] : && /Users/delta/.espressif/tools/xtensa-esp-elf/esp-14.2.0_20241119/xtensa-esp-elf/bin/xtensa-esp32s3-elf-gcc -mlongcalls  -fno-builtin-memcpy -fno-builtin-memset -fno-builtin-bzero -fno-builtin-stpcpy -fno-builtin-strncpy -Wall -Wextra -Wwrite-strings -Wmissing-prototypes -Wformat=2 -Wno-format-nonliteral -Wvla -Wlogical-op -Wshadow -nostartfiles CMakeFiles/cmTC_cc6b2.dir/src.c.obj -o cmTC_cc6b2   && :
         /Users/delta/.espressif/tools/xtensa-esp-elf/esp-14.2.0_20241119/xtensa-esp-elf/bin/../lib/gcc/xtensa-esp-elf/14.2.0/../../../../xtensa-esp-elf/bin/ld: warning: cannot find entry symbol _start; defaulting to 00400054
         
       exitCode: 0
