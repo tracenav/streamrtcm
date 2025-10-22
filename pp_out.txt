@@ -1,0 +1,18 @@
+RTCM Parser Logger - Session Type: SSR
+Connecting to NTRIP server: ppntrip.services.u-blox.com:2101
+Mountpoint: NEAR-SPARTN
+Username: j2Nu9ebxjdmm
+Position: 40.712800, -74.006000
+Logging to directory: rtcm_logs
+Output format: Text (.log) + Binary (.bin)
+Server response:
+ICY 200 OK
+
+
+Connection successful - receiving RTCM data...
+Started logging to: rtcm_logs/rtcm_20250807_194517.log
+Started binary logging to: rtcm_logs/rtcm_20250807_194517.bin
+Socket timeout - continuing...
+Connection closed by server
+Closed log file: rtcm_logs/rtcm_20250807_194517.log
+Closed binary file: rtcm_logs/rtcm_20250807_194517.bin

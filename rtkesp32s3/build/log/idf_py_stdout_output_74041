@@ -1,0 +1,8 @@
+Command: ninja all
+[1/4] cd /Users/delta/streamrtcm/rtkesp32s3/build/esp-idf/esptool_py && /Users/delta/.espressif/python_env/idf5.5_py3.13_env/bin/python /Users/delta/esp/v5.5/esp-idf/components/partition_table/check_sizes.py --offset 0x8000 partition --type app /Users/delta/streamrtcm/rtkesp32s3/build/partition_table/partition-table.bin /Users/delta/streamrtcm/rtkesp32s3/build/rtk_base_station.bin
+rtk_base_station.bin binary size 0x7f1f0 bytes. Smallest app partition is 0x100000 bytes. 0x80e10 bytes (50%) free.
+[2/4] Performing build step for 'bootloader'
+[1/1] cd /Users/delta/streamrtcm/rtkesp32s3/build/bootloader/esp-idf/esptool_py && /Users/delta/.espressif/python_env/idf5.5_py3.13_env/bin/python /Users/delta/esp/v5.5/esp-idf/components/partition_table/check_sizes.py --offset 0x8000 bootloader 0x0 /Users/delta/streamrtcm/rtkesp32s3/build/bootloader/bootloader.bin
+Bootloader binary size 0x5260 bytes. 0x2da0 bytes (36%) free.
+[3/4] No install step for 'bootloader'
+[4/4] Completed 'bootloader'

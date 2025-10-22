@@ -1,0 +1,13 @@
+# Target labels
+ bootloader
+# Source files and their labels
+/Users/delta/streamrtcm/rtkesp32s3/build/CMakeFiles/bootloader
+/Users/delta/streamrtcm/rtkesp32s3/build/CMakeFiles/bootloader.rule
+/Users/delta/streamrtcm/rtkesp32s3/build/CMakeFiles/bootloader-complete.rule
+/Users/delta/streamrtcm/rtkesp32s3/build/bootloader-prefix/src/bootloader-stamp/bootloader-build.rule
+/Users/delta/streamrtcm/rtkesp32s3/build/bootloader-prefix/src/bootloader-stamp/bootloader-configure.rule
+/Users/delta/streamrtcm/rtkesp32s3/build/bootloader-prefix/src/bootloader-stamp/bootloader-download.rule
+/Users/delta/streamrtcm/rtkesp32s3/build/bootloader-prefix/src/bootloader-stamp/bootloader-install.rule
+/Users/delta/streamrtcm/rtkesp32s3/build/bootloader-prefix/src/bootloader-stamp/bootloader-mkdir.rule
+/Users/delta/streamrtcm/rtkesp32s3/build/bootloader-prefix/src/bootloader-stamp/bootloader-patch.rule
+/Users/delta/streamrtcm/rtkesp32s3/build/bootloader-prefix/src/bootloader-stamp/bootloader-update.rule

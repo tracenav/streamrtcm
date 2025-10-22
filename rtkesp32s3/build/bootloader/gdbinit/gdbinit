@@ -1,0 +1,2 @@
+source /Users/delta/streamrtcm/rtkesp32s3/build/bootloader/gdbinit/symbols
+source /Users/delta/streamrtcm/rtkesp32s3/build/bootloader/gdbinit/connect

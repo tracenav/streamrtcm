@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html>
+<head>
+    
+    <meta http-equiv="content-type" content="text/html; charset=UTF-8" />
+    <script src="https://cdn.jsdelivr.net/npm/leaflet@1.9.3/dist/leaflet.js"></script>
+    <script src="https://code.jquery.com/jquery-3.7.1.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/Leaflet.awesome-markers/2.0.2/leaflet.awesome-markers.js"></script>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/leaflet@1.9.3/dist/leaflet.css"/>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/css/bootstrap.min.css"/>
+    <link rel="stylesheet" href="https://netdna.bootstrapcdn.com/bootstrap/3.0.0/css/bootstrap-glyphicons.css"/>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@6.2.0/css/all.min.css"/>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/Leaflet.awesome-markers/2.0.2/leaflet.awesome-markers.css"/>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/python-visualization/folium/folium/templates/leaflet.awesome.rotate.min.css"/>
+    
+            <meta name="viewport" content="width=device-width,
+                initial-scale=1.0, maximum-scale=1.0, user-scalable=no" />
+            <style>
+                #map_2fe07345b06863e06d8c6268ca0f449e {
+                    position: relative;
+                    width: 100.0%;
+                    height: 100.0%;
+                    left: 0.0%;
+                    top: 0.0%;
+                }
+                .leaflet-container { font-size: 1rem; }
+            </style>
+
+            <style>html, body {
+                width: 100%;
+                height: 100%;
+                margin: 0;
+                padding: 0;
+            }
+            </style>
+
+            <style>#map {
+                position:absolute;
+                top:0;
+                bottom:0;
+                right:0;
+                left:0;
+                }
+            </style>
+
+            <script>
+                L_NO_TOUCH = false;
+                L_DISABLE_3D = false;
+            </script>
+
+        
+</head>
+<body>
+    
+    
+            <div class="folium-map" id="map_2fe07345b06863e06d8c6268ca0f449e" ></div>
+        
+    
+        <div id="ocb-panel" style="position: fixed; bottom: 10px; left: 10px; width: 460px; z-index: 999999;">
+          <div style="background:#fff; padding:8px; border:1px solid #999; box-shadow: 0 2px 6px rgba(0,0,0,0.3);">
+            <div style='font: 13px/1.2 -apple-system, BlinkMacSystemFont, Segoe UI, Roboto, sans-serif'><h4 style='margin:0 0 8px 0'>OCB Orbit/Clock</h4><div style='margin:0 0 6px 0;font-weight:600'>GPS: 8 &nbsp; GLO: 3 &nbsp; GAL: 7 &nbsp; BDS: 6</div><div style='margin:4px 0'>Latest OCB time tag: 493486182s since 2010-01-01 (≈ 2025-08-21 15:29:42 UTC)</div><div style='max-height: 240px; overflow:auto; border:1px solid #ccc'><table style='border-collapse:collapse; width:100%'><tr><th>PRN</th><th>UTC</th><th>eph_type</th><th>IODE</th><th>Orbit radial (m)</th><th>along (m)</th><th>cross (m)</th><th>Clock (ns)</th><th>URE idx</th><th>Phase bias (m by track)</th><th>Code bias (m by track)</th></tr><tr><td>R02</td><td>15:29:42</td><td>0</td><td>61</td><td>0.000</td><td>0.000</td><td>0.000</td><td>-2.0</td><td>2</td><td style='white-space:nowrap'>0:-0.002, 1:-0.004</td><td style='white-space:nowrap'>0:1.800, 1:2.500</td></tr><tr><td>E03</td><td>12:30:00</td><td>1</td><td>14</td><td>0.000</td><td>0.000</td><td>0.000</td><td>0.5</td><td>2</td><td style='white-space:nowrap'>0:-0.154*, 1:-0.278*, 2:-1.204*</td><td style='white-space:nowrap'>0:-0.100, 1:-0.120, 2:-1.080</td></tr><tr><td>G05</td><td>12:30:00</td><td>0</td><td>130</td><td>0.000</td><td>0.000</td><td>0.000</td><td>1.6</td><td>2</td><td style='white-space:nowrap'>0:-0.490*, 1:-0.806*, 2:-0.074*</td><td style='white-space:nowrap'>0:0.140, 1:0.400, 2:1.000</td></tr><tr><td>G06</td><td>12:30:00</td><td>0</td><td>5</td><td>0.000</td><td>0.000</td><td>0.000</td><td>-2.1</td><td>2</td><td style='white-space:nowrap'>0:0.624*, 1:1.026*, 2:1.754*, 3:0.406*</td><td style='white-space:nowrap'>0:0.900, 1:1.380, 2:2.200, 3:1.180</td></tr><tr><td>E08</td><td>15:29:42</td><td>0</td><td>61</td><td>0.000</td><td>0.000</td><td>0.000</td><td>7.8</td><td>2</td><td style='white-space:nowrap'>0:-2.994, 1:-4.948</td><td style='white-space:nowrap'>0:1.660, 1:2.600</td></tr><tr><td>G09</td><td>12:30:00</td><td>0</td><td>28</td><td>0.000</td><td>0.000</td><td>0.000</td><td>-0.2</td><td>2</td><td style='white-space:nowrap'>0:0.064*, 1:0.106*, 2:0.354*, 3:-0.386*</td><td style='white-space:nowrap'>0:-0.380, 1:-0.700, 2:-0.320, 3:-1.380</td></tr><tr><td>G11</td><td>12:30:00</td><td>0</td><td>65</td><td>0.000</td><td>0.000</td><td>0.000</td><td>0.5</td><td>2</td><td style='white-space:nowrap'>0:-0.158*, 1:-0.260*, 2:-0.018*, 3:3.392*</td><td style='white-space:nowrap'>0:0.720, 1:1.580, 2:1.860, 3:5.160</td></tr><tr><td>G12</td><td>12:30:00</td><td>0</td><td>11</td><td>0.000</td><td>0.000</td><td>0.000</td><td>0.7</td><td>2</td><td style='white-space:nowrap'>0:-0.222*, 1:-0.366*, 2:0.366*</td><td style='white-space:nowrap'>0:-1.380, 1:-2.000, 2:-1.360</td></tr><tr><td>E13</td><td>12:30:00</td><td>1</td><td>10</td><td>0.000</td><td>0.000</td><td>0.000</td><td>-0.5</td><td>2</td><td style='white-space:nowrap'>0:0.136*, 1:0.246*, 2:-0.686*</td><td style='white-space:nowrap'>0:0.260, 1:0.420, 2:-0.620</td></tr><tr><td>E15</td><td>15:29:42</td><td>0</td><td>61</td><td>0.000</td><td>0.000</td><td>0.000</td><td>3.1</td><td>2</td><td style='white-space:nowrap'>0:-1.628, 1:-2.690</td><td style='white-space:nowrap'>0:0.820, 1:1.480</td></tr><tr><td>R17</td><td>15:29:42</td><td>0</td><td>61</td><td>0.000</td><td>0.000</td><td>0.000</td><td>-5.2</td><td>2</td><td style='white-space:nowrap'>0:0.912, 1:1.506</td><td style='white-space:nowrap'>0:0.840, 1:1.720</td></tr><tr><td>C19</td><td>12:29:46</td><td>0</td><td>60</td><td>0.000</td><td>0.000</td><td>0.000</td><td>-1.5</td><td>2</td><td style='white-space:nowrap'>0:0.438*, 1:0.772*, 4:6.684*</td><td style='white-space:nowrap'></td></tr><tr><td>C20</td><td>12:29:46</td><td>0</td><td>60</td><td>0.000</td><td>0.000</td><td>0.000</td><td>-1.1</td><td>2</td><td style='white-space:nowrap'>0:0.334*, 1:0.590*, 4:7.340*</td><td style='white-space:nowrap'></td></tr><tr><td>G21</td><td>12:30:00</td><td>1</td><td>14</td><td>0.000</td><td>0.000</td><td>0.000</td><td>-1.0</td><td>2</td><td style='white-space:nowrap'>0:0.304*, 1:0.544*, 2:-0.648*</td><td style='white-space:nowrap'>0:0.180, 1:0.160, 2:-0.940</td></tr><tr><td>E23</td><td>12:30:00</td><td>1</td><td>14</td><td>0.000</td><td>0.000</td><td>0.000</td><td>-0.8</td><td>2</td><td style='white-space:nowrap'>0:0.244*, 1:0.436*, 2:-0.498*</td><td style='white-space:nowrap'>0:0.280, 1:0.360, 2:-0.520</td></tr><tr><td>R24</td><td>15:29:42</td><td>0</td><td>61</td><td>0.000</td><td>0.000</td><td>0.000</td><td>-2.7</td><td>2</td><td style='white-space:nowrap'>0:-0.070, 1:-0.114</td><td style='white-space:nowrap'>0:-3.080, 1:-4.500</td></tr><tr><td>G25</td><td>12:30:00</td><td>0</td><td>50</td><td>0.000</td><td>0.000</td><td>0.000</td><td>2.8</td><td>2</td><td style='white-space:nowrap'>0:-0.840*, 1:-1.384*, 2:-0.650*, 3:-2.030*</td><td style='white-space:nowrap'>0:-0.780, 1:-1.340, 2:-0.580, 3:-1.780</td></tr><tr><td>E26</td><td>12:30:00</td><td>1</td><td>13</td><td>0.000</td><td>0.000</td><td>0.000</td><td>-1.5</td><td>2</td><td style='white-space:nowrap'>0:0.442*, 1:0.792*, 2:-0.418*</td><td style='white-space:nowrap'>0:0.000, 1:-0.160, 2:-1.380</td></tr><tr><td>E27</td><td>12:30:00</td><td>1</td><td>14</td><td>0.000</td><td>0.000</td><td>0.000</td><td>1.0</td><td>2</td><td style='white-space:nowrap'>0:-0.288*, 1:-0.518*, 2:-1.686*</td><td style='white-space:nowrap'>0:-0.080, 1:0.100, 2:-0.980</td></tr><tr><td>G29</td><td>12:30:00</td><td>0</td><td>60</td><td>0.000</td><td>0.000</td><td>0.000</td><td>-0.4</td><td>2</td><td style='white-space:nowrap'>0:0.124*, 1:0.220*, 4:3.860*</td><td style='white-space:nowrap'></td></tr><tr><td>C30</td><td>12:29:46</td><td>0</td><td>60</td><td>0.000</td><td>0.000</td><td>0.000</td><td>0.1</td><td>2</td><td style='white-space:nowrap'>0:-0.044*, 1:-0.076*, 4:0.428*</td><td style='white-space:nowrap'></td></tr><tr><td>C32</td><td>12:29:46</td><td>0</td><td>60</td><td>0.000</td><td>0.000</td><td>0.000</td><td>-1.8</td><td>2</td><td style='white-space:nowrap'>0:0.534*, 1:0.940*, 4:2.726*</td><td style='white-space:nowrap'></td></tr><tr><td>C35</td><td>12:29:46</td><td>0</td><td>60</td><td>0.000</td><td>0.000</td><td>0.000</td><td>0.3</td><td>2</td><td style='white-space:nowrap'>0:-0.084*, 1:-0.148*, 4:2.696*</td><td style='white-space:nowrap'></td></tr><tr><td>C47</td><td>12:29:46</td><td>0</td><td>60</td><td>0.000</td><td>0.000</td><td>0.000</td><td>-0.4</td><td>2</td><td style='white-space:nowrap'>0:0.116*, 1:0.202*, 4:3.866*</td><td style='white-space:nowrap'></td></tr></table></div></div>
+          </div>
+        </div>
+        
+    
+        <div style="position: fixed; bottom: 10px; right: 10px; z-index: 999999;">
+          <div style="background:#fff; padding:8px; border:1px solid #999; font: 12px/1.2 -apple-system, BlinkMacSystemFont, Segoe UI, Roboto, sans-serif; box-shadow: 0 2px 6px rgba(0,0,0,0.3);">
+            <div style="font-weight:600; margin-bottom:4px;">Color scales</div>
+            <div style="margin-bottom:6px;">Tropo residual (m): -0.20 <span style="display:inline-block; width:140px; height:10px; background: linear-gradient(90deg, #00ffff, #ff0000);"></span> +0.20</div>
+            <div>Iono (TECU): -10 <span style="display:inline-block; width:140px; height:10px; background: linear-gradient(90deg, #00ffff, #ff0000);"></span> +10</div>
+          </div>
+        </div>
+        
+</body>
+<script>
+    
+    
+            var map_2fe07345b06863e06d8c6268ca0f449e = L.map(
+                "map_2fe07345b06863e06d8c6268ca0f449e",
+                {
+                    center: [39.0, -96.0],
+                    crs: L.CRS.EPSG3857,
+                    ...{
+  "zoom": 5,
+  "zoomControl": true,
+  "preferCanvas": false,
+}
+
+                }
+            );
+
+            
+
+        
+    
+            var tile_layer_c5746b7f17c70f009ac400dd4195ce1e = L.tileLayer(
+                "https://tile.openstreetmap.org/{z}/{x}/{y}.png",
+                {
+  "minZoom": 0,
+  "maxZoom": 19,
+  "maxNativeZoom": 19,
+  "noWrap": false,
+  "attribution": "\u0026copy; \u003ca href=\"https://www.openstreetmap.org/copyright\"\u003eOpenStreetMap\u003c/a\u003e contributors",
+  "subdomains": "abc",
+  "detectRetina": false,
+  "tms": false,
+  "opacity": 1,
+}
+
+            );
+        
+    
+            tile_layer_c5746b7f17c70f009ac400dd4195ce1e.addTo(map_2fe07345b06863e06d8c6268ca0f449e);
+        
+</script>
+</html>

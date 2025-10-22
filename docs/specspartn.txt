@@ -1,0 +1,5726 @@
+Secure Position Augmentation for
+Real-Time Navigation (SPARTN)
+Interface Control Document
+Version 2.0.2
+Scottsdale, February 2022
+
+© 2022 u-blox AG. All rights reserved.
+
+This document and all information, including, all tables and graphs contained in this document are proprietary
+information of u-blox AG and may not be modified or altered. This document as a whole or in parts and the
+information contained in this document may only be republished, reproduced, redistributed and/or otherwise used for
+the intended purposes and in each case by identifying u-blox AG as the creator or www.SPARTNformat.org as the
+origin of the document.
+
+Table of Contents
+1.
+2.
+3.
+4.
+5.
+6.
+
+Revision Control .............................................................................................................................................................................................................. 3
+Preface ............................................................................................................................................................................................................................ 5
+Acronyms and abbreviations........................................................................................................................................................................................... 6
+Introduction .................................................................................................................................................................................................................... 8
+Application Layer............................................................................................................................................................................................................. 9
+Presentation layer ......................................................................................................................................................................................................... 10
+6.1.
+General message layout .................................................................................................................................................................................... 11
+6.2.
+Continuity controls ............................................................................................................................................................................................ 11
+6.3.
+Floating-point numbers conversion .................................................................................................................................................................. 12
+6.4.
+SPARTN fields .................................................................................................................................................................................................... 12
+6.5.
+SPARTN Messages ............................................................................................................................................................................................. 24
+6.5.1.
+Orbit, Clock, Bias (OCB) messages - SM 0-0 to SM 0-4 ................................................................................................................................ 24
+6.5.2.
+High Precision Atmosphere Correction (HPAC) message - SM 1-0 to 1-4.................................................................................................... 26
+6.5.3.
+Geographic Area Definition (GAD) message - SM 2-0.................................................................................................................................. 30
+6.5.4.
+Basic Precision Atmosphere Correction (BPAC) message - SM 3-0 ............................................................................................................. 30
+6.5.5.
+Dynamic Key message - SM 4-0 ................................................................................................................................................................... 31
+6.5.6.
+Group Authentication Message - SM 4-1(Deprecated – To be removed in future versions) ...................................................................... 32
+6.5.7.
+Proprietary Message Support ...................................................................................................................................................................... 32
+7.
+Transport layer .............................................................................................................................................................................................................. 34
+8.
+Implementation Details ................................................................................................................................................................................................ 38
+8.1.
+Numerical Constants ......................................................................................................................................................................................... 38
+8.2.
+Reference Datum............................................................................................................................................................................................... 38
+8.3.
+Broadcast Ephemeris ......................................................................................................................................................................................... 38
+8.4.
+Message Flexibility ............................................................................................................................................................................................ 39
+8.5.
+Message Payload Size Calculations ................................................................................................................................................................... 40
+8.6.
+Satellite and User Dependent Biases................................................................................................................................................................. 41
+8.7.
+GNSS Satellite Clock Calculation ........................................................................................................................................................................ 41
+8.8.
+GNSS Satellite Orbit Calculation ........................................................................................................................................................................ 42
+8.9.
+GNSS Satellite Bias Calculation .......................................................................................................................................................................... 43
+8.10.
+SPARTN Geographic Area Definition Message Implementation Details ........................................................................................................... 43
+8.11.
+HPAC Ionosphere Slant Delay Calculation ......................................................................................................................................................... 44
+8.12.
+Troposphere Delay Calculation ......................................................................................................................................................................... 46
+8.13.
+BPAC Ionosphere Delay Evaluation ................................................................................................................................................................... 47
+8.14.
+Satellite Frame Convention ............................................................................................................................................................................... 50
+8.15.
+Encryption/Authentication Implementation ..................................................................................................................................................... 50
+8.15.1.
+Initialization Vector...................................................................................................................................................................................... 52
+8.16.
+Modeling Conventions ...................................................................................................................................................................................... 52
+9.
+References .................................................................................................................................................................................................................... 53
+
+2
+© 2022 u-blox AG. All rights reserved.
+This document and all information contained in this
+document are proprietary information of u-blox AG.
+
+1. Revision Control
+Version
+1.0
+1.1
+
+Date modified
+
+1.2
+
+August 1 2018
+
+1.3
+
+August 22 2018
+
+-
+
+1.4
+
+October 3 2018
+
+-
+
+1.5
+
+November 3 2018
+
+February 7 2018
+March 23 2018
+
+-
+
+-
+
+1.6
+
+December 7 2018
+
+-
+
+1.6.1
+1.6.2
+
+April 9, 2019
+
+May 15, 2019
+
+-
+
+1.7.0
+
+June 29, 2019
+
+-
+
+Changes/updates
+Initial version of ICD proposal including OCB messages only
+Follow up of ICD proposal including atmospheric messages
+Re-structuring of messages and document layout in accordance
+with feedback by all partners and collaborators in the SAPA
+format development
+Incorporation of comments from technical board meeting;
+Addition of several aspects of message interpretation and
+integration.
+Adjust of HPAC atmosphere data field bounds
+Added preface, introduction and carrier phase alignment
+sections
+Added confidentially note in every page of document
+Renamed HPAC Area definition message to Geographic Area
+Definition
+Dropped Special Values representing invalid Satellite Corrections
+(SF020) and code bias correction (SF029). Range remains the
+same.
+Decreased length of code bias masks by 1 to make them same
+length as phase bias masks. See SF027 and SF028
+Fixed inconsistency between Number of Grid Points Present
+(SF039) and Area Latitude Grid Node Count (SF034) and Area
+Longitude Grid Node Count (SF035).
+Fixed Ionosphere Grid Residuals definition (table 6.22 and table
+6.32) as data field referenced was incorrect.
+Removed end-of-set from Geographic Area Definition Message
+as it is not required.
+Minor spelling and grammar changes
+Updated message size calculations due to changes described
+above
+Increased size of SF039 to 7 bits to support more than 63 grid
+points
+Adjusted message size computations for change in SF039
+Added offset to large troposphere coefficient (SF048) to match
+the offset on the small troposphere coefficient (SF045).
+Renamed SF006/SF007 to Solution ID and Solution Processor ID
+respectively.
+Restrict satellite reference datum to be consistent across all
+messages within a solution ID
+Addition of 1 reserved bit to each message header
+Specifically define bias track types
+Add description on restricting the use of area definition related
+data to users located within the boundary of the area.
+Merged message sub-types for OCB and HPAC messages
+
+3
+© 2022 u-blox AG. All rights reserved.
+This document and all information contained in this
+document are proprietary information of u-blox AG.
+
+-
+
+-
+
+1.8.0
+
+January 24,2020
+
+-
+
+2.0.0
+
+June 17, 2021
+
+2.0.1
+
+September 28, 2021
+
+2.0.2
+
+February 21, 2022
+
+-
+
+Replaced area continuity indicator with an Area Issue of Update
+to remove ambiguity of reference time
+Added implementation details for troposphere height correction,
+phase windup, yaw attitude and GLONASS leap second handling
+Removed unnecessary invalid field values.
+Updated message size calculations
+Added item to section 8.4 describing how the End-of-Set will
+exist in future OCB messages.
+Fixed typo in polynomial coefficients
+Added new message type to low precision ionosphere for submeter positioning.
+Created a Payload Description Block that is part of the
+Transportation Layer and moved Message sub-type, Time-tag,
+Solution ID, and Solution Processor ID into that block to support
+encryption/authentication
+Changed Small time tag from 12-bit (hourly time tag) to 16-bit
+(half day time tag) to support consistent byte alignment of
+frame/payload description for both encrypted and nonencrypted data
+Added encryption and embedded/group authentication concept
+Added additional acronym definitions and fix consistency issues
+with capitalization of data field names
+Changed name to SPARTN
+Moved Area IOU before reserved bit in HPAC message (SM-1)
+for consistency with GAD (SM-2) message.
+Rename Low Precision Atmosphere Correction to Basic
+Precisions Atmosphere Correction
+Added note to troposphere computation that ellipsoidal height
+to be used for mapping function computation
+Added legal disclaimers
+Added support for Galileo, BeiDou and QZSS
+Added additional signal support for GPS
+Added proprietary message content
+Clarified definition of Grid Node Present Mask (SF079)
+Replaced Safe with Secure in name of SPARTN
+Fixed payload length description in TF016
+Added note to indicate minimum implementation of the SPARTN
+format in section 6
+Other minor editorial changes
+Extended BDS signal types for code and phase biases with
+BeiDou 3 signals
+
+4
+© 2022 u-blox AG. All rights reserved.
+This document and all information contained in this
+document are proprietary information of u-blox AG.
+
+2. Preface
+The Secure Position Augmentation for Real Time Navigation (SPARTN) format was designed as
+an open standard to provide the data necessary to support high precision positioning applications
+using GNSS processing techniques in a secure manner. This document describes message formats,
+concepts behind field content, the types of data carried, what information various messages
+convey, as well as methods and algorithms that are necessary for fundamental use of such data.
+
+5
+© 2022 u-blox AG. All rights reserved.
+This document and all information contained in this
+document are proprietary information of u-blox AG.
+
+3. Acronyms and abbreviations
+AES – Advanced Encryption Standard
+AIOU – Area Issue of Update
+BDS – BeiDou
+CAD – Computed Authentication Data
+CCITT – Conservative Committee for Telephony and Telegraphy
+CRC – Cyclic Redundancy Check
+CTR – Counter
+DNU – Do-not-use
+EAF – Encryption and Authentication Flag
+EAS – Encryption and Authentication Support
+ECEF – Earth-Centered Earth-Fixed
+ECI – Earth-Centered Inertial
+EOS – End-of-set
+GAD – Geographic Area Definition
+GLONASS - GLObal NAvigation Satellite System
+GNSS – Global Navigation Satellite Systems
+GPS – Global Positioning System
+HPAC – High-Precision Atmosphere Correction
+IODE – Issue of Data Ephemeris
+IOU – Issue Of Update
+ITRF – International Terrestrial Reference Frame
+IV – Initialization Vector
+BPAC – Basic-Precision Atmosphere Correction
+OCB – Orbits, Clocks, and Biases
+PRN – Pseudo-Random Noise (used to denote a specific GNSS satellite)
+QZSS – Quazi-Zenith Satellite System
+SPARTN – Secure Position Augmentation for Real Time Navigation
+6
+© 2022 u-blox AG. All rights reserved.
+This document and all information contained in this
+document are proprietary information of u-blox AG.
+
+SF – SPARTN field(s)
+SHA – Secure Hash Algorithm
+SIOU – Solution IOU
+SM – SPARTN message(s)
+TECU – Total Electron Content Unit
+TF – Transport layer Field
+URE – User Range Error
+VTEC – Vertical Total Electron Content
+
+7
+© 2022 u-blox AG. All rights reserved.
+This document and all information contained in this
+document are proprietary information of u-blox AG.
+
+4. Introduction
+Global Navigation Satellite Systems (GNSS) are satellite-based positioning systems that are
+currently providing global service 24 hours each day. Systems within GNSS, include, the Global
+Positioning System (GPS), the GLObal NAvigation Satellite System (GLONASS), Galileo
+satellite system, the Quasi-Zenith Satellite System (QZSS), and the BeiDou Navigation Satellite
+System (BDS). Many types of correction services exist to improve the accuracy of these systems.
+Among these are techniques that emerged from precise positioning approaches that do not require
+that the end-user also set up some reference GNSS station or network. These systems rely on
+service providers to gather and process information from numerous real-time sources then
+broadcast the data to the end user to be used in connection with their own GNSS receiver for the
+purpose of accurate positioning/navigation realization.
+To date there exists no open, industry recognized standard that supports low bandwidth
+requirements required by some delivery systems while, at the same time, providing standards for
+integrity for safety of life applications. The SPARTN message protocol has been developed with
+the goal of meeting these requirements.
+
+8
+© 2022 u-blox AG. All rights reserved.
+This document and all information contained in this
+document are proprietary information of u-blox AG.
+
+5. Application Layer
+The Application Layer defines how messages can be applied for different end-user applications.
+The messages provided in this document are for broadcasting (provider or sending) services, and
+they are not intended for two-way data links. As such, information is developed centrally by a
+Service Provider, who has an institutional or commercial interest in providing data that enables
+end-user applications for precise positioning or navigation.
+The use of GNSS data for positioning and navigation has become an essential part of modern
+countries, their industries, their economy, and their people. Among these are techniques that
+emerged from precise positioning approaches that do not require that the end-user also set up
+some reference GNSS station or network. The initial offering of this standard is focused at the
+numerous applications that exploit such precise positioning approaches. Primarily the application
+layer for the use of these messages is within the systems exploiting GNSS receivers to produce
+precise positioning and navigation for real-time applications. The messages of this standard are
+focused at delivering the information which facilitates those end goals.
+
+9
+© 2022 u-blox AG. All rights reserved.
+This document and all information contained in this
+document are proprietary information of u-blox AG.
+
+6. Presentation layer
+The table below shows the existing message types in the SPARTN format design.
+At least one Subtype of message Type 0 must be implemented to make proper use of the SPARTN
+format.
+Table 6.1 – Messages types and subtypes in SPARTN
+
+Type
+
+0
+
+0
+
+GPS OCB
+
+1
+
+GLONASS OCB
+
+2
+
+Galileo OCB
+
+3
+
+BeiDou OCB
+
+4
+
+QZSS OCB
+
+5 to 15
+
+1
+
+2
+
+GPS HPAC
+
+1
+
+GLONASS HPAC
+
+2
+
+Galileo HPAC
+
+3
+
+BeiDou HPAC
+
+4
+
+QZSS HPAC
+
+5 to 15
+
+TBD
+
+0
+
+GAD
+
+1 to 15
+
+TBD
+
+4
+
+5 to 119
+
+120
+
+121 to 127
+
+1 to 15
+
+Description
+GNSS Orbit, Clock, Bias (OCB) messages
+These are the messages that carry data for satellite orbits, clocks,
+biases, and other auxiliary information. These messages are sufficient
+to allow global positioning modes that do not require the transmission
+of atmospheric data.
+
+TBD
+
+0
+
+0
+3
+
+Message name
+
+Subtype
+
+BPAC Polynomial
+TBD
+
+0
+
+Dynamic Key
+
+1
+
+Group Authentication
+(Deprecated – To be removed in
+future versions)
+
+2 to 15
+
+TBD
+
+TBD
+
+TBD
+
+0
+
+In-house proprietary test
+
+1
+
+u-Blox AG
+
+2
+
+Swift Navigation
+
+2 to 15
+
+TBD
+
+0 to 15
+
+TBD
+
+10
+© 2022 u-blox AG. All rights reserved.
+This document and all information contained in this
+document are proprietary information of u-blox AG.
+
+High-precision atmosphere correction (HPAC) messages
+These are the messages that contain high-precision atmosphere data,
+specifically ionospheric and tropospheric correction data. Both
+ionosphere and troposphere data are transmitted in the same message
+for each constellation.
+
+Geographic Area Definition (GAD) messages
+These are the messages used to define geographic areas of data
+usage. The use of these messages can serve different purposes,
+including atmospheric data availability and other types of
+geographical/geometrical aspects of usage of data.
+Basic-precision atmosphere correction (BPAC) messages
+These are the messages that contain basic-precision atmosphere data
+which prioritizes compression over accuracy. The messages may
+consider ionosphere and troposphere constituents.
+Encryption and Authentication Support (EAS) messages
+These are the messages which are used to support encryption and
+authentication of message payload information.
+
+TBD
+Proprietary messages
+These messages are proprietary and are defined by the organization
+to whom they are assigned.
+
+6.1. General message layout
+The SPARTN messages payload is structured as a composition of different elements. Those
+elements are listed below:
+•
+•
+
+•
+•
+
+SPARTN field – The SPARTN fields are the most basic element of every SPARTN message.
+They contain, in most cases, a single piece of information;
+Block – A block is a group of related SPARTN fields that are often repeated within a
+message, or simply used to cleanly separate different types of data within a message. In
+most cases the SPARTN fields within a block contain pieces of information that should be
+used in combination with each other. Blocks can contain other blocks;
+Header – SPARTN message headers contain general information about the message that
+applies to all blocks within that message;
+Message – The SPARTN messages (SM) are typically built with one header and one or more
+blocks, depending on the type of the message.
+
+The figure below shows a representation of the OCB message (SM 0-0) layout as an example:
+
+6.2. Continuity controls
+The following is a list of existing continuity controls in the SPARTN message format, some of which
+are found in the Transportation layer:
+•
+
+Solution ID (TF010) – Specifies a unique identifier of the current solution which consists
+of all instances of a correction streams that are generated for a given area of coverage.
+When a change in the Solution ID is encountered, no guarantee on continuity is provided;
+
+11
+© 2022 u-blox AG. All rights reserved.
+This document and all information contained in this
+document are proprietary information of u-blox AG.
+
+•
+
+•
+•
+
+•
+
+•
+
+Solution Processor ID (TF011) – Specifies the instance of the processor being used for
+generating correction data. When a change in the Solution Processor ID is encountered,
+no guarantee on continuity is provided;
+Solution Issue of Update (SF005) – Controls when and if different parts of the correction
+that are sent in separate messages can be combined for processing;
+Continuity Indicator (SF015) – Indicates the time over which no discontinuities have
+occurred. Processor implementation must reset their current state when the time since the
+last processed (or received) data is greater than the continuity time indicated in this data
+field;
+IODE Continuity (SF022) - Indicates if there has been a change in the IODE (SF018,SF019,
+SF099, SF100 and SF101) currently in use for the correction data. In case of a change,
+users must wait to receive a new IODE, issued after the indicated change. A new IODE
+must be received before continuing combining correction and broadcast ephemeris data;
+Area Issue of Update (SF068) –Controls when and if area data from different messages can
+be combined for processing.
+
+6.3. Floating-point numbers conversion
+SPARTN achieves some of its compression by converting floating-point numbers to integer
+representations using range and resolution values. The following equation shows how to perform
+the conversion from encoded (unsigned integer) values to decoded (floating-point numbers)
+values:
+Vdecoded = (Vencoded * Res) + Rngmin ,
+where Vdecoded is the decoded value that is retrieved after converting the encoded value (Vencoded)
+from an integer to a floating-point number. Res is the field resolution, and Rngmin is the lower limit
+of the data field range.
+The following equation shows how to perform the conversion from original (to be encoded
+floating-point numbers) values to encoded (unsigned integer) values:
+Vencoded = (Voriginal - Rngmin) / Res ,
+where Vencoded is the encoded integer value that is transmitted in the data field, and Voriginal is the
+original value (floating-point number) that shall be encoded in the data field.
+In the case of invalid or special values, encoders shall directly encode the special value as an
+unsigned integer. Decoders must check for special values prior to performing the conversion to a
+floating-point number.
+
+6.4. SPARTN fields
+The following table lists all data field definitions used in the SPARTN message format.
+
+12
+© 2022 u-blox AG. All rights reserved.
+This document and all information contained in this
+document are proprietary information of u-blox AG.
+
+Table 6.2 – SPARTN fields
+ID
+
+Name
+
+# Bits
+
+Range
+
+Resolution
+
+Special values
+
+SF005
+
+Solution issue of
+update (SIOU)
+
+9
+
+0 to 511
+
+1
+
+none
+
+SF008
+
+Yaw present flag
+
+1
+
+0 to 1
+
+n/a
+
+0 : SF021 not
+present
+1 : SF021 present
+for all orbit blocks
+
+SF009
+
+Satellite reference
+datum
+
+1
+
+0 to 1
+
+1
+
+0 : ITRF
+1 : Provider defined
+
+Notes
+The SIOU controls when and if
+different parts of the correction that
+are sent in separate messages can be
+combined for processing.
+The SIOU can’t change more than
+once per second.
+User must assume that SIOU has
+changed over outages of 510 secs or
+more even if the SIOU before/after
+an outage matches.
+SIOU is a solution-wide indicator and
+is not specific to any message type or
+subtype.
+The yaw present flag indicates
+whether the satellite orbit blocks will
+contain a yaw value. When set, all
+blocks will contain the yaw value field
+(SF021). When not set, none of the
+orbit will contain the yaw value field
+(SF021).
+Reference datum indicator of the
+satellite orbits. When set to 0 the
+reference datum is ITRF current
+epoch, latest realization. When set to
+1 the reference datum is defined by
+the provider.
+For practical purposes the evolution
+of current and future ITRFs is below
+the observable accuracy of real time
+GNSS systems.
+NOTE: Service providers must
+provide a consistent reference datum
+for a given Solution ID/Solution
+processor ID pair.
+
+SF010
+
+SF011
+
+End of OCB set
+(EOS)
+
+GPS satellite
+mask
+
+1
+
+34 to 66
+
+0 to 1
+
+Bitmask
+
+13
+© 2022 u-blox AG. All rights reserved.
+This document and all information contained in this
+document are proprietary information of u-blox AG.
+
+n/a
+
+Bitmask
+
+0 : more OCB
+subtype messages
+to follow
+1 : All OCB
+subtype messages
+sent
+
+The End of Orbit, Clock, Bias set
+indicates that all messages of the
+current type (including all subtypes)
+have been sent for a single epoch.
+
+Leftmost 2 bits
+indicate bitmask size
+to follow:
+0 : 32 bits
+1 : 44 bits
+2 : 56 bits
+3 : 64 bits
+
+GPS satellite mask field is composed
+of two bits that indicate the bitmask
+size, followed by the bitmask. The
+bitmask after the 2-bit size defines
+the IDs and order of GPS satellites in
+the message.
+The bitmask position added by 1 is
+equal to the Pseudo-Random Noise
+(PRN) ID of a satellite. At least one
+satellite must be present in the
+bitmask. Bitmask position 0 is the
+leftmost bit of the satellite mask,
+excluding the 2-bits indicating the
+size of the bitmask.
+
+ID
+
+SF012
+
+SF013
+
+Name
+
+GLONASS
+satellite mask
+
+Do not use (DNU)
+
+# Bits
+
+26 to 65
+
+1
+
+Range
+
+Bitmask
+
+0 to 1
+
+Resolution
+
+Special values
+
+Bitmask
+
+Leftmost 2 bits
+indicate bitmask size
+to follow.
+0 : 24 bits
+1 : 36 bits
+2 : 48 bits
+3 : 63 bits
+
+n/a
+
+0 : Satellite fields
+present
+1 : No fields in the
+associated satellite
+block will be present
+
+Notes
+GLONASS satellite mask field is
+composed of two bits that indicate
+the bitmask size, followed by the
+bitmask. The bitmask after the 2-bit
+size defines the IDs and order of
+GLONASS satellites in the message.
+The bitmask position added by 1 is
+equal to the orbit slot of a satellite.
+At least one satellite must be present
+in the bitmask. Bitmask position 0 is
+the leftmost bit of the satellite mask,
+excluding the 2-bits indicating the
+size of the bitmask.
+The primary purpose of the DNU
+Flag, when set, is to indicate some
+negative health, negative integrity,
+poor quality, and other such negative
+aspects of the satellite and its data.
+When this flag is set, the remaining
+fields of this section for this satellite
+shall not be present.
+Users must immediately stop using
+any satellite that has been flagged
+with a DNU indicator.
+
+Bit 0 (leftmost)
+0 : Orbit block no
+1 : Orbit block yes
+SF014
+
+OCB present flags
+
+3
+
+Bitmask
+
+Bitmask
+
+Bit 1 (middle)
+0 : Clock block no
+1 : Clock block yes
+
+The OCB present flags field is a
+bitmask that is used to indicate which
+combination of orbits, clocks, or
+biases data blocks are present in the
+message.
+
+Bit 2 (rightmost)
+0 : Bias block no
+1 : Bias block yes
+
+SF015
+
+SF016
+SF017
+
+Continuity
+indicator
+
+GPS ephemeris
+type
+GLO ephemeris
+type
+
+3
+
+0 to 7
+
+n/a
+
+2
+
+0 to 3
+
+n/a
+
+2
+
+0 to 3
+
+n/a
+
+0 : 0 secs
+1 : 1 secs
+2 : 5 secs
+3 : 10 secs
+4 : 30 secs
+5 : 60 secs
+6 : 120 secs
+7 : 320 secs
+
+0 : GPS L1C/A
+1 to 3 : TBD
+0 : GLO L1C/A
+1 to 3 : TBD
+
+SF018
+
+GPS IODE
+
+8
+
+0 to 255
+
+1
+
+none
+
+SF019
+
+GLO IODE
+
+7
+
+0 to 127
+
+1
+
+none
+
+SF020
+
+Satellite
+corrections
+
+14
+
+±16.382 m
+
+0.002 m
+
+none
+
+14
+© 2022 u-blox AG. All rights reserved.
+This document and all information contained in this
+document are proprietary information of u-blox AG.
+
+Indicates if there has been a
+discontinuity in the data
+accompanied by the indicator. The
+time values provided here are to be
+read as: “The data has had no
+discontinuity within the last X
+seconds.”, where X is the value
+provided in the special values list of
+this row.
+Processor implementation must
+consider resetting their current state
+when a data gap (i.e. last epoch
+processed or received) greater than
+the continuity time has occurred.
+Type of ephemeris being used for
+GPS corrections.
+Type of ephemeris being used for
+GLONASS corrections.
+Issue of data ephemeris (IODE) field
+that indicates to which GPS
+broadcast IODE the corrections must
+be combined with in order to be
+processed by the user.
+Issue of data ephemeris (IODE) field
+that indicates to which GLONASS
+broadcast IODE the corrections must
+be combined with in order to be
+processed by the user.
+Correction value in unit of meters.
+
+ID
+SF021
+
+Name
+Satellite yaw
+
+# Bits
+6
+
+Range
+0 to 354°
+
+Resolution
+
+Special values
+
+6°
+
+0x3F = invalid
+
+SF022
+
+IODE continuity
+
+3
+
+0 to 7
+
+n/a
+
+0 : 0 secs
+1 : 1 secs
+2 : 5 secs
+3 : 10 secs
+4 : 30 secs
+5 : 60 secs
+6 : 120 secs
+7 : 320 secs
+
+SF023
+
+Fix flag
+
+1
+
+0 to 1
+
+n/a
+
+0 : Float
+1 : Fixed
+
+n/a
+
+0 : unknown
+1 : 0.01m
+2 : 0.02m
+3 : 0.05m
+4 : 0.1m
+5 : 0.3m
+6 : 1.0m
+7 : > 1.0m
+
+SF024
+
+User range error
+(URE)
+
+3
+
+0 to 7
+
+Notes
+Yaw attitude angle of satellite. The
+yaw correction is with respect to the
+satellite frame described in section
+Satellite Frame Convention
+Indicates if there has been a change
+in the IODE
+(SF018/SF019/SF099/SF100/SF101)
+currently in use for the correction
+data. In case of a change, user must
+wait to receive a new IODE, issued
+after the indicated change. A new
+IODE must be received before
+continuing combining correction and
+broadcast ephemeris data.
+The time values provided here are to
+be read as: “The data has been
+generated using the same IODE over
+the last X seconds.”, where X is the
+value provided in the special values
+list of this row.
+Indicates if the clock solution, in
+combination with orbits and biases,
+has been generated using fixed
+ambiguities or float ambiguities.
+Indicates the expected range error of
+the combined OCB corrections.
+Value 0 means that there is no
+known value for this field.
+Value 7 means that the URE is
+greater than 1.0 m and corrections
+can still be used when proper
+considerations about the uncertainty
+of the corrections are made.
+
+Leftmost bit
+indicates bitmask
+size to follow:
+0 : 6 bits
+1 : 11 bits
+SF025
+
+GPS phase bias
+mask
+
+7 or 12
+
+bitmask
+
+bitmask
+
+SF026
+
+GLONASS phase
+bias mask
+
+6 or 10
+
+bitmask
+
+bitmask
+
+15
+© 2022 u-blox AG. All rights reserved.
+This document and all information contained in this
+document are proprietary information of u-blox AG.
+
+Bit #’s left to right
+(excluding size bit)
+0 : L1C phase bias
+1 : L2W phase bias
+2 : L2L phase bias
+3: L5Q phase bias
+4 to 10 : spare
+phase biases
+Leftmost bit
+indicates bitmask
+size to follow:
+0 : 5 bits
+1 : 9 bits
+Bit #’s left to right
+(excluding size bit)
+0 : L1C phase bias
+1 : L2C phase bias
+2 to 8 : spare phase
+biases
+
+Indicates which phase bias types are
+present in the GPS satellite bias
+corrections block.
+
+Indicates which phase bias types are
+present in the GLONASS satellite bias
+corrections block.
+
+ID
+
+Name
+
+# Bits
+
+Range
+
+Resolution
+
+Special values
+
+Notes
+
+Leftmost bit
+indicates bitmask
+size to follow:
+0 : 6 bits
+1 : 11 bits
+SF027
+
+GPS code bias
+mask
+
+7 or 12
+
+bitmask
+
+bitmask
+
+SF028
+
+GLONASS code
+bias mask
+
+6 or 10
+
+bitmask
+
+bitmask
+
+SF029
+
+Code bias
+correction
+
+11
+
+±20.46 m
+
+0.02 m
+
+none
+
+SF030
+
+Area Count
+
+5
+
+1 to 32
+
+1
+
+none
+
+SF031
+
+Area ID
+
+8
+
+0 to 255
+
+1
+
+none
+
+0.1 degrees
+
+none
+
+0.1 degrees
+
+none
+
+SF032
+SF033
+
+Area reference
+latitude
+Area reference
+longitude
+
+11
+12
+
+±90.00 north
+degrees
+±180.00 east
+degrees
+
+Bit #’s left to right
+(excluding size bit)
+0 : C1C code bias
+1 : C2W code bias
+2 : C2L code bias
+3: C5Q code bias
+4 to 10 : spare code
+biases
+Leftmost bit
+indicates bitmask
+size to follow:
+0 : 5 bits
+1 : 9 bits
+Bit #’s left to right
+(excluding size bit)
+0 : C1C code bias
+1 : C2C code bias
+2 to 8 : spare code
+biases
+
+SF034
+
+Area latitude grid
+node count
+
+3
+
+1 to 8
+
+1
+
+none
+
+SF035
+
+Area longitude
+grid node count
+
+3
+
+1 to 8
+
+1
+
+none
+
+0.1 degrees
+
+none
+
+0.1 degrees
+
+none
+
+1
+
+none
+
+1
+
+0 : None present
+1 : Poly block
+present
+2 : Poly/grid block
+present
+
+SF036
+SF037
+
+Area latitude grid
+node spacing
+Area longitude
+grid node spacing
+
+SF039
+
+Number of grid
+points present
+
+SF040
+
+Poly/Grid block
+present indicator
+
+5
+5
+
+7
+
+2
+
+0.1 to 3.2
+degrees
+0.1 to 3.2
+degrees
+0 to 127
+
+0 to 2
+
+16
+© 2022 u-blox AG. All rights reserved.
+This document and all information contained in this
+document are proprietary information of u-blox AG.
+
+Indicates which code bias types are
+present in the GPS satellite bias
+corrections block.
+
+Indicates which code bias types are
+present in the GLONASS satellite bias
+corrections block.
+
+Satellite bias correction value in unit
+of meters.
+Number of areas to follow in the data
+block section of the current message.
+Area identifier of the geographic area
+being defined, must be unique within
+a solution processor ID (TF011)
+The northern most latitude of the
+area being defined
+The western most longitude of the
+area being defined.
+The number of grid points that exist
+in the north-south direction
+beginning at the reference latitude
+(SF032).
+The number of grid points that exist
+in the west-east direction beginning
+at the reference longitude (SF033).
+The spacing between the grid nodes
+in the north-south direction
+The spacing between the grid nodes
+in the west-east direction
+Number of grid points present in the
+grid blocks of the message. When
+grids not present as indicated by
+SF040 within the same message, this
+data field may be ignored.
+Indicates the presence of the
+polynomial and grid blocks within the
+message. As the polynomial and grid
+blocks are cumulative, grids cannot
+be present without polynomials.
+
+ID
+
+Name
+
+# Bits
+
+Range
+
+Resolution
+
+Special values
+
+Notes
+Indicates the residual zenith
+troposphere delay polynomial model
+used. The coefficients are stored in
+the same order as they appear below
+( 𝑇!! , 𝑇!" , 𝑇"! , 𝑇"" ).
+
+SF041
+
+Troposphere
+equation type
+
+3
+
+0 to 7
+
+1
+
+See notes
+
+The field represents the quality of the
+complete interpolated troposphere
+model (average, polynomial, and grid
+when applicable) in units of meters at
+zenith (1𝜎).
+
+Models for each SF041 value:
+0 : 𝑇!!
+1 : 𝑇!! + 𝑇!" $𝛿𝜙# ' + 𝑇"! (𝜆 − 𝜆! )
+2 : 𝑇!! + 𝑇!" $𝛿𝜙# ' + 𝑇"! (𝜆 − 𝜆! ) +
+𝑇"" $𝛿𝜙# '(𝜆 − 𝜆! )
+3 to 7 : TBD
+
+SF042
+
+Troposphere
+quality
+
+3
+
+0 to 7
+
+1
+
+0 : unknown
+1 : <=0.010m
+2 : <=0.020m
+3 : <=0.040m
+4 : <=0.080m
+5 : <=0.160m
+6 : <=0.320m
+7 : > 0.320m
+
+SF043
+
+Area average
+vertical
+hydrostatic delay
+
+8
+
+±0.508m
+
+0.004 m
+
+None
+
+The average vertical hydrostatic
+delay (reduced to a reference height
+of 0 m on the ellipsoid) within the
+area offset from 2.3m
+
+SF044
+
+Troposphere
+polynomial
+coefficient size
+indicator
+
+1
+
+0 to 1
+
+1
+
+0 : Troposphere
+small coefficient
+block is used
+1 : Troposphere
+large coefficient
+block is used
+
+Indicates whether the small or large
+troposphere polynomial coefficients
+block is used
+
+SF045
+
+Small troposphere
+coefficient T00
+
+7
+
+±0.252 m
+
+0.004 m
+
+None
+
+The small size coefficient of the
+troposphere zenith delay polynomial
+offset by 0.252m.
+
+SF046
+
+Small troposphere
+coefficient
+T10/T01
+
+7
+
+±0.063
+m/degree
+
+0.001 m / degree
+
+None
+
+The small size coefficient of the
+troposphere zenith delay polynomial.
+
+SF047
+
+Small troposphere
+coefficient T11
+
+9
+
+±0.0510
+m/degree2
+
+0.0002 m
+/degree2
+
+None
+
+The small size coefficient of the
+troposphere zenith delay polynomial.
+
+SF048
+
+Large
+troposphere
+coefficient T00
+
+9
+
+±1.020 m
+
+0.004 m
+
+None
+
+The large size coefficient of the
+troposphere zenith delay polynomial
+offset by 0.252m
+
+SF049
+
+Large
+troposphere
+coefficient
+T10/T01
+
+9
+
+±0.255
+m/degree
+
+0.001 m / degree
+
+None
+
+The large size coefficient of the
+troposphere zenith delay polynomial.
+
+SF050
+
+Large
+troposphere
+coefficient T11
+
+11
+
+±0.2046
+m/degree2
+
+0.0002 m /
+degree2
+
+None
+
+The large size coefficient of the
+troposphere zenith delay polynomial.
+
+SF051
+
+Troposphere
+residual field size
+
+1
+
+0 : Troposphere
+small residual is
+used
+1 : Troposphere
+large residual is used
+
+1
+
+0 to 1
+
+17
+© 2022 u-blox AG. All rights reserved.
+This document and all information contained in this
+document are proprietary information of u-blox AG.
+
+Troposphere residual field size
+indicator.
+
+ID
+
+Name
+
+# Bits
+
+Range
+
+Resolution
+
+Special values
+
+Notes
+
+SF052
+
+Small troposphere
+residual zenith
+delay
+
+6
+
+±0.124 m
+
+0.004 m
+
+0x3F = invalid
+
+The small size troposphere residual
+zenith delay.
+
+SF053
+
+Large
+troposphere
+residual zenith
+delay
+
+8
+
+±0.508 m
+
+0.004 m
+
+0xFF = invalid
+
+The large size troposphere residual
+zenith delay.
+Indicates the slant ionosphere delay
+polynomial model used. The
+coefficients are stored in the same
+order as they appear below
+( 𝐶!! , 𝐶!" , 𝐶"! , 𝐶"" ).
+
+SF054
+
+Ionosphere
+equation type
+
+3
+
+0 to 7
+
+SF055
+
+Ionosphere
+quality
+
+SF056
+
+Ionosphere
+polynomial
+coefficient size
+indicator
+
+1
+
+0 to 1
+
+SF057
+
+Small ionosphere
+coefficient C00
+
+12
+
+SF058
+
+Small ionosphere
+coefficient
+C10/C01
+
+SF059
+
+SF060
+
+4
+
+0 to 15
+
+1
+
+1
+
+See notes
+
+0 : Unknown
+1 : <=0.03 TECU
+2 : <=0.05 TECU
+3 : <=0.07 TECU
+4 : <=0.14 TECU
+5 : <=0.28 TECU
+6 : <=0.56 TECU
+7 : <=1.12 TECU
+8 : <=2.24 TECU
+9 : <=4.48 TECU
+10 : <=8.96 TECU
+11 : <=17.92 TECU
+12 : <=35.84 TECU
+13 : <=71.68 TECU
+14 : <=143.36 TECU
+15 : >143.36 TECU
+
+Models for each SF054 value:
+0 : 𝐶!!
+1 : 𝐶!! + 𝐶!" $𝛿𝜙# ' + 𝐶"!$𝛿𝜆# '
+2 : 𝐶!! + 𝐶!" $𝛿𝜙# ' + 𝐶"!$𝛿𝜆# ' +
+𝐶"" $𝛿𝜙# '$𝛿𝜆# '
+3 - 7 : TBD
+
+The model quality of the interpolated
+ionosphere model (1𝜎). The indicator
+represents the combined accuracy of
+the polynomial, and when present,
+grid model.
+
+1
+
+0 : Ionosphere small
+coefficient block is
+used
+1 : Ionosphere large
+coefficient block is
+used
+
+Indicates whether the small or large
+ionosphere polynomial coefficients
+block is used
+
+±81.88 TECU
+
+0.04 TECU
+
+None
+
+The small size coefficient of the
+ionosphere slant delay polynomial.
+
+12
+
+±16.376
+TECU/degree
+
+0.008 TECU /
+degree
+
+None
+
+The small size coefficient of the
+ionosphere slant delay polynomial.
+
+Small ionosphere
+coefficient C11
+
+13
+
+±8.190
+TECU/degree2
+
+0.002 TECU /
+degree2
+
+None
+
+The small size coefficient of the
+ionosphere slant delay polynomial.
+
+Large ionosphere
+coefficient C00
+
+14
+
+±327.64 TECU
+
+0.04 TECU
+
+None
+
+The large size coefficient of the
+ionosphere slant delay polynomial.
+
+18
+© 2022 u-blox AG. All rights reserved.
+This document and all information contained in this
+document are proprietary information of u-blox AG.
+
+ID
+
+Name
+
+# Bits
+
+Range
+
+Resolution
+
+Special values
+
+Notes
+
+SF061
+
+Large ionosphere
+coefficient
+C10/C01
+
+14
+
+±65.528
+TECU/degree
+
+0.008 TECU /
+degree
+
+None
+
+The large size coefficient of the
+ionosphere slant delay polynomial.
+
+SF062
+
+Large ionosphere
+coefficient C11
+
+15
+
+±32.766
+TECU/degree2
+
+0.002 TECU /
+degree2
+
+None
+
+The large size coefficient of the
+ionosphere slant delay polynomial.
+
+SF063
+
+Ionosphere
+residual field size
+
+2
+
+0 to 3
+
+1
+
+0: Ionosphere small
+residual is used
+1: Ionosphere
+medium residual is
+used
+2: Ionosphere large
+residual is used
+3: Ionosphere extralarge residual is used
+
+SF064
+
+Small ionosphere
+residual slant
+delay
+
+4
+
+±0.28 TECU
+
+0.04 TECU
+
+0xF = invalid
+
+The small size ionosphere residual
+slant delay.
+
+SF065
+
+Medium
+ionosphere
+residual slant
+delay
+
+7
+
+±2.52 TECU
+
+0.04 TECU
+
+0x7F = invalid
+
+The medium size ionosphere residual
+slant delay.
+
+SF066
+
+Large ionosphere
+residual slant
+delay
+
+10
+
+±20.44 TECU
+
+0.04 TECU
+
+0x3FF = invalid
+
+The large size ionosphere residual
+slant delay.
+
+SF067
+
+Extra-large
+ionosphere
+residual slant
+delay
+
+14
+
+±327.64TECU
+
+0.04 TECU
+
+0x3FFF = invalid
+
+The extra-large size ionosphere
+residual slant delay.
+
+Ionosphere residual field size
+indicator.
+
+The AIOU controls when and if
+messages may be combined with the
+GAD messages described in SM 2.
+SF068
+
+Area Issue of
+Update (AIOU)
+
+4
+
+0 to 15
+
+1
+
+None
+
+SF069
+
+Reserved
+
+N
+
+N/A
+
+N/A
+
+N/A
+
+SF070
+
+Ionosphere shell
+height
+
+2
+
+0-3
+
+1
+
+0 : 350 km
+1 : 400 km
+2 : 450 km
+3 : 500 km
+
+The height of the ionosphere shell
+used to compute the pierce point of
+the satellite observation
+
+SF071
+
+BPAC area count
+
+2
+
+1 to 4
+
+1
+
+None
+
+Number of areas to follow in the data
+block section of the current message.
+
+19
+© 2022 u-blox AG. All rights reserved.
+This document and all information contained in this
+document are proprietary information of u-blox AG.
+
+The AIOU cannot change more than
+once per 30 seconds. User must
+assume that an AIOU has changed
+over outages of 450 seconds or more
+even if the AIOU before and after the
+outage matches.
+Reserved bits may be used to extend
+existing messages in the future.
+Reserved bits should be set to zero,
+until defined in future versions of the
+ICD.
+
+ID
+
+Name
+
+# Bits
+
+Range
+
+Resolution
+
+Special values
+
+Notes
+
+SF072
+
+BPAC area ID
+
+2
+
+0 to 3
+
+1
+
+None
+
+Area identifier of the BPAC data
+contained within the message. Must
+be unique within a solution processor
+ID (TF011). NOTE: This parameter
+does not need to be unique from the
+Area ID (SF031).
+
+SF073
+
+BPAC area
+reference latitude
+
+8
+
+±85.00 north
+degrees
+
+1.0 degrees
+
+None
+
+The northern most latitude of the
+area being defined
+
+SF074
+
+BPAC area
+reference
+longitude
+
+9
+
+±180.00 east
+degrees
+
+1.0 degrees
+
+None
+
+The western most longitude of the
+area being defined.
+
+SF075
+
+BPAC area
+latitude grid node
+count
+
+4
+
+1 to 16
+
+1
+
+None
+
+The number of grid points that exist
+in the north-south direction
+beginning at the reference latitude
+(SF073).
+
+SF076
+
+BPAC area
+longitude grid
+node count
+
+4
+
+1 to 16
+
+1
+
+None
+
+The number of grid points that exist
+in the west-east direction beginning
+at the reference longitude (SF076).
+
+SF077
+
+BPAC area
+latitude grid node
+spacing
+
+2
+
+0-3
+
+1
+
+0 : 2.5 deg
+1 : 5.0 deg
+2 : 10.0 deg
+3 : 15.0 deg
+
+The spacing between the grid nodes
+in the north-south direction
+
+SF078
+
+BPAC area
+longitude grid
+node spacing
+
+2
+
+0-3
+
+1
+
+0 : 2.5 deg
+1 : 5.0 deg
+2 : 10.0 deg
+3 : 15.0 deg
+
+The spacing between the grid nodes
+in the west-east direction
+
+SF079
+
+Grid node present
+mask
+
+N
+
+Bitmask
+
+Bitmask
+
+None
+
+Bit mask of length N (between 1 and
+256 bits) indicating the presence of
+grid point data in the BPAC area
+VTEC block
+
+SF080
+
+Area average
+VTEC
+
+12
+
+±511.75 TECU
+
+0.25 TECU
+
+None
+
+The average VTEC within the area
+
+SF081
+
+VTEC size
+indicator
+
+1
+
+0 to 1
+
+1
+
+0 : small
+1 : large
+
+Indicates the size of the VTEC bin
+
+SF082
+
+Small VTEC
+residual
+
+7
+
+±15.75 TECU
+
+0.25 TECU
+
+0x7F = invalid
+
+VTEC residual at the specified
+location in units of TECU
+
+SF083
+
+Large VTEC
+residual
+
+11
+
+±255.75 TECU
+
+0.25 TECU
+
+0x7FF = invalid
+
+VTEC residual at the specified
+location in units of TECU
+
+SF084
+
+Customer Key ID
+
+20
+
+0 to 1,048,576
+
+20
+© 2022 u-blox AG. All rights reserved.
+This document and all information contained in this
+document are proprietary information of u-blox AG.
+
+1
+
+None
+
+Identification number used by a
+customer to determine if the dynamic
+key contained in the message can be
+decoded by their customer key.
+
+ID
+SF085
+
+Name
+Encryption Type
+
+# Bits
+4
+
+Range
+0 to 15
+
+Resolution
+
+Special values
+
+1
+
+0 : AES
+1 : ChaCha12
+2 : ChaCha20
+3 to 15 : TBD
+
+Notes
+The type of encryption
+
+Indicates the week at which the
+dynamic key becomes active. Week 0
+of current year always begins on Jan
+1 at 00:00 UTC.
+
+SF086
+
+SF087
+
+Week of
+Applicability
+
+6
+
+Key length
+
+4
+
+SF088
+
+Cryptographic
+Key
+
+Key
+length
+(SF087)
+
+SF089
+
+Count of Message
+IDs
+
+SF090
+
+Group
+Authentication
+Type
+
+0 to 52
+
+0 to 15
+
+1
+
+0x3F = Currently
+active
+
+1
+
+0 : 96 bits
+1 : 128 bits
+2 : 192 bits
+3 : 256 bits
+4 : 512 bits
+5 to 15 : TBD
+
+A half year ambiguity is present and
+therefore the key cannot be sent out
+more than 6 months in advance.
+When special value of 0x3F is set,
+u64SatMask the key is currently
+active.
+NOTE: It is not required for a service
+provider to change the Week of
+Applicability once a key is active.
+The length of the key in bits.
+
+The cryptographic key.
+96 to 2^(Key
+length)-1
+
+1
+
+None
+
+Count of message IDs in this message
+
+SF091
+
+SF092
+
+SF093
+
+Computed
+Authentication
+Data (CAD)
+Length
+
+Computed
+Authentication
+Data (CAD)
+
+Galileo satellite
+mask
+
+5
+
+4
+
+4
+
+CAD
+length
+
+38 to 66
+
+0 to 31
+
+0 to 15
+
+0 to 15
+
+0 to 2^(CAD
+length) - 1
+
+Bitmask
+
+21
+© 2022 u-blox AG. All rights reserved.
+This document and all information contained in this
+document are proprietary information of u-blox AG.
+
+1
+
+1
+
+1
+
+None
+
+0 : none
+1 : Ed25519
+2 : SHA-2
+2 : SHA-3
+4 to 15 : TBD
+0 : 32 bits
+1 : 64 bits
+2 : 96 bits
+3 : 128 bits
+4 : 192 bits
+5 : 256 bits
+6 : 512 bits
+7 to 15 : TBD
+
+1
+
+None
+
+Bitmask
+
+Leftmost 2 bits
+indicate bitmask size
+to follow:
+0 : 36 bits
+1 : 45 bits
+2 : 54 bits
+3 : 64 bits
+
+Identifies authentication algorithm
+type
+
+The length of the CAD stored in the
+message (NOTE: the CAD is
+computed according to algorithm
+selected may be shorter or longer:
+i.e., meaning the CAD is either
+padded or truncated, respectively).
+The CAD that is padded or truncated
+in accordance with CAD Length. The
+size, even zero, depends upon the
+Group Authentication Type (SF090).
+The CAD is computed from TF002
+through TF016, where TF016 is
+encrypted before computation.
+Galileo satellite mask field is
+composed of two bits that indicate
+the bitmask size, followed by the
+bitmask. The bitmask after the 2-bit
+size defines the IDs and order
+of Galileo satellites in the
+message. The bitmask position
+added by 1 is equal to the PseudoRandom Noise (PRN) ID of a
+satellite. At least one satellite must
+be present in the bitmask. Bitmask
+position 0 is the leftmost bit of the
+
+ID
+
+Name
+
+# Bits
+
+Range
+
+Resolution
+
+Special values
+
+Notes
+satellite mask, excluding the 2-bits
+indicating the size of the bitmask.
+
+SF094
+
+BDS satellite
+mask
+
+39 to 66
+
+Bitmask
+
+Bitmask
+
+Leftmost 2 bits
+indicate bitmask size
+to follow.
+0 : 37 bits
+1 : 46 bits
+2 : 55 bits
+3 : 64 bits
+
+Leftmost 2 bits
+indicate bitmask size
+to follow.
+0 : 10 bits
+1 : 40 bits
+2 : 48 bits
+3 : 64 bits
+
+SF095
+
+QZSS satellite
+mask
+
+12 to 66
+
+Bitmask
+
+Bitmask
+
+SF096
+
+Galileo ephemeris
+type
+
+3
+
+0 to 7
+
+n/a
+
+SF097
+
+BDS ephemeris
+type
+
+SF098
+
+QZSS ephemeris
+type
+
+4
+
+3
+
+0 to 15
+
+0 to 7
+
+n/a
+
+n/a
+
+0: Galileo F/NAV
+1: Galileo I/NAV
+2: Galileo C/NAV
+3 to 7: TBD
+0 :D1 Nav (B1I)
+1 : D2 Nav (B1I)
+2 :D1 Nav (B3I)
+3 : D2 Nav (B3I)
+4: B-CNAV1
+5: B-CNAV2
+6 to 15 TBD
+0 :LNAV (L1C/A)
+1 : CNAV2(L1C)
+2: CNAV (L2C,L5)
+3 to 7 TBD
+
+SF099
+
+Galileo IODnav
+
+10
+
+0 to 1023
+
+1
+
+none
+
+SF100
+
+BDS IODE/IODC
+
+8
+
+0 to 255
+
+1
+
+none
+
+22
+© 2022 u-blox AG. All rights reserved.
+This document and all information contained in this
+document are proprietary information of u-blox AG.
+
+BDS satellite mask field is composed
+of two bits that indicate the bitmask
+size, followed by the bitmask. The
+bitmask after the 2-bit size defines
+the IDs and order of BDS satellites in
+the message. The bitmask position
+added by 1 is equal to the PseudoRandom Noise (PRN) ID of a
+satellite. At least one satellite must
+be present in the bitmask. Bitmask
+position 0 is the leftmost bit of the
+satellite mask, excluding the 2-bits
+indicating the size of the bitmask.
+QZSS satellite mask field is composed
+of two bits that indicate the bitmask
+size, followed by the bitmask. The
+bitmask after the 2-bit size defines
+the IDs and order of QZSS satellites
+in the message. The bitmask position
+added by 193 is equal to the PseudoRandom Noise (PRN) ID of a
+satellite. At least one satellite must
+be present in the bitmask. Bitmask
+position 0 is the leftmost bit of the
+satellite mask, excluding the 2-bits
+indicating the size of the bitmask. L1SAIF satellite mapping is not defined
+as part of the QZSS satellite mask.
+Type of ephemeris being used for
+Galileo corrections.
+Type of ephemeris being used
+for BDS corrections.
+
+Type of ephemeris being used
+for QZSS corrections.
+Issue of data (IODnav) field that
+indicates to which
+Galileo broadcast ephemeris
+(identified by its IODnav) the
+corrections must be combined with in
+order to be processed by the user.
+Issue of Data Ephemeris (IODE) or
+issue of Data Clock (IODC), field that
+indicates to
+which BDS broadcast ephemeris the
+corrections must be combined with in
+order to be processed by the
+user. The IODE/IODC choice
+depends upon the ephemeris
+type. That is, the IODE of the
+ephemeris is used when SF097
+indicates either B-CNAV1 or BCNAV2. When SF097 indicates
+either the D1 or D2 Nav type then
+one computes the IODC value in
+
+ID
+
+SF101
+
+Name
+
+QZSS IODE
+
+# Bits
+
+8
+
+Range
+
+0 to 255
+
+Resolution
+
+1
+
+Special values
+
+none
+
+Leftmost bit
+indicates bitmask
+size to follow:
+0 : 8 bits
+1 : 15 bits
+SF102
+
+SF103
+
+SF104
+
+SF105
+
+Galileo phase bias
+mask
+
+BDS phase bias
+mask
+
+QZSS phase bias
+mask
+
+Galileo code bias
+mask
+
+9 or 16
+
+9 or 16
+
+7 or 12
+
+9 or 16
+
+Bitmask
+
+Bitmask
+
+Bitmask
+
+Bitmask
+
+23
+© 2022 u-blox AG. All rights reserved.
+This document and all information contained in this
+document are proprietary information of u-blox AG.
+
+Bitmask
+
+Bitmask
+
+Bitmask
+
+Bitmask
+
+Bit #’s left to right
+(excluding size bit)
+0 : L1C phase bias
+1 : L5Q phase bias
+2 : L7Q phase bias
+3 to 14 : spare
+phase biases
+Leftmost bit
+indicates bitmask
+size to follow:
+0 : 8 bits
+1 : 15 bits
+Bit #’s left to right
+(excluding size bit)
+0 : L2I phase bias
+1 : L5P phase bias
+2 : L7I phase bias
+3 : L6I phase bias
+4 : L1P phase bias
+5 : L7P phase bias
+6 : L8P phase bias
+7 to 14 : spare
+phase biases
+Leftmost bit
+indicates bitmask
+size to follow:
+0 : 6 bits
+1 : 11 bits
+Bit #’s left to right
+(excluding size bit)
+0 : L1C phase bias
+1 : L2L phase bias
+2 : L5Q phase bias
+3 to 10 : spare
+phase biases
+Leftmost bit
+indicates bitmask
+size to follow:
+0 : 8 bits
+1 : 15 bits
+Bit #’s left to right
+(excluding size bit)
+0 : C1C code bias
+1 : C5Q code bias
+2 : C7Q code bias
+3 to 14 : spare code
+biases
+
+Notes
+accordance with the RTCM/CSNO
+agreed algorithm (which produces
+and 8-bit value):
+BDS IODC=mod (toc / 720, 240).
+Issue of data ephemeris (IODE) field
+that indicates to
+which QZSS broadcast ephemeris
+(identified by its IODE) the
+corrections must be combined with in
+order to be processed by the user.
+Indicates which phase bias types are
+present in the Galileo satellite bias
+corrections block.
+For Galileo observation codes, see
+Table 6 of RINEX 3.04 (Nov 23,
+2018).
+
+Indicates which phase bias types are
+present in the BDS satellite bias
+corrections block.
+For BDS observation codes, see
+Table 9 of RINEX 3.04 (Nov 23,
+2018).
+
+Indicates which phase bias types are
+present in the QZSS satellite bias
+corrections block.
+For QZSS observation codes, see
+Table 8 of RINEX 3.04 (Nov 23,
+2018).
+
+Indicates which code bias types are
+present in the Galileo satellite bias
+corrections block.
+For Galileo observation codes, see
+Table 6 of RINEX 3.04 (Nov 23,
+2018).
+
+ID
+
+Name
+
+SF106
+
+SF107
+
+BDS code bias
+mask
+
+QZSS code bias
+mask
+
+# Bits
+
+Range
+
+9 or 16
+
+7 or 12
+
+Bitmask
+
+Bitmask
+
+Resolution
+
+Bitmask
+
+Bitmask
+
+Special values
+
+Notes
+
+Leftmost bit
+indicates bitmask
+size to follow:
+0 : 8 bits
+1 : 15 bits
+
+Indicates which code bias types are
+present in the BDS satellite bias
+corrections block.
+
+Bit #’s left to right
+(excluding size bit)
+0 : C2I code bias
+1 : C5P code bias
+2 : C7I code bias
+3 : C6I code bias
+4 : C1P code bias
+5 : C7P code bias
+6 : C8P code bias
+7 to 14 : spare code
+biases
+Leftmost bit
+indicates bitmask
+size to follow:
+0 : 6 bits
+1 : 11 bits
+Bit #’s left to right
+(excluding size bit)
+0 : C1C code bias
+1 : C2L code bias
+2 : C5Q code bias
+3 to 10 : spare code
+biases
+
+For BDS observation codes, see
+Table 9 of RINEX 3.04 (Nov 23,
+2018).
+
+Indicates which code bias types are
+present in the QZSS satellite bias
+corrections block.
+For QZSS observation codes, see
+Table 9 of RINEX 3.04 (Nov 23,
+2018).
+
+6.5. SPARTN Messages
+Many SPARTN Messages are provided on a per constellation basis. For each constellation data
+field definitions which are a function of constellation are marked with a **. These data fields must
+be treated consistently throughout the message. All other data fields are consistent across all
+constellations.
+6.5.1. Orbit, Clock, Bias (OCB) messages - SM 0-0 to SM 0-4
+The following table describes the overall layout of the SM 0-0 to SM 0-4:
+Table 6.3 – Overall layout of SPARTN message 0-0 to 0-4
+Block
+
+Header block
+(SM 0-0 to SM 0-4)
+
+Name
+
+Definition
+
+Size (bits)
+
+Solution issue of update (SIOU)
+
+SF005
+
+9
+
+End of set
+
+SF010
+
+1
+
+Reserved
+
+SF069
+
+1
+
+Yaw present flag
+
+SF008
+
+1
+
+SF009
+
+1
+
+Satellite reference datum
+Ephemeris type**
+Satellite mask**
+
+24
+© 2022 u-blox AG. All rights reserved.
+This document and all information contained in this
+document are proprietary information of u-blox AG.
+
+SF016 or SF017 or SF096 or SF097
+or SF098
+SF011 or SF012 or SF093 or SF094
+or SF095
+
+2, 3, or 4
+12 to 66
+
+Block
+
+Name
+
+Definition
+
+Size (bits)
+
+Satellite block
+(SM 0-0 to SM 0-4)
+
+Satellite block
+
+Table 6.4
+
+Variable
+(Repeated for each satellite)
+
+The following tables describe the satellite, clock, and bias blocks present in SM 0-0 to SM 0-4. The
+satellite
+block
+repeats
+for
+every
+satellite
+present
+in
+the
+satellite
+mask
+(SF011/SF012/SF093/SF094/SF095).
+Table 6.4 – Message 0-0 to 0-4 satellite block
+Block
+
+Satellite block
+(SM 0-0 to SM 0-4)
+
+Name
+
+Definition
+
+Size (bits)
+
+Do not use (DNU)
+
+SF013
+
+1
+
+OCB present flags
+
+SF014
+
+3
+
+Continuity indicator
+
+SF015
+
+3
+
+Orbit block
+
+Table 6.5
+
+49, 50, 52, 55, 56, or 58
+
+Clock block
+
+Table 6.6
+
+20
+
+Bias block**
+
+Table 6.7 or Table 6.8 or Table 6.9 or
+Table 6.10 or Table 6.11
+
+Variable size
+
+Table 6.5 – Message 0-0 to 0-4 orbit block
+Block
+
+Orbit block
+(SM 0-0 to SM 0-4)
+
+Name
+
+Definition
+
+Size (bits)
+
+IODE**
+
+SF018 or SF019 or SF099 or SF100
+or SF101
+
+8 or 7 or 10
+
+Orbit radial correction
+
+SF020
+
+14
+
+Orbit along-track correction
+
+SF020
+
+14
+
+Orbit cross-track correction
+
+SF020
+
+14
+
+Satellite yaw
+
+SF021
+
+0 or 6
+
+Table 6.6 – Message 0-0 to 0-4 clock block
+Block
+Clock block
+(SM 0-0 to SM 0-4)
+
+Name
+
+Definition
+
+Size (bits)
+
+IODE continuity
+
+SF022
+
+3
+
+Clock correction
+
+SF020
+
+14
+
+User range error
+
+SF024
+
+3
+
+Table 6.7 – Message 0-0 GPS bias block
+Block
+
+Bias block
+(SM 0-0)
+
+Name
+
+Definition
+
+GPS phase bias mask
+
+SF025
+
+7 or 12
+
+Phase bias block
+
+Table 6.12
+
+18 per phase bias type
+(Repeated for each bias)
+
+GPS code bias mask
+
+SF027
+
+7 or 12
+
+SF029
+
+11 per code bias type
+(Repeated for each bias)
+
+Code bias correction
+
+25
+© 2022 u-blox AG. All rights reserved.
+This document and all information contained in this
+document are proprietary information of u-blox AG.
+
+Size (bits)
+
+Table 6.8 – Message 0-1 GLONASS bias block
+Block
+
+Bias block
+(SM 0-1)
+
+Name
+
+Definition
+
+GLONASS phase bias mask
+
+SF026
+
+6 or 10
+
+Phase bias block
+
+Table 6.12
+
+18 per phase bias type
+(Repeated for each bias)
+
+GLONASS code bias mask
+
+SF028
+
+6 or 10
+
+SF029
+
+11 per code bias type
+(Repeated for each bias)
+
+Code bias correction
+
+Size (bits)
+
+Table 6.9 – Message 0-2 Galileo bias block
+Block
+
+Bias block
+(SM 0-2)
+
+Name
+
+Definition
+
+Size (bits)
+
+Galileo phase bias mask
+
+SF102
+
+9 or 16
+
+Phase bias block
+
+Table 6.12
+
+18 per phase bias type
+(Repeated for each bias)
+
+Galileo code bias mask
+
+SF105
+
+9 or 16
+
+SF029
+
+11 per code bias type
+(Repeated for each bias)
+
+Code bias correction
+
+Table 6.10 – Message 0-3 BeiDou bias block
+Block
+
+Bias block
+(SM 0-3)
+
+Name
+
+Definition
+
+BeiDou phase bias mask
+
+SF103
+
+9 or 16
+
+Phase bias block
+
+Table 6.12
+
+18 per phase bias type
+(Repeated for each bias)
+
+BeiDou code bias mask
+
+SF106
+
+9 or 16
+
+SF029
+
+11 per code bias type
+(Repeated for each bias)
+
+Code bias correction
+
+Size (bits)
+
+Table 6.11 – Message 0-4 QZSS bias block
+Block
+
+Bias block
+(SM 0-4)
+
+Name
+
+Definition
+
+QZSS phase bias mask
+
+SF104
+
+7 or 12
+
+Phase bias block
+
+Table 6.12
+
+18 per phase bias type
+(Repeated for each bias)
+
+QZSS code bias mask
+
+SF107
+
+7 or 12
+
+SF029
+
+11 per code bias type
+(Repeated for each bias)
+
+Code bias correction
+
+Size (bits)
+
+Table 6.12 – Message 0-0 to 0-4 phase bias block
+Block
+Phase bias block
+(SM 0-0 to SM 0-1)
+
+Name
+
+Definition
+
+Size (bits)
+
+Fix flag
+
+SF023
+
+1
+
+Continuity indicator
+
+SF015
+
+3
+
+Phase bias correction
+
+SF020
+
+14 per phase bias type
+
+6.5.2. High Precision Atmosphere Correction (HPAC) message - SM 1-0 to 1-4
+The following table describes the overall layout of the SM 1-0 to SM 1-4:
+26
+© 2022 u-blox AG. All rights reserved.
+This document and all information contained in this
+document are proprietary information of u-blox AG.
+
+Table 6.13 – Overall layout of SPARTN message 1-0 to 1-4
+Block
+
+Header block
+(SM 1-0 to SM 1-4)
+
+Atmosphere block
+(SM 1-0 to SM 1-4)
+
+Name
+
+Definition
+
+Size (bits)
+
+Solution issue of update (SIOU)
+
+SF005
+
+9
+
+Area issue of update (AIOU)
+
+SF068
+
+4
+
+Reserved
+
+SF069
+
+1
+
+Area count
+
+SF030
+
+5
+
+Atmosphere block
+
+Table 6.14
+
+Variable
+(Repeated for each area)
+
+Table 6.14 – Message 1-0 to 1-4 HPAC atmosphere data block
+Block
+
+Name
+
+Definition
+
+Size (bits)
+
+Atmosphere block
+(SM 1-0 to SM 1-4)
+
+Area data block
+
+Table 6.15
+
+19
+
+Troposphere data block
+
+Table 6.16
+
+Variable
+
+Ionosphere data block
+
+Table 6.19
+
+Variable
+
+The following tables describe the HPAC area data block, troposphere and ionosphere blocks
+present in SM 1-0 to 1-4 The blocks repeat for every area present in SM 1-0 to 1-4.
+Table 6.15 – Message 1-0 to 1-4 HPAC area data block
+Block
+
+Area data block
+(SM 1-0 to SM 1-4)
+
+Name
+
+Definition
+
+Size (bits)
+
+Area ID
+
+SF031
+
+8
+
+Number of grid points present
+
+SF039
+
+7
+
+Tropo blocks indicator
+
+SF040
+
+2
+
+Iono blocks indicator
+
+SF040
+
+2
+
+The HPAC troposphere data blocks are only present if one or both Tropo blocks indicator bits are
+turned on. It is made up of the troposphere block, troposphere polynomial coefficient block and
+troposphere grid block.
+Table 6.16 – Message 1-0 to 1-4 HPAC troposphere data block
+Block
+Troposphere polynomial
+coefficient block
+(SM 1-0 to SM 1-4)
+(Present if tropo blocks indicator =
+1 or 2)
+
+Troposphere grid block
+(SM 1-0 to SM 1-4)
+
+Name
+
+Definition
+
+Size (bits)
+
+Troposphere equation type
+
+SF041
+
+3
+
+Troposphere quality
+
+SF042
+
+3
+
+SF043
+
+8
+
+SF044
+
+1
+
+SF044 = 0 see table 6.17
+SF044 = 1 see table 6.18
+
+Variable
+
+Area average vertical
+hydrostatic delay
+Troposphere polynomial
+coefficient size indicator
+Troposphere polynomial
+coefficients
+Troposphere residual field size
+
+SF051
+
+1
+
+Troposphere grid residuals
+
+SF051 = 0 : SF052
+SF051 = 1 : SF053
+
+SF051 = 0: NGridPts * 6
+SF051 = 1: NGridPts * 8
+
+27
+© 2022 u-blox AG. All rights reserved.
+This document and all information contained in this
+document are proprietary information of u-blox AG.
+
+Block
+
+Name
+
+Definition
+
+Size (bits)
+
+(Present if tropo blocks indicator =
+2)
+
+The HPAC troposphere small coefficient blocks are only present if the Troposphere polynomial
+coefficient size indicator is set to 0. The equation type is defined from SF041 – Troposphere
+Equation Type.
+Table 6.17 – Message 1-0 to 1-4 HPAC troposphere small coefficient block
+Block
+
+Name
+
+Troposphere small
+coefficients block
+(SM 1-0 to SM 1-4)
+
+Troposphere coefficient T00
+(SF041 models 0, 1 or 2)
+Troposphere coefficient T01
+(SF041 models 1 or 2)
+Troposphere coefficient T10
+(SF041 models 1 or 2)
+Troposphere coefficient T11
+(SF041 model 2)
+
+Definition
+
+Size (bits)
+
+SF045
+
+7
+
+SF046
+
+0 or 7
+
+SF046
+
+0 or 7
+
+SF047
+
+0 or 9
+
+The HPAC troposphere large coefficient blocks are only present if the Troposphere polynomial
+coefficient size indicator is set to 1. The equation type is defined from SF041 – Troposphere
+Equation Type.
+Table 6.18 – Message 1-0 to 1-4 HPAC troposphere large coefficient block
+Block
+
+Troposphere large
+coefficients block
+(SM 1-0 to SM 1-4)
+
+Name
+Troposphere coefficient T00
+(SF041 models 0, 1 or 2)
+Troposphere coefficient T01
+(SF041 models 1 or 2)
+
+Troposphere coefficient T10
+(SF041 models 1 or 2)
+
+Troposphere coefficient T11
+(SF041 model 2)
+
+Definition
+
+Size (bits)
+
+SF048
+
+9
+
+SF049
+
+0 or 9
+
+SF049
+
+0 or 9
+
+SF050
+
+0 or 11
+
+The HPAC ionosphere data blocks are only present if one or both Iono blocks indicator bits are
+turned on. It is made up of the ionosphere block and the ionosphere satellite block.
+Table 6.19 – Message 1-0 to 1-4 HPAC ionosphere data block
+Block
+
+Name
+
+Definition
+
+Size (bits)
+
+Ionosphere block
+(SM 1-0 to SM 1-4)
+
+Ionosphere equation type
+
+SF054
+
+3
+
+(Present if iono blocks indicator =
+1 or 2)
+
+Satellite mask**
+
+SF011 or SF012 or SF093 or SF094
+or SF095
+
+12 to 66
+
+Ionosphere satellite block
+
+Table 6.20
+
+Variable
+(Repeated for all satellites)
+
+Ionosphere satellite block
+(SM 1-0 to SM 1-4)
+(Present if iono blocks indicator =
+1 or 2)
+
+28
+© 2022 u-blox AG. All rights reserved.
+This document and all information contained in this
+document are proprietary information of u-blox AG.
+
+The HPAC ionosphere satellite block consists of the satellite polynomial block, the satellite
+coefficients block and ionosphere satellite grid block. The satellite block is repeated for all satellites
+enabled in the satellite Mask of SM 1-0 to 1-4.
+Table 6.20 – Message 1-0 to 1-4 HPAC ionosphere satellite block
+Block
+Ionosphere satellite
+polynomial block
+(SM 1-0 to SM 1-4)
+(Present if iono blocks indicator =
+1 or 2)
+
+Ionosphere satellite
+coefficient block
+(SM 1-0 to SM 1-4)
+(Present if iono blocks indicator =
+1 or 2)
+
+Ionosphere grid block
+(SM 1-0 to SM 1-4)
+
+Name
+
+Definition
+
+Size (bits)
+
+Ionosphere quality
+
+SF055
+
+4
+
+Ionosphere polynomial
+coefficient size indicator
+
+SF056
+
+1
+
+Ionosphere satellite polynomial
+coefficients
+
+SF056 = 0 see table 6.21
+SF056 = 1 see table 6.22
+
+Variable
+
+Ionosphere residual field size
+
+(Present if iono blocks indicator =
+2)
+
+Ionosphere grid residuals
+
+SF063
+
+2
+
+SF063 = 0 : SF064
+SF063 = 1 : SF065
+SF063 = 2 : SF066
+SF063 = 3 : SF067
+
+SF063 = 0: NGridPts * 4
+SF063 = 1: NGridPts * 7
+SF063 = 2: NGridPts * 10
+SF063 = 3: NGridPts * 14
+
+The HPAC ionosphere small coefficient blocks are only present if the Ionosphere polynomial
+coefficient size indicator is set to 0. The equation type is defined from SF054 – Ionosphere
+Equation Type.
+Table 6.21 – Message 1-0 to 1-4 HPAC ionosphere small coefficient block
+Block
+
+Name
+
+Ionosphere small coefficients
+block
+(SM 1-0 to SM 1-4)
+
+Ionosphere coefficient C00
+(SF054 models 0, 1 or 2)
+Ionosphere coefficient C01
+(SF054 models 1 or 2)
+Ionosphere coefficient C10
+(SF054 models 1 or 2)
+Ionosphere coefficient C11
+(SF054 model 2)
+
+Definition
+
+Size (bits)
+
+SF057
+
+12
+
+SF058
+
+0 or 12
+
+SF058
+
+0 or 12
+
+SF059
+
+0 or 13
+
+The HPAC ionosphere large coefficient blocks are only present if the Ionosphere polynomial
+coefficient size indicator is set to 1. The equation type is defined from SF054 – Ionosphere
+Equation Type.
+Table 6.22 – Message 1-0 to 1-4 HPAC ionosphere large coefficient block
+Block
+
+Name
+
+Ionosphere large coefficients
+block
+(SM 1-0 to SM 1-4)
+
+Ionosphere coefficient C00
+(SF054 models 0, 1 or 2)
+Ionosphere coefficient C01
+(SF054 models 1 or 2)
+Ionosphere coefficient C10
+(SF054 models 1 or 2)
+
+29
+© 2022 u-blox AG. All rights reserved.
+This document and all information contained in this
+document are proprietary information of u-blox AG.
+
+Definition
+
+Size (bits)
+
+SF060
+
+14
+
+SF061
+
+0 or 14
+
+SF061
+
+0 or 14
+
+Block
+
+Name
+
+Definition
+
+Size (bits)
+
+Ionosphere coefficient C11
+(SF054 model 2)
+
+SF062
+
+0 or 15
+
+6.5.3. Geographic Area Definition (GAD) message - SM 2-0
+The following table describes the overall layout of the SM 2-0:
+Table 6.23 – Overall layout of SPARTN message 2-0
+Block
+
+Header block
+(SM 2-0)
+
+Area definition block
+(SM 2-0)
+
+Name
+
+Definition
+
+Size (bits)
+
+Solution issue of update (SIOU)
+
+SF005
+
+9
+
+Area issue of update (AIOU)
+
+SF068
+
+4
+
+Reserved
+
+SF069
+
+1
+
+Area count
+
+SF030
+
+5
+
+Table 6.24
+
+47 per area
+(Repeated for all areas)
+
+Area definition block
+
+The following table describe the area definition block present in SM 2-0. The area definition block
+repeats for every area present in a solution.
+Table 6.24 – Overall layout of SPARTN message 2-0
+Block
+
+Area definition block
+(SM 2-0)
+
+Name
+
+Definition
+
+Size (bits)
+
+Area ID
+
+SF031
+
+8
+
+Area reference latitude
+
+SF032
+
+11
+
+Area reference longitude
+
+SF033
+
+12
+
+Area latitude grid node count
+
+SF034
+
+3
+
+Area longitude grid node count
+
+SF035
+
+3
+
+Area latitude grid node spacing
+
+SF036
+
+5
+
+Area longitude grid node
+spacing
+
+SF037
+
+5
+
+6.5.4. Basic Precision Atmosphere Correction (BPAC) message - SM 3-0
+The following table describes the overall layout of the SM 3-0:
+Table 6.25 – Overall layout of SPARTN message 3-0
+Block
+
+Header block
+(SM 3-0)
+
+BPAC area block
+(SM 3-0)
+
+Name
+
+Definition
+
+Size (bits)
+
+Solution issue of update (SIOU)
+
+SF005
+
+9
+
+Reserved
+
+SF069
+
+1
+
+Ionosphere shell height
+
+SF070
+
+2
+
+BPAC area count
+
+SF071
+
+2
+
+See table 6.26
+
+Variable
+(Repeated for each area)
+
+BPAC area block
+
+30
+© 2022 u-blox AG. All rights reserved.
+This document and all information contained in this
+document are proprietary information of u-blox AG.
+
+The table below defines the BPAC area block for SM 3-0. It is repeated for each area contained in the message:
+Table 6.26 – BPAC area block definition
+Block
+
+Name
+
+Definition
+
+Size (bits)
+
+BPAC area data block
+
+See table 6.27
+
+Variable
+
+BPAC VTEC block
+
+See table 6.28
+
+12 or 16
+(Repeated for each grid point)
+
+BPAC area block
+(SM 3-0)
+
+Table 6.27 – BPAC area data block definition
+Block
+
+BPAC area data block
+(SM 3-0)
+
+Name
+
+Definition
+
+Size (bits)
+
+BPAC area ID
+
+SF072
+
+2
+
+BPAC area reference latitude
+
+SF073
+
+8
+
+BPAC area reference longitude
+
+SF074
+
+9
+
+SF075
+
+4
+
+SF076
+
+4
+
+SF077
+
+2
+
+SF078
+
+2
+
+Average area VTEC
+
+SF080
+
+12
+
+Grid node present mask
+
+SF079
+
+Num Grid Points
+
+BPAC area latitude grid node
+count
+BPAC area longitude grid node
+count
+BPAC area latitude grid node
+spacing
+BPAC area longitude grid node
+spacing
+
+Table 6.28– BPAC grid node VTEC block for message 3-0
+Block
+
+BPAC grid node VTEC block
+(SM 3-0)
+
+Name
+
+Definition
+
+Size (bits)
+
+VTEC quality
+
+SF055
+
+4
+
+VTEC size indicator
+
+SF081
+
+1
+
+VTEC residual
+
+SF081 = 0 : SF082
+SF081 = 1 : SF083
+
+7 or 11
+
+6.5.5. Dynamic Key message - SM 4-0
+The following table describes the overall layout of the SM 4-0 message. (^^) indicates data fields
+transmitted in plain text. Unlike other SPARTN messages, when the Dynamic Key message is
+encrypted (i.e., the EAF-TF004 is set to 1), the Customer Key ID and Dynamic Key Encryption
+Type is transmitted in clear-text of the SPARTN Payload (both are included in any authentication
+computation). See section 8.15 for more details.
+Table 6.29 – Overall layout of SPARTN message 4-0
+
+31
+© 2022 u-blox AG. All rights reserved.
+This document and all information contained in this
+document are proprietary information of u-blox AG.
+
+Block
+
+Name
+
+Definition
+
+Size (bits)
+
+Dynamic key encryption
+meta data block^^
+(SM 4-0)
+
+Customer key ID^^
+
+SF084
+
+20
+
+Dynamic key encryption
+type^^
+
+SF085
+
+4
+
+Week of applicability
+
+SF086
+
+6
+
+Payload encryption type
+
+SF085
+
+4
+
+Dynamic key length
+
+SF087
+
+4
+
+Dynamic key
+
+SF088
+
+Variable
+
+Dynamic key payload block
+(SM 4-0)
+
+6.5.6. Group Authentication Message - SM 4-1(Deprecated – To be removed in future versions)
+The group authentication message contains the authentication details pertaining to a group (or
+collection) of SPARTN messages for a given time tag. The following table describes the overall
+layout of SM 4-1:
+Table 6.30 – Overall layout of SPARTN message 4-1
+Block
+
+Group authentication data
+block
+(SM 4-1)
+
+Name
+
+Definition
+
+Size (bits)
+
+Count of message IDs
+
+SF089
+
+5
+
+Group authentication type
+
+SF090
+
+4
+
+Computed authentication data
+length
+
+SF091
+
+4
+
+Message group IDs block
+
+See Table 6.31
+
+Variable
+
+Table 6.31 – Message ID block layout of SPARTN message 4-1
+Block
+
+Message ID block
+(SM 4-1)
+
+Name
+
+Definition
+
+Size (bits)
+
+Message type
+
+TF002
+
+7
+
+Message sub-type
+
+TF007
+
+4
+
+Encryption sequence number
+
+TF013
+
+6
+
+Computed authentication data
+
+SF092
+
+Variable
+
+6.5.7. Proprietary Message Support
+SPARTN Proprietary messages are allocated to message types (TF002) in the range of 120
+through 127. Each subtype (TF007) of these messages are assigned to different
+organizations. Their contents are defined by the organization assigned the proprietary
+TF002/TF007 pair.
+
+32
+© 2022 u-blox AG. All rights reserved.
+This document and all information contained in this
+document are proprietary information of u-blox AG.
+
+The SPARTN Committee manages the assignments. Requests for proprietary message
+assignments are made through http://www.spartnformat.org. There is no fee associated with
+such requests.
+Table 6.38 shows the Proprietary Message assignments at the time of this document publication.
+Table 6.38 – Assigned Proprietary IDs
+Proprietary Type & Subtype
+
+Organization
+
+Contact
+
+SM 120-0
+
+None
+
+This message shall only be used for an organization’s inhouse development and testing (typically while awaiting a for
+a Proprietary Message assignment).
+
+SM 120-1
+
+U-Blox AG
+
+https://www.u-blox.com/
+
+SM 120-2
+
+Swift Navigation Inc
+
+https://www.swiftnav.com
+
+SM 120-3 through SM 127-15
+
+Reserved
+
+33
+© 2022 u-blox AG. All rights reserved.
+This document and all information contained in this
+document are proprietary information of u-blox AG.
+
+7. Transport layer
+The transport layer defines the frame architecture for sending or receiving SPARTN messages.
+The purpose of defining this layer is to ensure that SPARTN messages can be properly decoded by
+applications.
+The structure of the frame format is depicted below and described in the table that follows:
+Figure 7.1 – Message frame layout
+
+Frame Start
+
+Payload Description
+Block
+
+Payload
+
+Embedded
+Authentication Data
+
+(TF001-TF006)
+
+(TF007-TF015)
+
+(TF016)
+
+(TF017)
+
+Message
+CRC
+(TF018)
+
+Table 7.1 – Message frame and payload description block format
+ID
+
+Name
+
+# Bits
+
+Range
+
+Resolution
+
+Special values
+
+Various notations for the
+preamble value:
+Binary: 011100112
+Decimal: 11510
+Hexadecimal: 0x73
+Types defined in table 6.1
+
+TF001
+
+Preamble
+
+8
+
+n/a
+
+n/a
+
+115 : This is the only
+valid value that can be
+used for the SPARTN
+message frame
+preamble.
+
+TF002
+
+Message type
+
+7
+
+0 to 127
+
+1
+
+none
+
+TF003
+
+Payload length
+
+10
+
+0 to 1023
+
+1 byte
+
+TF004
+
+Encryption and
+authentication flag
+(EAF)
+
+1
+
+0 to 1
+
+n/a
+
+TF005
+
+Message CRC type
+
+2
+
+0 to 3
+
+1
+
+TF006
+
+Frame CRC
+
+4
+
+n/a
+
+n/a
+
+Notes
+
+none
+0 : No encryption or
+authentication is
+applied to any portion
+of the message frame
+and/or payload
+1: The message
+payload is encrypted
+and authenticated.
+0: CRC-8-CCITT
+1: CRC-16-CCITT
+2: CRC-24-Radix-64
+3: CRC-32-CCITT
+
+n/a
+
+When applied, encryption and
+authentication is present in the
+message payload section
+(TF016).
+This field indicates what type of
+CRC is used in the message.
+Table 7.2 describes details of
+each option.
+Byte-by-byte 4-bit CRC
+calculated from TF002 through
+TF005.
+A 4-bit 0x0 filler (4 bits) is added
+to the right of the rightmost bit
+of the TF002-TF005 bit
+sequence (20 bits). Therefore, a
+24-bit sequence is used in the
+CRC computation. This is done
+in order to allow byte alignment
+of the buffer used for the CRC
+computation.
+The parameters of this CRC-4
+are:
+a. Polynomial = 0x09
+b. Initialized at zero
+c. Input is reflected.
+d. Output is reflected.
+e. Zero XOR on output.
+
+34
+© 2022 u-blox AG. All rights reserved.
+This document and all information contained in this
+document are proprietary information of u-blox AG.
+
+ID
+
+Name
+
+# Bits
+
+Range
+
+Resolution
+
+Special values
+
+TF007
+
+Message Subtype
+
+4
+
+0 to 15
+
+1
+
+none
+
+TF008
+
+TF009
+
+Time tag type
+
+GNSS time tag
+
+1
+
+0 to 1
+
+n/a
+
+0 : Half-day (16 bit)
+time tag to follow
+1 : Full (32-bit) time
+tag to follow
+
+16 or 32
+
+0 to 43,199
+or
+0 to
+4,294,967,295
+
+1
+
+none
+
+TF010
+
+Solution ID
+
+7
+
+0 to 127
+
+1
+
+none
+
+TF011
+
+Solution processor ID
+
+4
+
+0 to 15
+
+1
+
+none
+
+TF012
+
+Encryption ID
+
+4
+
+0 to 15
+
+1
+
+None
+
+35
+© 2022 u-blox AG. All rights reserved.
+This document and all information contained in this
+document are proprietary information of u-blox AG.
+
+Notes
+Subtypes defined in table 6.1
+Time tag type is used to define
+the size of the time tag to
+follow. Messages can carry time
+represented by either a 16-bit
+half day time tag or a full, 32-bit
+time tag. See field definitions
+described in TF009.
+This field provides the time tag
+of the message in the system
+time of the GNSS constellation
+to which the message pertains:
+i.e., GPS message time tags are
+in GPS system time, while
+GLONASS message time tags
+are in GLONASS system time.
+For message which do not
+indicate a constellation (e.g.,
+GAD message) or may contain
+data for multiple constellations
+simultaneously, the time tag is
+GPS.
+When Time tag type (TF008) is
+set to 0, the ambiguous, 16-bit
+GNSS time tag is used. When
+Time tag type (TF008) is set to 1,
+the full 32-bit time tag is used.
+The half-day must be resolved
+with the assistance of an
+unambiguous time tag, either
+received in the message through
+the full 32-bit time tag, or from
+another source.
+The reference time for the 32bit time tag is seconds since
+January 1st 2010, 00:00:00.
+The solution ID represents the
+unique identification of the
+current system, which consists
+of all instances of a solution that
+is being generated for a given
+area of coverage. The different
+instances of the solution are
+represented by unique solution
+processor IDs (TF011).
+The solution processor ID
+indicates the unique ID of the
+processing instance that has
+generated the correction data in
+the message. Each processing
+instance of the solution must be
+associated with a unique
+solution processor ID by the
+corrections provider.
+When the EAF Flag of the
+Transportation Layer (TF004) is
+set to 1, this field is present.
+Otherwise it is not present.
+When present, it provides a
+unique identifier for the
+encryption instance to ensure a
+unique crypto initialization
+vector (IV).
+
+ID
+
+Name
+
+TF013
+
+Encryption Sequence
+Number
+
+TF014
+
+Authentication
+Indicator
+
+TF015
+
+Embedded
+Authentication Length
+
+TF016
+
+# Bits
+
+6
+
+3
+
+Range
+
+0 to 63
+
+0 to 7
+
+Resolution
+
+Special values
+
+1
+
+None
+
+1
+
+0 : None
+1 : Group
+authenticated
+2 : Ed25519
+3 to 7 : TBD
+
+0 : 64 bits
+1 : 96 bits
+2 : 128 bits
+3 : 256 bits
+4 : 512 bits
+5 to 7 : TBD
+
+3
+
+0 to 7
+
+1
+
+Message payload
+
+8 to
+8192
+
+n/a
+
+n/a
+
+n/a
+
+TF017
+
+Embedded
+Authentication Data
+
+Size
+indicated
+by
+TF015
+
+n/a
+
+n/a
+
+n/a
+
+TF018
+
+Message CRC
+
+8 to 32
+
+n/a
+
+n/a
+
+n/a
+
+36
+© 2022 u-blox AG. All rights reserved.
+This document and all information contained in this
+document are proprietary information of u-blox AG.
+
+Notes
+When the EAF Flag of the
+Transportation Layer (TF004) is
+set to 1, this field is present.
+Otherwise it is not present.
+When present, the encryption
+sequence number gets
+incremented each time a subtype gets sent. The encryption
+sequence number is tracked for
+each type & sub-type. Must not
+send more than 64 messages of
+a single type & sub-type in one
+second.
+When the EAF Flag of the
+Transportation Layer (TF004) is
+set to 1, this field is present.
+Otherwise it is not present.
+When present, it is used to
+indicate where this message is
+authenticated: either by the
+Group Authentication message
+or an authentication that is part
+of the current message.
+Present only when the EAF Flag
+(TF004) is set to 1. When the
+Authentication Indicator (TF014)
+is less than or equal to 1 this
+field shall be ignored. It is used
+to indicate the length of the
+authentication data stored after
+the message payload (TF016).
+Message payload, containing
+encoded message – supported
+messages are defined in the
+Presentation Layer section of
+this document. If the encoded
+message length is not bytealigned, fill bits must be inserted
+to match the payload length
+declared in the message frame
+(TF003). When the EAF Flag of
+the Transportation Layer
+(TF004) is set to 1, this payload
+is encrypted.
+Present when the
+Authentication Indicator (TF014)
+is set greater than 1. Otherwise
+it is not present. Authentication
+is computed from TF002
+through TF016, where TF016 is
+encrypted before authentication.
+CRC computed using all bits
+from TF002 through TF017. The
+type and size of CRC used is
+defined in TF005. If EAF (TF004)
+is set to one, CRC computation
+is computed using the encrypted
+payload (TF016), and when
+present, includes the Embedded
+Authentication Data (TF017).
+
+Table 7.2 – SPARTN message CRC types
+TF005 value
+
+CRC type
+
+Notes
+An unsigned 8-bit CRC using a polynomial of 0x07U.
+
+0
+
+CRC-8-CCITT
+
+1
+
+CRC-16-CCITT
+
+2
+
+CRC-24-Radix-64
+
+3
+
+CRC-32-CCITT
+
+Pre-computation initialization:
+None.
+Post-computation inclusion:
+None.
+An unsigned 16-bit CRC using a polynomial of 0x1021U.
+Pre-computation initialization:
+None.
+Post-computation inclusion:
+None.
+An unsigned 24-bit CRC using a polynomial of 0x864CFBU.
+Pre-computation initialization:
+None.
+Post-computation inclusion:
+None.
+An unsigned 32-bit CRC using a polynomial of 0x04C11DB7U.
+Pre-computation initialization:
+Post-computation inclusion:
+
+37
+© 2022 u-blox AG. All rights reserved.
+This document and all information contained in this
+document are proprietary information of u-blox AG.
+
+0xFFFFFFFFU.
+Result XORed with 0xFFFFFFFFU.
+
+8. Implementation Details
+General guidelines and notes about using and implementing the SPARTN message format are
+described below.
+
+8.1. Numerical Constants
+Table 8.0 – SPARTN numerical constants
+
+Constant
+
+Description
+
+Value
+
+Unit
+
+c
+
+Speed of light
+
+299792458.0
+
+m/s
+
+𝝅
+
+Circular constant “pi”
+
+3.1415926535898
+
+unitless
+
+8.2. Reference Datum
+SF009 is used to define the datum of the satellite coordinates provided in SPARTN message. Over
+the past decades updates to ITRF have become stable at close to the mm level. Therefore, it is not
+necessary to define the exact realization of ITRF used in the SPARTN message format. The epoch
+of the positions computed using the SPARTN message format will always be in the current epoch
+as provided in the message.
+Service providers may choose to broadcast SPARTN messages in non-ITRF datums. In this case
+users must consult the service providers to establish the reference datum.
+
+8.3. Broadcast Ephemeris
+All references to broadcast ephemeris refer to the following versions of interface documents:
+Table 8.1 – SPARTN Constellation ICD
+
+Constellation
+
+Document
+
+GPS
+
+IS-GPS-200H
+
+GLONASS
+
+Version 5.1
+
+Galileo
+
+OS SIS ICD Issue 1.3
+
+BeiDou
+
+ICD SIS Version 2
+
+QZSS
+
+IS-QZSS-PNT-003
+
+SPARTN OCB messages are combined with the corresponding value obtained from the satellite
+broadcast message. The IODE is used to uniquely identify the broadcast ephemeris used in the
+expansion. Any deviation from the standard broadcast ephemeris implementations described in
+the documents above will directly impact the final accuracy of the system.
+38
+© 2022 u-blox AG. All rights reserved.
+This document and all information contained in this
+document are proprietary information of u-blox AG.
+
+8.4. Message Flexibility
+This standard is designed to allow for flexibility in how service providers broadcast the messages
+to optimize bandwidth as well as support future growth. Below are several guidelines which should
+be followed:
+1) GNSS OCB messages (SM 0) contain an OCB present indicator (SF014) which allows
+service providers to independently send clocks, biases and orbits if desired. This allows for
+data rates to be optimized based on the rate of change of each parameter.
+2) HPAC Atmosphere correction messages (SM 1) should only broadcast troposphere
+parameters for a single constellation. Service providers can take advantage of the
+Troposphere blocks indicator field (SF040) to indicate whether the troposphere block is
+present in the SM 1 message. If multiple troposphere models are broadcast for a single
+epoch, it is expected that the user utilize the latest received troposphere model. Additional
+service providers can choose to send polynomial only, or grid plus polynomial corrections
+depending on accuracy requirements.
+3) Geographic Area Definition Message (SM 2) provides flexibility to allow for optimizing area
+size based on service requirements.
+4) Several messages include reserved bits which in the future may be used to extend message
+content at the end of the payload. Therefore, decoder implementations should not use
+payload length to indicate where they stop decoding.
+5) For OCB messages, SF010 is used to mark the end of an epoch. In the future, additional
+OCB messages may be added to the standard (e.g., supporting other constellations) and
+providers may elect to mark the End-of-Set in any SM-0 message. Therefore, decoder
+implementations should be designed so as to decode the SF010 field of all current and
+future SM 0 message possibilities, even though they may not understand the data for
+certain OCB messages (i.e., the SF010 field will be at the exact same location for all current
+and future OCB message types).
+
+39
+© 2022 u-blox AG. All rights reserved.
+This document and all information contained in this
+document are proprietary information of u-blox AG.
+
+8.5. Message Payload Size Calculations
+Below are the computations for message payload lengths base upon message type and sub-type.
+For total message lengths, one should also include the Frame Start, the Payload Description Block,
+any Embedded Authentication Data, and the message CRC
+Type
+0
+
+Subtype
+0-4
+
+Table 8.2 – SPARTN message payload size calculations
+Message name
+Nominal Size Calculation (bits)
+OCB
+(SM 0-0 to SM 04)
+
+HeaderBlock
+OrbitBlock
+ClockBlock
+BiasBlock
+Total
+
+1
+
+0-4
+
+HPAC
+(SM 1-0 to SM 14)
+
+0
+
+Geographic Area
+Definition
+(SM 2-0)
+
+HeaderBlock
+
+19
+
+AreaDataBlock
+TropDataBlock
+IonoDataBlock
+
+19
+15 + Tpc + Tgp * (1 + Tgr * NGp)
+3 + MNsc + (5 + Ipc + Igp * (2 + Igr * NGp)) * Nsa
+HeaderBlock + NAreas * (AreaDataBlock + Tp * TropDataBlock
++ Ip * IonoDataBlock)
+
+Total
+2
+
+3
+
+0
+
+BPAC Message
+(SM 3-0)
+
+Total
+
+19 + 47 * NAreas
+
+HeaderBlock
+
+14
+
+AreaDataBlock
+
+43 + NGp
+
+VTECBlock
+Total
+
+0
+
+Dynamic Key
+Message
+(SM 4-0)
+
+1
+
+Group
+Authentication
+Message
+(SM 4-1)
+
+(5+Vs) * NGpPrst
+HeaderBlock + NAreas * (AreaDataBlock + VTECBlock)
+
+Dynamic Key
+Encryption Meta
+Data Block
+
+24
+
+Dynamic Key
+Payload Block
+
+14 + DKL
+
+Total
+
+4
+
+15 + MNsc
+Op * (Iod+42 +Yp * 6)
+Cp * 20
+Bp *(MNPb + Npb*18 + MNCb + Ncb * 11)
+HeaderBlock + (7 + Dnu * (OrbitBlock + ClockBlock +
+BiasBlock)) * NSc
+
+DynKeyEncMetaDataBlock + DynKeyPayload
+
+Group
+Authentication
+Data Block
+
+13
+
+Message ID Block
+
+17 + CADL
+
+Total
+
+GroupAuthDataBlock + CGID * MessageIdBlock
+
+MNsc Mask size as defined in SF011/SF012/SF093/SF094/SF095 for constellation (including expansion bits)
+Iod
+Number of bits for the IODE. See SF018/SF019/SF099/SF100/SF101.
+Op
+0 when orbit block is not present, 1 when orbit block is present
+Yp
+0 when yaw is not present, 1 when yaw is present
+Cp
+0 when clock block is not present, 1 when clock block is present
+Bp
+0 when bias block is not present, 1 when bias block is present
+MNpb Max Number of phase biases. See SF025/SF026/SF102/SF103/SF104.
+Npb
+Number of phase biases present.
+MNcb Max Number of code biases. See SF027/SF028/SF105/SF106/SF107.
+Ncb
+Number of code biases present.
+Dnu
+0 when satellite should not be used, 1 otherwise
+Nsc
+Number of satellites present for constellation within the solution
+Tpc
+Number of bits for the troposphere polynomial coefficient block:
+
+40
+© 2022 u-blox AG. All rights reserved.
+This document and all information contained in this
+document are proprietary information of u-blox AG.
+
+Troposphere Small Coefficients
+Block
+Troposphere Large Coefficients
+Block
+
+Tgp
+Tgr
+Ipc
+
+Troposphere Eq Type
+0
+1
+2
+7
+21
+30
+9
+
+27
+
+38
+
+0 when troposphere grid block is not present, 1 when troposphere grid block is present
+Troposphere grid bits, 6 or 8 if “Troposphere residual field size” (SF051) is 0 or 1 respectively.
+Number of bits for the ionosphere polynomial coefficient block:
+
+Ionosphere Small Coefficients
+Block
+Ionosphere Large Coefficients
+Block
+
+0
+12
+
+Ionosphere Eq Type
+1
+2
+36
+49
+
+14
+
+42
+
+57
+
+Igp
+0 when ionosphere grid block is not present, 1 when ionosphere grid block is present
+Igr
+Ionosphere grid bits, 4, 7, 10 or 14 if “Ionosphere residual field size” (SF064) is 0, 1, 2 or 3 respectively.
+Tp
+0 when troposphere data block is not present, 1 when troposphere data block present
+Ip
+0 when ionosphere data block is not present, 1 when ionosphere data block present
+NAreas Number of areas within the solution
+NSa
+Number of satellites visible in area
+NGp
+Number of grid points in area
+NGpPrst Number of grid points present
+Vs
+VTEC bin size 7 or 11 if VTEC size indicator (SF081) is 0 or 1
+DKL
+Dynamic key length
+CADL
+Length of CAD
+CGID
+The count of group message IDs
+
+8.6. Satellite and User Dependent Biases
+In order to facilitate ambiguity resolution, it is necessary that satellite biases are consistent
+between all satellites of a satellite system and a specific frequency. Parameters provided with the
+SPARTN message format must be free from satellite signal dependent biases other than those
+provided in the system dependent code and phase bias data fields.
+Dependent on the user’s hardware specifications, it may be necessary to model receiver
+dependent biases such as:
+•
+•
+•
+
+Receiver quarter cycle carrier phase shifts
+GLONASS inter-frequency biases
+Inter-System clock biases
+
+8.7. GNSS Satellite Clock Calculation
+SPARTN OCB messages (SM 0) contains the parameters for clock correction 𝛿𝐶. This correction is
+combined with the broadcast satellite clock 𝑡" to form the corrected satellite clock 𝑡# :
+41
+© 2022 u-blox AG. All rights reserved.
+This document and all information contained in this
+document are proprietary information of u-blox AG.
+
+𝑡# = 𝑡" −
+
+𝛿𝐶
+𝑐
+
+where 𝑐 is the speed of light constant.
+Relativistic effects must be applied for all constellations, except for GLONASS, where relativistic
+effect is already accounted for in the broadcast clock parameter. The relativistic clock correction
+for GPS is:
+𝛿𝑡$ = −
+
+2 𝒓 ⋅ 𝒓̇
+𝑐%
+
+8.8. GNSS Satellite Orbit Calculation
+SPARTN OCB message (SM 0) contains the parameters for orbit correction 𝛿𝑶 in radial, alongtrack and cross-track component. These corrections are transformed to a satellite position
+correction 𝛿𝑿 to be combined with the broadcast satellite position 𝑿" to form the corrected
+satellite nominal antenna phase center position 𝑿&$" :
+𝑿&$" = 𝑿" − 𝛿𝑿
+The satellite position correction 𝛿𝑿 is computed according to:
+𝒆'(&)* =
+𝒆+$&## =
+
+𝒓̇
+|𝒓̇ |
+
+𝒓 × 𝒓̇
+|𝒓 × 𝒓̇ |
+
+𝒆$',-'( = 𝒆'(&)* × 𝒆+$&##
+𝛿𝑿 = 1𝒆$',-'( 𝒆'(&)* 𝒆+$&## 2 ⋅ 𝛿𝑶
+𝒓 = 𝑿" satellite broadcast position vector
+𝒓̇ = 𝑿"̇ satellite broadcast velocity vector
+𝒆- direction unit vector, 𝑖 = {𝑟𝑎𝑑𝑖𝑎𝑙, 𝑎𝑙𝑜𝑛𝑔, 𝑐𝑟𝑜𝑠𝑠}
+Satellite orbits are in the reference frame defined in SF009. See section 8.2 for further details.
+
+42
+© 2022 u-blox AG. All rights reserved.
+This document and all information contained in this
+document are proprietary information of u-blox AG.
+
+8.9. GNSS Satellite Bias Calculation
+SPARTN OCB message (SM 0) contains parameters for bias correction for various track types.
+These biases shall be subtracted from the raw pseudorange and carrier phase measurements for
+the corresponding track types.
+GLONASS biases are aligned to a theoretical zero bias receiver.
+
+8.10. SPARTN Geographic Area Definition Message Implementation Details
+The area definition message (SM 2) defines the geographic validity regions, grid layout and
+polynomial expansion point for the atmosphere model data (SM 1). These are shown in the figure
+below
+
+Users select the appropriate geographic area based on approximate receiver position. The user
+position must be located inside of the area definition for the data to be used. This is to ensure safe
+and consistent interpolation of both polynomial and gridded data. Below are examples showing
+availability of atmosphere data with respect to various configurations.
+
+43
+© 2022 u-blox AG. All rights reserved.
+This document and all information contained in this
+document are proprietary information of u-blox AG.
+
+Due to the curvature of the earth, the SM 2 area definition messages are not suited for arctic
+navigation and should not be used above +/- 85 degrees latitude.
+
+8.11. HPAC Ionosphere Slant Delay Calculation
+SM 1 contains parameters for correcting for the ionosphere slant delay for each signal frequency.
+The slant delay for a given satellite is computed as:
+𝛿𝐼./
+= −40.3 ×
+
+𝛿𝐼/5
+= 40.3 ×
+
+10012
+⋅ (𝐼/- + 𝐼4- )
+𝑓3%
+
+10012
+⋅ (𝐼/- + 𝐼4- )
+𝑓3%
+
+where
+𝛿𝐼./
+slant ionosphere delay of satellite 𝑖, for the carrier phase measurement, in units of meters
+𝛿𝐼/5
+slant ionosphere delay of satellite 𝑖, for the pseudorange measurement, in units of meters
+
+𝐼/- slant ionosphere delay evaluated for the polynomial for satellite 𝑖, in units of TECU
+𝐼4- interpolated residual slant ionosphere delay interpolated from the gridded residuals for satellite
+𝑖 in units of TECU.
+
+44
+© 2022 u-blox AG. All rights reserved.
+This document and all information contained in this
+document are proprietary information of u-blox AG.
+
+In the case where no grid information is present, 𝐼4- is assumed to be zero.
+Grid Interpolation:
+A bi-linear grid interpolation is used to interpolate the residual slant delay for the requested user
+position.
+7
+𝐼4 = I 𝑊6 𝐼4 -6
+681
+
+Where
+𝑊6 is the weight applied to the grid point 𝑘
+𝐼4 -6 is the residual slant ionosphere delay for satellite 𝑖 at grid point 𝑘 in units of TECU.
+Polynomial Evaluation:
+The slant ionosphere delay is evaluated for the user location based on distance from the area’s
+centroid latitude (𝜙+ )and longitude (𝜆+ ) and approximate user latitude (𝜙9 ) and longitude (𝜆9 ):
+𝐼/- = 𝑓: (𝛿𝜙, 𝛿𝜆)
+where
+𝛿𝜙: = 𝜙9 − 𝜙+
+𝛿𝜆: = 𝜆9 − 𝜆+
+𝜙9 latitude of the user in units of degrees
+𝜙+ area centroid latitude in units of degrees
+𝜆9 longitude of the user in units of degrees
+𝜆+ area centroid longitude in units of degrees
+𝑓: is the polynomial representation of the ionosphere slant delay, as given by data field SF054:
+0 : 𝐼/0 = 𝐶11
+1 : 𝐼/0 = 𝐶11 + 𝐶12 &δϕ3 ) + 𝐶21 &δλ3 )
+2 : 𝐼/0 = 𝐶11 + 𝐶12 &δϕ3 ) + 𝐶21 &δλ3 ) + 𝐶22 &δϕ3 )&δλ3 )
+3 - 7 : place holders for future polynomial representations
+
+45
+© 2022 u-blox AG. All rights reserved.
+This document and all information contained in this
+document are proprietary information of u-blox AG.
+
+8.12. Troposphere Delay Calculation
+SM 1 contains parameters for correcting for the troposphere zenith delay. The slant delay for a
+given satellite is computed as:
+<
+𝛿𝑇 - = PP
+𝑇PP
+; ⋅ 𝑚; (𝜖- , ℎ) + (𝑇/ + 𝑇4 ) ⋅ 𝑚); (𝜖- )
+
+Where
+𝛿𝑇 - is the troposphere slant delay for satellite 𝑖 at the user’s location
+<
+PP
+𝑇PP
+; is the average zenith hydrostatic delay for the given area referenced to a zero ellipsoidal height
+(WGS-84)
+
+𝑚; (𝜖- , ℎ) is the hydrostatic mapping function defined in Niell (1996) for the satellite elevation
+angle (𝜖- ) and ellipsoidal height (ℎ) for the approximate user location.
+𝑚); (𝜖- ) is the non-hydrostatic mapping function defined in Niell (1996) for the satellite elevation
+angle (𝜖- )
+𝑇4 is the residual troposphere zenith delay for station interpolated from the grid points, in units
+of meters.
+𝑇/- is the residual troposphere zenith delay for satellite 𝑖 interpolated obtained from the polynomial
+expansion, in units of meters.
+Grid Interpolation:
+A bi-linear grid interpolation is used to interpolate the residual slant delay for the requested user
+position.
+7
+
+𝑇4 = I 𝑊6 𝑇4!
+681
+
+Where
+𝑊6 is the weight applied to the grid point 𝑘
+𝑇4! is the residual troposphere zenith delay for ionosphere delay at grid point 𝑘 in units of TECU.
+Polynomial Evaluation:
+The troposphere zenith delay is evaluated for the user location based on distance from the area’s
+centroid latitude (𝜙+ )and longitude (𝜆+ ) and approximate user latitude (𝜙9 ) and longitude (𝜆9 ):
+𝑇/ = 𝑓: (𝛿𝜙, 𝛿𝜆)
+where
+46
+© 2022 u-blox AG. All rights reserved.
+This document and all information contained in this
+document are proprietary information of u-blox AG.
+
+𝛿𝜙: = 𝜙9 − 𝜙+
+𝛿𝜆: = 𝜆9 − 𝜆+
+𝜙9 latitude of the user in units of degrees
+𝜙+ area centroid latitude in units of degrees
+𝜆9 longitude of the user in units of degrees
+𝜆+ area centroid longitude in units of degrees
+𝑓: is the polynomial representation of the troposphere residual zenith delay, as given by data fields
+SF041:
+0 : 𝑇/ = 𝑇11
+1 : 𝑇/ = 𝑇11 + 𝑇12 &𝛿𝜙4 ) + 𝑇21 &𝛿𝜆4 )
+2 : 𝑇/ = 𝑇11 + 𝑇12 &𝛿𝜙4 ) + 𝑇21 &𝛿𝜆4 ) + 𝑇22 &𝛿𝜙4 )&𝛿𝜆4 )
+3 - 7 : place holders for future polynomial representations
+
+8.13. BPAC Ionosphere Delay Evaluation
+In the BPAC ionosphere message, the ionosphere is modelled as a vertical total electron content
+(VTEC) and a mapping function. An ionosphere shell model, is used to compute the ionosphere
+pierce point of the satellite’s ray and can be computed using geometric relationships and a
+spherical earth assumption.
+
+Figure 1 Description of the ionosphere shell model and satellite ray pierce points
+
+The pierce point for a given satellites ray can be computed as follow:
+47
+© 2022 u-blox AG. All rights reserved.
+This document and all information contained in this
+document are proprietary information of u-blox AG.
+
+𝜙-:: = sin01 (sin(𝜙9#$ ) ⋅ cos ( Ψ) + cos(𝜙9#$ ) ⋅ 𝑠𝑖𝑛(Ψ) ⋅ cos (𝛼))
+𝜆-:: = 𝜆9#$ + sin01 [
+Ψ=
+
+sin(Ψ) ⋅ sin(𝛼)
+^
+cos\𝜙-:: ]
+
+𝜋
+𝑅
+− 𝜖 − sin01 `
+⋅ cos(𝜖)b
+2
+𝑅 + ℎ-
+
+where:
+𝑅 = radius of the earth 6,378,000 m
+ℎ- = ionosphere shell height in meters
+𝛼 = azimuth of the satellite with respect to the user
+𝜖 = elevation angle of the satellite with respect to the user
+
+End user implementations must be able to support two interpolation strategies. The triangular
+interpolation will additionally have different orientations which must be considered. Interpolation
+may only be performed within a defined area and it is not valid to interpolate between two
+adjacent areas.
+
+The rectangular interpolation uses the following formula:
+7
+
+𝑉𝑇𝐸𝐶-:: = I 𝑊- \𝑥:: , 𝑦:: ] ⋅ 𝑉𝑇𝐸𝐶-81
+=>
+
+"##
+𝑥:: = > 0>
+$
+
+%
+
+𝛿𝜙-::
+𝑦:: =
+𝜙% − 𝜙1
+48
+© 2022 u-blox AG. All rights reserved.
+This document and all information contained in this
+document are proprietary information of u-blox AG.
+
+where
+𝜆1 = longitude of the grid point west of the ionosphere pierce point
+𝜆% = longitude of the grid point east of the ionosphere pierce point
+𝜙1 = latitude of the grid point south of the ionosphere pierce point
+𝜙% = latitude of the grid point north of the ionosphere pierce point
+𝑉𝑇𝐸𝐶- = 𝑉𝑇𝐸𝐶?@* + 𝑉𝑇𝐸𝐶4$-,
+𝑉𝑇𝐸𝐶?A4 = area average VTEC as specified in SF080
+𝑉𝑇𝐸𝐶4$-, = area average VTEC as specified in SF082 or SF083
+If the longitude cross +/- 180 degrees, then the computation must consider this discontinuity.
+The weights are computed according to:
+𝑊1 = 𝑥:: 𝑦::
+𝑊% = (1 − 𝑥:: )𝑦::
+𝑊B = (1 − 𝑥:: )(1 − 𝑦:: )
+𝑊7 = 𝑥:: (1 − 𝑦:: )
+The triangular interpolation uses the following formula:
+B
+
+𝑉𝑇𝐸𝐶-:: = I 𝑊- \𝑥:: , 𝑦:: ] ⋅ 𝑉𝑇𝐸𝐶-81
+
+𝑥:: =
+𝑥:: =
+
+=>"##
+>$ 0>%
+
+𝛿𝜙-::
+𝜙% − 𝜙1
+
+where
+𝜆1 = longitude of the grid point west of the ionosphere pierce point
+𝜆% = longitude of the grid point east of the ionosphere pierce point
+𝜙1 = latitude of the grid point south of the ionosphere pierce point
+𝜙% = latitude of the grid point north of the ionosphere pierce point
+If the longitude cross +/- 180 degrees, then the computation must consider this discontinuity.
+49
+© 2022 u-blox AG. All rights reserved.
+This document and all information contained in this
+document are proprietary information of u-blox AG.
+
+The weights are computed according to:
+𝑊1 = 𝑦::
+𝑊% = 1 − 𝑥:: − 𝑦::
+𝑊B = 𝑥::
+The VTEC can be mapped to the slant delay via a mapping function defined as:
+% 0
+
+1
+
+%
+𝑅 ⋅ cos(𝜖)
+𝑚𝑓(𝜖) = g1 − [
+^ h
+𝑅 + ℎ-
+
+8.14. Satellite Frame Convention
+If the yaw angle is not provided, the satellite yaw angle should be considered zero. The nominal
+satellite phase windup is computed according to Wu et al. (1993). The satellite frame used for yaw
+computations is a satellite fixed frame defined as follows:
+
+8.15. Encryption/Authentication Implementation
+This section describes implementation details related to the encryption and authentication
+concept. For all messages, with the exception of the Dynamic Key Message (SM 4-0), the diagram
+below shows the portions of the message that are plain-text, that are encrypted and that are part
+of the authentication computation. In this case, the payload is encrypted using the dynamic key.
+All encryption and authentication algorithms describe within this ICD operate on byte-aligned
+input.
+50
+© 2022 u-blox AG. All rights reserved.
+This document and all information contained in this
+document are proprietary information of u-blox AG.
+
+For the Dynamic Key Message, in addition to the Payload Description Block, the Dynamic Key
+Encryption Meta Data Block is also transmitted in plain text. This block contains the dynamic key
+encryption type which indicates the type of encryption performed on the dynamic key payload
+block. The payload encryption type present in the dynamic key payload block indicates the type
+of encryption performed on all other SPARTN messages.
+
+A typical interface for the encryption function, referred to as a cipher is as follows:
+
+Plain Text – Payload to be encrypted by the cipher
+Cipher Text – Encrypted form of the payload
+Key – Secret cryptographic value used for encrypting and decrypting the plain/cipher-text
+payload.
+Cipher – Algorithm used for encrypting the plain-text and decrypting the cipher-text payload.
+Takes as input the secret key and initialization vector
+Initialization Vector – Value used in an initial step for the encryption/decryption of plain/ciphertext. The IV does not need to be a secret however, the IV must be unique and not reused for
+encrypting different plain-text payloads.
+
+51
+© 2022 u-blox AG. All rights reserved.
+This document and all information contained in this
+document are proprietary information of u-blox AG.
+
+8.15.1. Initialization Vector
+The Initialization Vector (IV) for encryption is formed using the following (from left most position
+to right most position):
+a. Message type (TF002)
+b. Payload length (TF003)
+c. Message sub-type (TF007)
+d. 32-bit Time tag: i.e., when 16-bit form is present, it must be expanded to 32-bit form
+(TF009)
+e. Solution ID (TF010)
+f. Solution processor ID (TF011)
+g. Encryption ID (TF012)
+h. Encryption Sequence number (TF013)
+i. Pad zeros (to right most position) to reach required length for encryption algorithm IV
+Initialization Vector (IV)
+Msg
+type
+
+Payload
+length
+
+Msg subtype
+
+Time
+tag
+
+Solution
+ID
+
+Solution
+processor ID
+
+Encryption
+ID
+
+Encryption
+SN
+
+Pad
+zeros
+
+For AES-CTR and ChaCha encryption, the IV (e.g., counter for AES-CTR) will be constructed as
+described in RFC-3686 section 2.1 (Housley, 2004), with items a-i above forming the 96 mostsignificant bits, and the least-significant 32-bits of the counter set to one (i.e., 0x00000001).
+
+8.16. Modeling Conventions
+The table below lists references for the standard error models which must be applied at the rover
+in order to achieve full accuracy:
+Error Source
+
+Reference
+Document
+
+Solid Earth Tides
+
+IERS (2010)
+
+Phase Windup
+
+Wu et al. (1993)
+
+Shapiro
+
+Ashby (2003)
+
+Sagnac
+
+Ashby (2003)
+
+Troposphere
+Mapping Function
+
+Niell (1996)
+
+52
+© 2022 u-blox AG. All rights reserved.
+This document and all information contained in this
+document are proprietary information of u-blox AG.
+
+9. References
+Ashby, N. (2003) Relativity in the global positioning system. Living Rev. Relativity 6, 1–42 (2003).
+Housley, R. (2004) Using Advanced Encryption Standard (AES) Counter Mode with IPsec
+Encapsulating
+Security
+Payload
+(ESP)
+Vigil
+Security,
+January
+2004,
+https://tools.ietf.org/html/rfc4309
+Niell, A. E. (1996) Global mapping functions for the atmosphere delay at radio wavelengths, J.
+Geophys Res, 101, 2337 - 3246
+Petit, G. and Luzum, B. (2010) IERS Conventions (IERS Technical Note ; 36) Frankfurt am Main:
+Verlag des Bundesamts für Kartographie und Geodäsie, 2010. 179 pp., ISBN 3-89888-989-6
+Wu, J. T., S. C. Wu, G. A. Hajj, W. I. Bertiger, and S. M. Lichten (1993), Effects of antenna orientation
+on GPS carrier phase, Manuscripta Geodaetica, 18 (2), 91–98.
+
+53
+© 2022 u-blox AG. All rights reserved.
+This document and all information contained in this
+document are proprietary information of u-blox AG.
+
+

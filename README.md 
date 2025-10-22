@@ -1,0 +1,42 @@
+ESP32-S3 + PPL Minimal Convergence Test
+
+What it is
+- **Goal**: Feed PPL on ESP32-S3 with NMEA GGA/ZDA, RTCM ephemeris, and SPARTN corrections from a Python host and confirm that PPL converges (produces RTCM output).
+- **Bare-bones**: No WiFi, no NTRIP on ESP32. All data comes over USB Serial from the Python feeder.
+
+Hardware
+- **Target**: ESP32-S3 board (USB CDC Serial)
+
+ESP32 Sketch
+- `esp32s3_ppl_minimal.ino`: Initializes PPL, reads framed input on Serial:
+  - NMEA lines: `$...` terminated by newline → `PPL_SendRcvrData`
+  - RTCM frames: `!R <len>\n` then <len> raw bytes then `\n` → `PPL_SendRcvrData`
+  - SPARTN frames: `!S <len>\n` then <len> raw bytes then `\n` → `PPL_SendAuxSpartn`
+- Prints a minimal line when PPL emits corrections: `RTK OUT: <bytes> bytes`.
+
+Secrets
+- Create `secrets.h` with PointPerfect dynamic key:
+  ```c
+  // secrets.h
+  #pragma once
+  static const char* currentDynamicKey = "<your_hex_key_here>"; // e.g., "6f49600eb72527e0ec592bfbf42bd12f"
+  static const uint32_t currentKeyLength = 32; // number of hex characters
+  ```
+
+Python Feeder
+- Use `clienthttprtcmlogger2.py` to pull from NTRIP and send framed data over Serial (extend to write to serial per framing above).
+- Example inputs:
+  - SPARTN: `ppntrip.services.u-blox.com:2101` (mount `NEAR-SPARTN`) → requires periodic GGA
+  - RTCM Ephemeris: `ntrip.data.gnss.ga.gov.au:2101` (mount `BCEP00BKG0`) → GGA not required
+- Suggested test position (for GGA when needed): `38.34030 N, -78.97626 W, alt 377 m`.
+
+Quick Start
+1) Flash `esp32s3_ppl_minimal.ino` to ESP32-S3. Open Serial Monitor at 115200.
+2) Ensure `secrets.h` is present in the sketch directory with your PointPerfect key.
+3) Run the Python feeder, connect to NTRIP(s), and forward data to the ESP32-S3 using the framing protocol.
+4) Watch for `RTK OUT: <n> bytes` on Serial; that indicates convergence and corrections.
+
+Notes
+- When connecting to GA (BCEP00BKG0), GGA is not needed.
+- When connecting to PointPerfect (NEAR-SPARTN), send GGA about every 10 s.
+- Keep this repo minimal: just the feeder and bare sketch for convergence testing.

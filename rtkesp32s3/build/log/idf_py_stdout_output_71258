@@ -1,0 +1,35 @@
+Command: /Users/delta/.espressif/python_env/idf5.5_py3.13_env/bin/python /Users/delta/esp/v5.5/esp-idf/tools/idf_monitor.py -p socket://localhost:5555 -b 115200 --toolchain-prefix xtensa-esp32s3-elf- --target esp32s3 --revision 0 /Users/delta/streamrtcm/rtkesp32s3/build/rtk_base_station.elf /Users/delta/streamrtcm/rtkesp32s3/build/bootloader/bootloader.elf -m '/Users/delta/.espressif/python_env/idf5.5_py3.13_env/bin/python' '/Users/delta/esp/v5.5/esp-idf/tools/idf.py'
+[0;32mI (87) esp_image: segment 5: paddr=0008f1a8 vaddr=600fe000 size=00020h (    32) load[0m
+[0;32mI (88) boot: Loaded app from partition at offset 0x10000[0m
+[0;32mI (88) boot: Disabling RNG early entropy source...[0m
+[0;33mW (202) rtcinit: o_code calibration fail[0m
+
+[0;32mI (104) cpu_start: Multicore app[0m
+[0;32mI (115) cpu_start: Pro cpu start user code[0m
+[0;32mI (115) cpu_start: cpu freq: 160000000 Hz[0m
+[0;32mI (115) app_init: Application information:[0m
+[0;32mI (115) app_init: Project name:     rtk_base_station[0m
+[0;32mI (116) app_init: App version:      1[0m
+[0;32mI (116) app_init: Compile time:     Oct 22 2025 11:13:44[0m
+[0;32mI (116) app_init: ELF file SHA256:  1df0193d3...[0m
+[0;32mI (116) app_init: ESP-IDF:          v5.5-dirty[0m
+[0;32mI (116) efuse_init: Min chip rev:     v0.0[0m
+[0;32mI (116) efuse_init: Max chip rev:     v0.99 [0m
+[0;32mI (116) efuse_init: Chip rev:         v0.3[0m
+[0;32mI (116) heap_init: Initializing. RAM available for dynamic allocation:[0m
+[0;32mI (116) heap_init: At 3FC9C5C8 len 0004D148 (308 KiB): RAM[0m
+[0;32mI (116) heap_init: At 3FCE9710 len 00005724 (21 KiB): RAM[0m
+[0;32mI (116) heap_init: At 3FCF0000 len 00008000 (32 KiB): DRAM[0m
+[0;32mI (116) heap_init: At 600FE020 len 00001FC8 (7 KiB): RTCRAM[0m
+[0;32mI (120) spi_flash: detected chip: winbond[0m
+[0;32mI (120) spi_flash: flash io: dio[0m
+[0;32mI (120) sleep_gpio: Configure to isolate all GPIO pins in sleep state[0m
+[0;32mI (120) sleep_gpio: Enable automatic switching of GPIO sleep configuration[0m
+[0;32mI (122) main_task: Started on CPU0[0m
+[0;32mI (132) main_task: Calling app_main()[0m
+PPL QEMU bare passthrough
+Point_Perfect_SDK-ESP32-BLD21-v1.11.4
+PPL_Initialize: 0 (Success)
+PPL ready for IP channel (NTRIP) data
+[0;32mI (152) main_task: Returned from app_main()[0m
+STATUS: ppl=Success key=unset spartn=0/0 rtcm_in=0/0 nmea(GGA/ZDA)=0/0 ppl_out=0/0

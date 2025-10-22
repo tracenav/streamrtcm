@@ -1,0 +1,4 @@
+Command: /Users/delta/.espressif/python_env/idf5.5_py3.13_env/bin/python /Users/delta/esp/v5.5/esp-idf/tools/idf_monitor.py -p socket://localhost:5555 -b 115200 --toolchain-prefix xtensa-esp32s3-elf- --target esp32s3 --revision 0 /Users/delta/streamrtcm/rtkesp32s3/build/rtk_base_station.elf /Users/delta/streamrtcm/rtkesp32s3/build/bootloader/bootloader.elf -m '/Users/delta/.espressif/python_env/idf5.5_py3.13_env/bin/python' '/Users/delta/esp/v5.5/esp-idf/tools/idf.py'
+[0;33m--- esp-idf-monitor 1.7.0 on socket://localhost:5555 115200[0m
+[0;33m--- Quit: Ctrl+] | Menu: Ctrl+T | Help: Ctrl+T followed by Ctrl+H[0m
+[0m

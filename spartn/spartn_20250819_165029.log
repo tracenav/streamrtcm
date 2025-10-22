@@ -1,0 +1,10 @@
+# SPARTN Message Log
+# Generated: 2025-08-19T16:50:29 UTC
+# Mountpoint: PMP
+# GPS Week: 0
+# GPS TOW: 0ms
+# Format: [timestamp_ms] [type] [subtype] [length] [hex_data]
+# ----------------------------------------
+0 0 0 48 730012a20221280100000025219497f03bb2fded065fc1188bf7eb117f17192fe0a145fbf5ccbf87e195f0c0b0530814
+0 0 2 38 73000da82221280100010a20800014bf83c517effd92fe19e65fc1d08bf803917ef8da8595fd
+0 0 3 44 730010a13220b80100404000000a180c100bf804917efaf22fdfd245fbc4acbf801517efd222fdce549c3515
